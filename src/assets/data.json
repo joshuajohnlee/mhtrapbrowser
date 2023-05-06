@@ -1,0 +1,51 @@
+{
+    "freshness": [
+        "Über Stale",
+        "Ultimately Stale",
+        "Insanely Stale",
+        "Extremely Stale",
+        "Very Stale",
+        "Stale",
+        "No cheese effect",
+        "Fresh",
+        "Very Fresh",
+        "Extremely Fresh",
+        "Insanely Fresh",
+        "Ultimately Fresh",
+        "Über Fresh"
+    ],
+    "types": [
+        "Arcane",
+        "Draconic",
+        "Forgotten",
+        "Hydro",
+        "Law",
+        "Parental",
+        "Physical",
+        "Rift",
+        "Shadow",
+        "Tactical"
+    ],
+    "title_req": [
+        "Novice",
+        "Recruit",
+        "Apprentice",
+        "Initiate",
+        "Journeyman/woman",
+        "Master",
+        "Grandmaster",
+        "Legendary",
+        "Hero",
+        "Knight",
+        "Lord/Lady",
+        "Baron/Baroness",
+        "Count/Countess",
+        "Duke/Duchess",
+        "Grand Duke/Duchess",
+        "Archduke/duchess",
+        "Viceroy",
+        "Elder",
+        "Sage",
+        "Fabled"
+    ]
+}

@@ -1,0 +1,46 @@
+
+/* 800px Breakpoint */
+@media (max-width: 800px) {
+    .app-header {
+        position: relative;
+        z-index: 0;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+    
+    .card {
+        min-width: 80%;
+    }
+
+    /* Filter modal takes up most of width on smaller devices */
+    .modal-form {
+        min-width: 80%;
+    }
+
+    .form-other-controls{
+        display:block;
+    }
+
+    .form-other-controls * {
+        margin-bottom: 1vh;
+    }
+
+    /* Sort appears below filter button on smaller devices */
+    .filter-sort-container {
+        display:flex !important; 
+        flex-direction: column;
+    }
+
+
+}
+
+/* Touchscreen specific */
+@media (pointer: coarse) {
+    .filter-button {
+        width: 80%;
+        min-height: 10vh;
+        margin: 1vh auto 1vh auto;
+        border-radius: 15px;
+    }
+}

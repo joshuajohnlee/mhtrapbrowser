@@ -1,0 +1,210 @@
+/* Welcome Window Modal */
+
+.welcome-window {
+    position: relative;
+    top: 10vh;
+    margin: 5vh;
+    padding: 5vh;
+    background-color: #11212D;
+    border-style: solid;
+    border-radius: 15px;
+    z-index: 5;
+}
+
+.welcome-window button {
+    position: absolute;
+    height: 3vh;
+    width: 8vh;
+    top: 2vh;
+    right: 2vh;
+}
+
+.welcome-window li {
+    margin-top: 1vh;
+}
+
+/* Weapon Card Component */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    padding: 1vw;
+}
+
+.card {
+    display: flex;
+    max-width: 30%;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2F384B;
+    padding: 1rem;
+    margin: 1rem auto 1rem auto;
+    border-radius: 15px;
+}
+
+.trap-image {
+    margin: 0 auto 0 auto;
+    width: 50%;
+    height: 50%;
+    background-image: url("base.png");
+    background-size: contain;
+}
+
+.trap-image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.stats-container {
+    display: grid;
+    gap: 2vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.stats-header {
+    font-weight: bold;
+    vertical-align: middle;
+    margin: auto 0 auto 0;
+}
+
+.stats-value {
+    text-transform: capitalize;
+    border-style: dotted none dotted none;
+    border-color: #89A2BE;
+    border-width: 0.1em;
+    overflow-wrap: break-word;
+    vertical-align: middle;
+    margin: auto 0 auto 0;
+}
+
+.card button {
+    padding: 1em;
+    height: 2em;
+}
+
+/* Filter Modal Component */
+
+.modal-form {
+    width: 60%;
+    z-index: 3;
+    text-align: center;
+    margin: 4vh auto auto auto;
+    padding: 1rem;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: #0A141B;
+}
+
+.modal-form legend {
+    text-align: center;
+}
+
+.slider-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.power-type-buttons button {
+    width: 40%;
+    margin: 1vh;
+}
+
+.warning-message {
+    margin: 1vh auto 1vh auto;
+    width: 90%;
+    border-color: red;
+    color: white;
+    background-color: #D95D39;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 1rem;
+    word-wrap: break-word;
+}
+
+.warning-message-inactive {
+    display: none;
+}
+
+.form-label {
+    display: block;
+}
+
+fieldset {
+    margin-top: 1vh;
+}
+
+.form-buttons {
+    display: block;
+    margin-top: 2rem;
+}
+
+.form-buttons button {
+    height: 5vh;
+    margin: 1vw;
+    width: 20%;
+}
+
+.form-power-selection {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+.form-check-label {
+    text-align: left;
+}
+
+.form-other-controls {
+    margin: 2vh auto 2vh auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1vh;
+    column-gap: 1vw;
+}
+
+.form-other-controls select {
+    width: 60%;
+}
+
+/* Rilter and sort buttons */
+
+.filter-sort-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+}
+
+.filter-button {
+    width: 80%;
+    min-height: 5vh;
+}
+
+.sorter {
+    width: auto;
+}
+
+.sorter select {
+    background-color: #11212D;
+    color: white;
+    height: 5vh;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+/* Model content overlay animation */
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
