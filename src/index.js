@@ -1,7 +1,7 @@
 //React Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 //Component Imports
 import WeaponApp from './components/WeaponApp';
 import Home from './components/Home';
@@ -15,7 +15,7 @@ import './css/weaponapp.css';
 
 const Routing = () => {
   return(
-    <BrowserRouter>
+    <HashRouter>
       <PageHeader/>
       <Routes>
         <Route index element={<Home />} />
@@ -23,7 +23,7 @@ const Routing = () => {
         <Route path="weapons" element={<WeaponApp />} />
         <Route path="help" element={<Help />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
