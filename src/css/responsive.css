@@ -1,10 +1,35 @@
 
 /* 800px Breakpoint */
 @media (max-width: 800px) {
+
+    /* header */
     .app-header {
         position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         z-index: 0;
     }
+
+    .app-header h1 {
+        text-align: center;
+        margin: 4vh 0 0 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nav-link {
+        margin: 1em 0 0 0;
+        width: 50%;
+        border-style: dotted;
+        border-width: 1px;
+        padding: 1vh 0 1vh 0;
+    }
+
+    /* Weapon cards */
     .card-container {
         flex-direction: column;
     }
@@ -26,12 +51,23 @@
         margin-bottom: 1vh;
     }
 
+    fieldset legend {
+        text-align: center;
+    }
+
     /* Sort appears below filter button on smaller devices */
     .filter-sort-container {
         display:flex !important; 
         flex-direction: column;
     }
 
+    .form-buttons {
+        display: grid;
+    } 
+
+    .form-other-controls select {
+        width: 100%;
+    }
 
 }
 

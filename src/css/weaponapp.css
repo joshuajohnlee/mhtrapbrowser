@@ -81,9 +81,8 @@
     margin: auto 0 auto 0;
 }
 
-.card button {
+.wiki-button {
     padding: 1em;
-    height: 2em;
 }
 
 /* Filter Modal Component */
@@ -139,13 +138,13 @@ fieldset {
 
 .form-buttons {
     display: block;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .form-buttons button {
     height: 5vh;
-    margin: 1vw;
-    width: 20%;
+    padding: 1em;
+    margin: 0 2% 0 2%;
 }
 
 .form-power-selection {

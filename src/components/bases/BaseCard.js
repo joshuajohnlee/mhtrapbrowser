@@ -1,27 +1,24 @@
-import dataList from '../assets/data.json';
+import dataList from '../../assets/data.json';
 
-// Individual card component that displays a weapon's picture and stats
+// Individual card component that displays a base's picture and stats
 
-export default function WeaponCard({ weapon }) {
+export default function BaseCard({ base }) {
 
-    let imglink = process.env.PUBLIC_URL + "/images/weapons/" + weapon.name + ".png";
-    let weppowerbonus = (weapon.power_bonus * 100).toFixed(0) + "%";
-    let attrbonus = (weapon.attr_bonus * 100).toFixed(0) + "%";
-    let cheese_effect = (dataList.freshness[(weapon.cheese_effect)]);
-    let title_req = (dataList.title_req[weapon.title_req - 1]);
-    let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + weapon.name;
+    let imglink = process.env.PUBLIC_URL + "/images/bases/" + base.name + ".png";
+    let weppowerbonus = (base.power_bonus * 100).toFixed(0) + "%";
+    let attrbonus = (base.attr_bonus * 100).toFixed(0) + "%";
+    let cheese_effect = (dataList.freshness[(base.cheese_effect)]);
+    let title_req = (dataList.title_req[base.title_req - 1]);
+    let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + base.name;
 
     return (
         <>
             <div className="card">
 
-                <div className="trap-image">
-                    <img src={imglink} alt={weapon.name} />
-                </div>
+                <img className="base-image" src={imglink} alt={base.name} />
 
-                <div class="weapon-name-container">
-                    <h4>{weapon.name}</h4>
-                    <h6>{weapon.power_type}</h6>
+                <div className="base-name-container">
+                    <h4>{base.name}</h4>
                 </div>
 
                 <div className="stats-container">
@@ -29,7 +26,7 @@ export default function WeaponCard({ weapon }) {
                         <p>Power</p>
                     </div>
                     <div className="stats-value">
-                        <p>{weapon.power}</p>
+                        <p>{base.power}</p>
                     </div>
                     <div className="stats-header">
                         <p>Power Bonus</p>
@@ -47,7 +44,7 @@ export default function WeaponCard({ weapon }) {
                         <p>Luck</p>
                     </div>
                     <div className="stats-value">
-                        <p>{weapon.luck}</p>
+                        <p>{base.luck}</p>
                     </div>
                     <div className="stats-header" style={{"gridColumn": "1 / span 2"}}>
                         <p>Cheese effect</p>
@@ -65,12 +62,12 @@ export default function WeaponCard({ weapon }) {
                         <p>Limited Edition</p>
                     </div>
                     <div className="stats-value" style={{"gridColumn": "3 / span 2"}}>
-                        <p>{weapon.limited}</p>
+                        <p>{base.limited}</p>
                     </div>
                 </div>
 
                 <a href={wiki_link} target="_blank" rel="noreferrer">
-                    <button className="wikibutton">Find on MHWiki</button>
+                    <button className="wiki-button">Find on MHWiki</button>
                 </a>
             </div>
 

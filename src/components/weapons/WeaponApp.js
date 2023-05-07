@@ -1,14 +1,11 @@
-// React Imports
 import { useState } from "react";
-// Component Imports
-import weaponsList from '../assets/weapons.json';
+import weaponsList from '../../assets/weapons.json';
 import WeaponCard from "./WeaponCard";
-import FilterForm from "./FilterForm";
-import SortButton from "./SortButton";
-// Other Imports
-import lodash from "lodash"; // allows sorting by object key/value
+import FilterForm from "./WeaponFilterForm";
+import SortButton from "../SortButton";
+import lodash from "lodash";
 
-export default function Weapons() {
+export default function WeaponApp() {
 
   const DEFAULT_FILTERS = {
     power_type: {
@@ -86,16 +83,18 @@ export default function Weapons() {
   // return the page
   return (
     <>
+
+      <div className="filter-sort-container">
       <FilterForm
         setFilters={setFilters}
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
       />
-
       <SortButton
         setCurrentSortDirection={setCurrentSortDirection}
         setCurrentSortField={setCurrentSortField}
       />
+      </div>
 
       <div className="card-container">
         {sortedAndFilteredList.map((weapon) => (

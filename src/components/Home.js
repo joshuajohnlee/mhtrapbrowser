@@ -13,6 +13,17 @@ export default function Home () {
             <p>This tool's data is derived from 
                 the <a href="https://mhwiki.hitgrab.com/wiki/index.php/Main_Page" target="_blank" rel="noreferrer">MouseHunt Wiki</a>, made possible by the hard work of its contributors.</p>
 
+            <h2>Known Issues</h2>
+            <ul>
+                <li>Accessibility is not properly implemented yet - apologies to any using screen readers, etc - it will be done as soon as possible.</li>
+                <li>Some text or buttons may display in the wrong positions.</li>
+            </ul>
+
+            <h2>Planned Features</h2>
+            <ul>
+                <li>Searching by name.</li>
+            </ul>
+
         </div>
         </>
     );

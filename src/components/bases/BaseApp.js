@@ -1,26 +1,14 @@
 import { useState } from "react";
-import weaponsList from '../assets/weapons.json';
-import WeaponCard from "./WeaponCard";
-import FilterForm from "./FilterForm";
-import SortButton from "./SortButton";
-import WelcomeWindow from "./WelcomeWindow"
+import basesList from '../../assets/bases.json';
+import BaseCard from "./BaseCard";
+import FilterForm from "./BaseFilterForm";
+import SortButton from "../SortButton";
 import lodash from "lodash";
+import ToTopButton from "../ToTopButton";
 
-export default function Weapons() {
+export default function BaseApp() {
 
   const DEFAULT_FILTERS = {
-    power_type: {
-      "Arcane": true,
-      "Draconic": true,
-      "Forgotten": true,
-      "Hydro": true,
-      "Law": true,
-      "Parental": true,
-      "Physical": true,
-      "Rift": true,
-      "Shadow": true,
-      "Tactical": true,
-    },
     min_power: 0,
     max_power: 16500,
     min_power_bonus: 0,
@@ -38,11 +26,7 @@ export default function Weapons() {
 
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
-  let filteredList = weaponsList.filter(x => {
-
-    if(filters.power_type[x.power_type] === false) {
-      return false;
-    }
+  let filteredList = basesList.filter(x => {
 
     if (x.power < filters.min_power || x.power > filters.max_power) {
       return false;
@@ -84,9 +68,7 @@ export default function Weapons() {
   // return the page
   return (
     <>
-
-      <WelcomeWindow />
-      
+      <ToTopButton />
       <div className="filter-sort-container">
       <FilterForm
         setFilters={setFilters}
@@ -100,10 +82,11 @@ export default function Weapons() {
       </div>
 
       <div className="card-container">
-        {sortedAndFilteredList.map((weapon) => (
-          <WeaponCard key={weapon.name} weapon={weapon} />
+        {sortedAndFilteredList.map((base) => (
+          <BaseCard key={base.name} base={base} />
         ))}
       </div>
+
 
     </>
 

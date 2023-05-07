@@ -1,9 +1,10 @@
 //React Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
+import { HashRouter, Routes, Route, } from 'react-router-dom';
 //Component Imports
-import WeaponApp from './components/WeaponApp';
+import WeaponApp from './components/weapons/WeaponApp';
+import BaseApp from './components/bases/BaseApp'
 import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
 import PageHeader from './components/PageHeader';
@@ -12,6 +13,7 @@ import Help from './components/Help';
 import './css/app.css';
 import './css/responsive.css';
 import './css/weaponapp.css';
+import './css/baseapp.css'
 
 const Routing = () => {
   return(
@@ -21,6 +23,7 @@ const Routing = () => {
         <Route index element={<Home />} />
         <Route path="/mhtrapbrowser" element={<Home />} />
         <Route path="/weapons" element={<WeaponApp />} />
+        <Route path="/bases" element={<BaseApp />} />
         <Route path="/help" element={<Help />} />
       </Routes>
     </HashRouter>

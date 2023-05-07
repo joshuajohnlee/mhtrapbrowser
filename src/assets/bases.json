@@ -7,7 +7,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds Cupcake Charm; Extra Sweet Cupcake Charm; and Sprinkly Sweet Cupcake Charm to mouse loot pool"
     },
     {
@@ -18,7 +18,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2017 Charm to mouse loot pool during 2017"
     },
     {
@@ -29,7 +29,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2018 Charm to mouse loot pool during 2018"
     },
     {
@@ -40,7 +40,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2019 Charm to mouse loot pool during 2019"
     },
     {
@@ -51,7 +51,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2020 Charm and Rift 2020 Charm to mouse loot pool during 2020"
     },
     {
@@ -62,7 +62,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2021 Charm and Rift 2021 Charm to mouse loot pool during 2021"
     },
     {
@@ -73,7 +73,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds 2022 Charm and Rift 2022 Charm to mouse loot pool during 2022"
     },
     {
@@ -84,18 +84,18 @@
       "luck": 20,
       "cheese_effect": 7,
       "title_req": 16,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
-      "name": "Alchemist's Cookbook Base E",
+      "name": "Alchemist's Cookbook Base",
       "power": "350",
       "power_bonus": 0.1,
       "attr_bonus": 0.1,
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a chance to duplicate any potion that a mouse drops as loot"
     },
     {
@@ -106,7 +106,7 @@
       "luck": 10,
       "cheese_effect": 10,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Boosts the chance to upgrade equipped non-Rift Snowball Charm variant to 100%"
     },
     {
@@ -117,7 +117,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Consumes an Ancient Relic to generate a random Ancient Charm variant upon catching a Relic Hunter Mouse"
     },
     {
@@ -128,7 +128,7 @@
       "luck": 8,
       "cheese_effect": 6,
       "title_req": 8,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -139,7 +139,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 15,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -150,7 +150,7 @@
       "luck": 6,
       "cheese_effect": 8,
       "title_req": 10,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a chance to generate a random Garden Essences when hunting in the Living Garden; Lost City; Sand Dunes; Twisted Garden; Cursed City; and Sand Crypts"
     },
     {
@@ -161,7 +161,7 @@
       "luck": 0,
       "cheese_effect": 9,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -172,7 +172,7 @@
       "luck": 4,
       "cheese_effect": 8,
       "title_req": 7,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -183,51 +183,51 @@
       "luck": 11,
       "cheese_effect": 7,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Birthday Cake Base E",
+      "name": "Birthday Cake Base",
       "power": "175",
       "power_bonus": 0.11,
       "attr_bonus": 0.05,
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Birthday Confetti Cake Base E",
+      "name": "Birthday Confetti Cake Base",
       "power": "300",
       "power_bonus": 0.12,
       "attr_bonus": 0.12,
       "luck": 10,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Birthday Dragée Cake Base E",
+      "name": "Birthday Dragée Cake Base",
       "power": "175",
       "power_bonus": 0.05,
       "attr_bonus": 0.15,
       "luck": 6,
       "cheese_effect": 8,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Birthday Ube Cake Base E",
+      "name": "Birthday Ube Cake Base",
       "power": "300",
       "power_bonus": 0.13,
       "attr_bonus": 0.13,
       "luck": 10,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -238,7 +238,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Generates bonus loot upon catching a Black Widow Mouse"
     },
     {
@@ -249,62 +249,62 @@
       "luck": 5,
       "cheese_effect": 7,
       "title_req": 5,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 2 Luck when armed with Champion Charm"
     },
     {
-      "name": "Candy Cane Base E",
+      "name": "Candy Cane Base",
       "power": "300",
       "power_bonus": 0,
       "attr_bonus": 0,
       "luck": 8,
       "cheese_effect": 7,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Carrot Birthday Cake Base E",
+      "name": "Carrot Birthday Cake Base",
       "power": "175",
       "power_bonus": 0.05,
       "attr_bonus": 0.05,
       "luck": 3,
       "cheese_effect": 7,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Cheesecake Base E",
+      "name": "Cheesecake Base",
       "power": "175",
       "power_bonus": 0.03,
       "attr_bonus": 0.2,
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Chocolate Bar Base E",
+      "name": "Chocolate Bar Base",
       "power": "350",
       "power_bonus": 0.1,
       "attr_bonus": 0.05,
       "luck": 10,
       "cheese_effect": 8,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a chance to boost the effect of Eggstra Charm or Eggstra Charge Charm from doubling to tripling eggs"
     },
     {
-      "name": "Chocolate Birthday Cake Base E",
+      "name": "Chocolate Birthday Cake Base",
       "power": "175",
       "power_bonus": 0.08,
       "attr_bonus": 0.05,
       "luck": 1,
       "cheese_effect": 6,
       "title_req": 3,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -315,7 +315,7 @@
       "luck": 4,
       "cheese_effect": 8,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 1;000 Power with S.L.A.C. or S.L.A.C. II in Claw Shot City"
     },
     {
@@ -326,7 +326,7 @@
       "luck": 13,
       "cheese_effect": 6,
       "title_req": 15,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -337,7 +337,7 @@
       "luck": 5,
       "cheese_effect": 6,
       "title_req": 14,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a 30% chance to remove Dead End clue upon catching a mouse in Labyrinth"
     },
     {
@@ -348,29 +348,29 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Haunted Estate Set: improves drops from The Haunted Manor Trap when both are equipped"
     },
     {
-      "name": "Crushed Birthday Cake Base E",
+      "name": "Crushed Birthday Cake Base",
       "power": "185",
       "power_bonus": 0.03,
       "attr_bonus": 0.15,
       "luck": 5,
       "cheese_effect": 0,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Cupcake Birthday Base E",
+      "name": "Cupcake Birthday Base",
       "power": "300",
       "power_bonus": 0.07,
       "attr_bonus": 0.07,
       "luck": 7,
       "cheese_effect": 9,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds Cupcake Charm to mouse loot pool"
     },
     {
@@ -381,7 +381,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 12,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Lost City"
     },
     {
@@ -392,7 +392,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 4,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -403,7 +403,7 @@
       "luck": 0,
       "cheese_effect": 12,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 665 Power and 9 Luck from 1800 ft onward in Iceberg"
     },
     {
@@ -414,7 +414,7 @@
       "luck": 4,
       "cheese_effect": 10,
       "title_req": 4,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -425,7 +425,7 @@
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 15,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has boosted stats of 1500 Power; 25% Power Bonus; 25% Attraction Bonus and 20 Luck when the Hunter has at least one toothlet"
     },
     {
@@ -436,7 +436,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 8,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a bonus of 1;000 Power in Sunken City when diving"
     },
     {
@@ -447,7 +447,7 @@
       "luck": 10,
       "cheese_effect": 4,
       "title_req": 12,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Consumes a Flameshard every hunt and generates bonus loot when capturing a mouse when armed in Sandtail Desert."
     },
     {
@@ -458,7 +458,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -469,29 +469,29 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Eerie Base E",
+      "name": "Eerie Base",
       "power": "300",
       "power_bonus": 0.08,
       "attr_bonus": 0.05,
       "luck": 8,
       "cheese_effect": 4,
       "title_req": 6,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Eerier Base E",
+      "name": "Eerier Base",
       "power": "300",
       "power_bonus": 0.1,
       "attr_bonus": 0,
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -502,7 +502,7 @@
       "luck": 8,
       "cheese_effect": 4,
       "title_req": 12,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a chance to generate Meteorite Piece during night in Fort Rox"
     },
     {
@@ -513,7 +513,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 16,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -524,7 +524,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 15,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -535,18 +535,18 @@
       "luck": 0,
       "cheese_effect": 5,
       "title_req": 4,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
-      "name": "Extra Sweet Cupcake Birthday Base E",
+      "name": "Extra Sweet Cupcake Birthday Base",
       "power": "300",
       "power_bonus": 0.08,
       "attr_bonus": 0.08,
       "luck": 8,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds Extra Sweet Cupcake Charm to mouse loot pool"
     },
     {
@@ -557,18 +557,18 @@
       "luck": 2,
       "cheese_effect": 8,
       "title_req": 1,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
-      "name": "Festive Winter Hunt Base E",
+      "name": "Festive Winter Hunt Base",
       "power": "100",
       "power_bonus": 0,
       "attr_bonus": 0.15,
       "luck": 10,
       "cheese_effect": 8,
       "title_req": 3,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -579,7 +579,7 @@
       "luck": 4,
       "cheese_effect": 5,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -590,7 +590,7 @@
       "luck": 12,
       "cheese_effect": 5,
       "title_req": 14,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -601,7 +601,7 @@
       "luck": 10,
       "cheese_effect": 8,
       "title_req": 15,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Doubles weather intensity gain on successful catch in Moussu Picchu"
     },
     {
@@ -612,7 +612,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 14,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -623,7 +623,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 1,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a chance to generate an extra Student Token in the Dojo or Chi Token in the Furoma Rift."
     },
     {
@@ -634,7 +634,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 14,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Increase the attraction rate of mice that drop higher quantities of Mineral; Gemstone; and Diamond in Fungal Cavern"
     },
     {
@@ -645,18 +645,18 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds the Gift of the Day to mouse loot pool"
     },
     {
-      "name": "Gingerbread Base E",
+      "name": "Gingerbread Base",
       "power": "225",
       "power_bonus": 0.08,
       "attr_bonus": 0,
       "luck": 4,
       "cheese_effect": 10,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -667,7 +667,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a bonus of 6 Luck when armed with Golem Guardian Trap"
     },
     {
@@ -678,7 +678,7 @@
       "luck": 8,
       "cheese_effect": 9,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 4 Luck when armed with Champion Charm"
     },
     {
@@ -689,7 +689,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -700,7 +700,7 @@
       "luck": 2,
       "cheese_effect": 8,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Decreases the attraction rate of Zealot in The Mad Depths of Iceberg"
     },
     {
@@ -711,7 +711,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -722,7 +722,7 @@
       "luck": 6,
       "cheese_effect": 8,
       "title_req": 12,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Doubles petals and herbs loot range in Living Garden; Lost City; Sand Dunes; Twisted Garden; Cursed City; and Sand Crypts"
     },
     {
@@ -733,7 +733,7 @@
       "luck": 10,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -744,18 +744,18 @@
       "luck": 6,
       "cheese_effect": 8,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has the combined effects of:"
     },
     {
-      "name": "Jade Base E",
+      "name": "Jade Base",
       "power": "300",
       "power_bonus": 0.1,
       "attr_bonus": 0,
       "luck": 4,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -766,7 +766,7 @@
       "luck": 10,
       "cheese_effect": 4,
       "title_req": 14,
-      "limited": 0,
+      "limited": "no",
       "effect": "Reduces the chance that failing to catch a mouse in a Labyrinth hallway will result in a Dead End Clue"
     },
     {
@@ -777,18 +777,18 @@
       "luck": 8,
       "cheese_effect": 8,
       "title_req": 13,
-      "limited": 0,
+      "limited": "no",
       "effect": "Doubles petals and herbs loot range in Living Garden; Lost City; Sand Dunes; Twisted Garden; Cursed City; and Sand Crypts"
     },
     {
-      "name": "Living Grove Base C",
+      "name": "Living Grove Base",
       "power": "450",
       "power_bonus": 0.1,
       "attr_bonus": 0.05,
       "luck": 8,
       "cheese_effect": 8,
       "title_req": 12,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has bonus power; luck; and attraction when armed with Growth or Wild Growth Charm"
     },
     {
@@ -799,7 +799,7 @@
       "luck": 10,
       "cheese_effect": 2,
       "title_req": 6,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -810,7 +810,7 @@
       "luck": 5,
       "cheese_effect": 7,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Increase the attraction rate of Tunnel Rat in Treacherous Tunnels of Iceberg"
     },
     {
@@ -821,7 +821,7 @@
       "luck": 15,
       "cheese_effect": 7,
       "title_req": 14,
-      "limited": 0,
+      "limited": "no",
       "effect": "Reduces the chance that failing to catch a mouse in a Labyrinth hallway will result in a Dead End Clue"
     },
     {
@@ -832,7 +832,7 @@
       "luck": 6,
       "cheese_effect": 11,
       "title_req": 13,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Consumes 2 Mist Canister per hunt to keep Mist Meter locked in Green Zone in Burroughs Rift"
     },
     {
@@ -843,7 +843,7 @@
       "luck": 8,
       "cheese_effect": 3,
       "title_req": 10,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -854,7 +854,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -865,7 +865,7 @@
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 6,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -876,7 +876,7 @@
       "luck": 12,
       "cheese_effect": 1,
       "title_req": 13,
-      "limited": 0,
+      "limited": "no",
       "effect": "Generates 50% more Bland Queso from pumping when used in Queso River"
     },
     {
@@ -887,7 +887,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -898,18 +898,18 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 12,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
-      "name": "Physical Brace Base E",
+      "name": "Physical Brace Base",
       "power": "300",
       "power_bonus": 0,
       "attr_bonus": 0.05,
       "luck": 8,
       "cheese_effect": 6,
       "title_req": 10,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a bonus of 25% Power Bonus when armed with a Physical weapon"
     },
     {
@@ -920,7 +920,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -931,7 +931,7 @@
       "luck": 4,
       "cheese_effect": 10,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -942,7 +942,7 @@
       "luck": 5,
       "cheese_effect": 5,
       "title_req": 9,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has extra luck when paired with the Polluted charm variant"
     },
     {
@@ -953,7 +953,7 @@
       "luck": 5,
       "cheese_effect": 6,
       "title_req": 16,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 20 Power per floor reached during Ultimate Umbra and 2 Luck per Total Eclipse floor reached during Ultimate Umbra"
     },
     {
@@ -964,7 +964,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -975,7 +975,7 @@
       "luck": 10,
       "cheese_effect": 10,
       "title_req": 5,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -986,7 +986,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 9,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has extra luck when paired with the Polluted charm variant"
     },
     {
@@ -997,7 +997,7 @@
       "luck": 4,
       "cheese_effect": 5,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Moves extra distance when catching Bomb Squad in Bombing Run of Iceberg"
     },
     {
@@ -1008,7 +1008,7 @@
       "luck": 11,
       "cheese_effect": 7,
       "title_req": 12,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has Rift Set Bonuses"
     },
     {
@@ -1019,7 +1019,7 @@
       "luck": 5,
       "cheese_effect": 6,
       "title_req": 13,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Consumes 10/20/35/50 Calcified Rift Mist to convert equipped Snowball Charm; Super Snowball Charm; Extreme Snowball Charm; or Ultimate Snowball Charm into its Rift version."
     },
     {
@@ -1030,7 +1030,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -1041,7 +1041,7 @@
       "luck": 5,
       "cheese_effect": 6,
       "title_req": 8,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Generates extra Rune loot in Bristle Woods"
     },
     {
@@ -1052,18 +1052,18 @@
       "luck": 6,
       "cheese_effect": 6,
       "title_req": 11,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has 18% Power Bonus in Seasonal Garden."
     },
     {
-      "name": "Seasonal Gift of the Day Base E",
+      "name": "Seasonal Gift of the Day Base",
       "power": "100",
       "power_bonus": 0,
       "attr_bonus": 0.15,
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 2,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds the Gift of the Day to the mouse loot pool"
     },
     {
@@ -1074,7 +1074,7 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -1085,7 +1085,7 @@
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 15,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has boosted stats of 3750 Power; 25% Power Bonus; 25% Attraction Bonus and 50 Luck when the Hunter has at least one toothlet"
     },
     {
@@ -1096,7 +1096,7 @@
       "luck": 7,
       "cheese_effect": 8,
       "title_req": 8,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 3 Luck when armed with Champion Charm"
     },
     {
@@ -1107,7 +1107,7 @@
       "luck": 8,
       "cheese_effect": 6,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds Brain Bits to zombie mice's loot pool"
     },
     {
@@ -1118,7 +1118,7 @@
       "luck": 10,
       "cheese_effect": 12,
       "title_req": 12,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Sand Crypts"
     },
     {
@@ -1129,7 +1129,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
@@ -1140,7 +1140,7 @@
       "luck": 6,
       "cheese_effect": 8,
       "title_req": 12,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has extra power; luck; and attraction when paired with Growth or Wild Growth Charm"
     },
     {
@@ -1151,7 +1151,7 @@
       "luck": 7,
       "cheese_effect": 7,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 500 Power and 8% Power Bonus when armed with Spellbook Charm"
     },
     {
@@ -1162,18 +1162,18 @@
       "luck": 3,
       "cheese_effect": 4,
       "title_req": 11,
-      "limited": 0,
+      "limited": "no",
       "effect": "Prevents depth lost from Brute in Brutal Bulwark of Iceberg."
     },
     {
-      "name": "Sprinkly Sweet Cupcake Birthday Base E",
+      "name": "Sprinkly Sweet Cupcake Birthday Base",
       "power": "300",
       "power_bonus": 0.09,
       "attr_bonus": 0.09,
       "luck": 9,
       "cheese_effect": 9,
       "title_req": 5,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Adds Sprinkly Sweet Cupcake Charm to mouse loot pool"
     },
     {
@@ -1184,7 +1184,7 @@
       "luck": 0,
       "cheese_effect": 7,
       "title_req": 2,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -1195,7 +1195,7 @@
       "luck": 10,
       "cheese_effect": 6,
       "title_req": 14,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Stealth Mode: has 50% chance of not losing Stealth in Zokor"
     },
     {
@@ -1206,7 +1206,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 13,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -1217,18 +1217,18 @@
       "luck": 10,
       "cheese_effect": 5,
       "title_req": 7,
-      "limited": 1,
+      "limited": "yes",
       "effect": "None"
     },
     {
-      "name": "Tiki Base E; C",
+      "name": "Tiki Base",
       "power": "200",
       "power_bonus": 0.18,
       "attr_bonus": 0.05,
       "luck": 8,
       "cheese_effect": 8,
       "title_req": 8,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has a bonus of 6 Luck against Tribe mice"
     },
     {
@@ -1239,7 +1239,7 @@
       "luck": 10,
       "cheese_effect": 7,
       "title_req": 14,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Reduces the chance that failing to catch a mouse in a Labyrinth hallway will result in a Dead End Clue"
     },
     {
@@ -1250,7 +1250,7 @@
       "luck": 4,
       "cheese_effect": 7,
       "title_req": 8,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 6 Luck against Tribe mice"
     },
     {
@@ -1261,7 +1261,7 @@
       "luck": 0,
       "cheese_effect": 8,
       "title_req": 8,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Doubles the range of Seashell; Savoury Vegetables; Delicious Stone and all Seeds dropped in Tribal Isles"
     },
     {
@@ -1272,7 +1272,7 @@
       "luck": 5,
       "cheese_effect": 8,
       "title_req": 11,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Has the combined effects of:"
     },
     {
@@ -1283,7 +1283,7 @@
       "luck": 5,
       "cheese_effect": 7,
       "title_req": 8,
-      "limited": 1,
+      "limited": "yes",
       "effect": "Generates pepper when mice drop Pepper Seed in Elub Shore; Nerg Plains; and Derr Dunes"
     },
     {
@@ -1294,7 +1294,7 @@
       "luck": 8,
       "cheese_effect": 3,
       "title_req": 9,
-      "limited": 0,
+      "limited": "no",
       "effect": "Has a bonus of 5 luck and 5% Power in the Toxic Spill"
     },
     {
@@ -1305,7 +1305,7 @@
       "luck": 0,
       "cheese_effect": 8,
       "title_req": 1,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     },
     {
@@ -1316,7 +1316,7 @@
       "luck": 0,
       "cheese_effect": 6,
       "title_req": 1,
-      "limited": 0,
+      "limited": "no",
       "effect": "None"
     }
    ]

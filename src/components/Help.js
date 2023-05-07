@@ -1,6 +1,6 @@
 export default function Help() {
     return(
     <>
-        <p>This will be the help.</p>
+        <p>Help documentation is being written and will be published here shortly.</p>
     </>)
 }

@@ -54,50 +54,6 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
 
     }
 
-    const handleCheckboxChange = (e) => {
-        if (e.target.checked) {
-            setFilters({...filters,
-                "power_type": {...filters.power_type, [e.target.value]: true}
-            });
-        } else {
-            setFilters({...filters,
-                "power_type": {...filters.power_type, [e.target.value]: false}
-            });
-        }
-    }
-
-    function selectAllPowerTypes() {
-        setFilters({...filters, power_type: {
-            "Arcane": true,
-            "Draconic": true,
-            "Forgotten": true,
-            "Hydro": true,
-            "Law": true,
-            "Parental": true,
-            "Physical": true,
-            "Rift": true,
-            "Shadow": true,
-            "Tactical": true,
-          }})
-          console.log(filters.power_type);
-    }
-
-    function selectNoPowerTypes() {
-        setFilters({...filters, power_type: {
-            "Arcane": false,
-            "Draconic": false,
-            "Forgotten": false,
-            "Hydro": false,
-            "Law": false,
-            "Parental": false,
-            "Physical": false,
-            "Rift": false,
-            "Shadow": false,
-            "Tactical": false,
-          }})
-          console.log(filters.power_type);
-    }
-
     function openModal() {
         setisModalOpen(true);
         document.body.style.overflow = 'hidden';
@@ -135,47 +91,6 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
                 shouldCloseOnOverlayClick={true}
             >
                 <form id="filterForm">
-
-                    <fieldset >
-                        <legend>Power Type</legend>
-
-                        <div className="power-type-buttons">
-                            <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
-                            <button type= "button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button>
-                        </div>
-
-                        <div className="form-power-selection">
-                            <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onChange={handleCheckboxChange}/>
-                            <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={filters.power_type.Draconic} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={filters.power_type.Forgotten} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={filters.power_type.Hydro} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={filters.power_type.Law} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-7">Law</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={filters.power_type.Parental} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={filters.power_type.Physical} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={filters.power_type.Rift} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={filters.power_type.Shadow} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
-
-                            <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={filters.power_type.Tactical} onChange={handleCheckboxChange} />
-                            <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
-                        </div>
-                    </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Power</legend>
