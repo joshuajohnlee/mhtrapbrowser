@@ -23,8 +23,6 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
 
         setFilters({ ...filters, [e.target.name]: e.target.value });
 
-        console.log("Limited is set to " + filters.limited);
-
         if (Number(filters.min_power) > Number(filters.max_power)) {
             displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
             return (null)
@@ -79,7 +77,6 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
             "Shadow": true,
             "Tactical": true,
           }})
-          console.log(filters.power_type);
     }
 
     function selectNoPowerTypes() {
@@ -95,7 +92,6 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
             "Shadow": false,
             "Tactical": false,
           }})
-          console.log(filters.power_type);
     }
 
     function openModal() {

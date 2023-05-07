@@ -5,10 +5,12 @@ import FilterForm from "./BaseFilterForm";
 import SortButton from "../SortButton";
 import lodash from "lodash";
 import ToTopButton from "../ToTopButton";
+import BaseNameSearch from '../bases/BaseNameSearch'
 
 export default function BaseApp() {
 
   const DEFAULT_FILTERS = {
+    base_name: "",
     min_power: 0,
     max_power: 16500,
     min_power_bonus: 0,
@@ -56,6 +58,13 @@ export default function BaseApp() {
       return false;
     }
 
+      let userString = (filters.base_name).toLowerCase();
+      let testString = (x.name).toLowerCase();
+  
+      if (!testString.includes(userString)) {
+        return false;
+      }
+
     return true;
   });
 
@@ -80,6 +89,11 @@ export default function BaseApp() {
         setCurrentSortField={setCurrentSortField}
       />
       </div>
+
+      <BaseNameSearch 
+        filters={filters}
+        setFilters={setFilters}
+      />
 
       <div className="card-container">
         {sortedAndFilteredList.map((base) => (

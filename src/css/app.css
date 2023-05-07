@@ -70,6 +70,7 @@ nav {
 
 a:link, a:visited, a:hover, a:active { 
     text-decoration: none;
+    color: #40c28c;
 }
 
 /* top button */
@@ -86,4 +87,19 @@ a:link, a:visited, a:hover, a:active {
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
+ }
+
+ 
+ /* Name search bar */
+
+ .name-search-container {
+    display:grid;
+    align-items: center;
+    width: 60%;
+    margin: 1vh auto 1vh auto;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+
+ .name-search * {
+    margin: 0 auto 0 auto;
  }

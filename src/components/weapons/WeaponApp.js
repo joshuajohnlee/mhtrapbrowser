@@ -4,10 +4,12 @@ import WeaponCard from "./WeaponCard";
 import FilterForm from "./WeaponFilterForm";
 import SortButton from "../SortButton";
 import lodash from "lodash";
+import NameSearch from "../weapons/WeaponNameSearch";
 
 export default function WeaponApp() {
 
   const DEFAULT_FILTERS = {
+    weapon_name: "",
     power_type: {
       "Arcane": true,
       "Draconic": true,
@@ -71,6 +73,14 @@ export default function WeaponApp() {
       return false;
     }
 
+    // eslint-disable-next-line
+    let userString = (filters.weapon_name).toLowerCase();
+    let testString = (x.name).toLowerCase();
+
+    if (!testString.includes(userString)) {
+      return false;
+    }
+
     return true;
   });
 
@@ -94,7 +104,14 @@ export default function WeaponApp() {
         setCurrentSortDirection={setCurrentSortDirection}
         setCurrentSortField={setCurrentSortField}
       />
+
       </div>
+
+      
+      <NameSearch 
+        filters={filters}
+        setFilters={setFilters}
+      />
 
       <div className="card-container">
         {sortedAndFilteredList.map((weapon) => (
