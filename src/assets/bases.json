@@ -1318,5 +1318,16 @@
       "title_req": 1,
       "limited": "no",
       "effect": "None"
+    },
+    {
+      "name": "Queso Cannonstorm Base",
+      "power": 1000,
+      "power_bonus": 0.25,
+      "attr_bonus": 0,
+      "luck": 8,
+      "cheese_effect": 4,
+      "title_req": 10,
+      "limited": "yes",
+      "effect": "While armed within the Queso Canyon Region: This base will blast 5 Solidified Amber Queso on every hunt. Bonus Queso Canyon loot will be found in the rubble after catching a mouse"
     }
    ]
