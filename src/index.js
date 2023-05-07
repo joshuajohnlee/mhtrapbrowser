@@ -19,9 +19,9 @@ const Routing = () => {
       <PageHeader/>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="mhtrapbrowser" element={<Home />} />
-        <Route path="weapons" element={<WeaponApp />} />
-        <Route path="help" element={<Help />} />
+        <Route path="/mhtrapbrowser" element={<Home />} />
+        <Route path="/weapons" element={<WeaponApp />} />
+        <Route path="/help" element={<Help />} />
       </Routes>
     </HashRouter>
   )

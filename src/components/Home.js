@@ -10,7 +10,7 @@ export default function Home () {
             some cheese on it (maybe a charm, too!) and go hunting across the kingdom!</p>
 
             
-            <p>This tool's information is derived from 
+            <p>This tool's data is derived from 
                 the <a href="https://mhwiki.hitgrab.com/wiki/index.php/Main_Page" target="_blank" rel="noreferrer">MouseHunt Wiki</a>, made possible by the hard work of its contributors.</p>
 
         </div>
