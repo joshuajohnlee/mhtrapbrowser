@@ -5,6 +5,7 @@ import FilterForm from "./WeaponFilterForm";
 import SortButton from "../SortButton";
 import lodash from "lodash";
 import NameSearch from "../weapons/WeaponNameSearch";
+import ToTopButton from "../ToTopButton"
 
 export default function WeaponApp() {
 
@@ -118,6 +119,8 @@ export default function WeaponApp() {
           <WeaponCard key={weapon.name} weapon={weapon} />
         ))}
       </div>
+
+      <ToTopButton />
 
     </>
 
