@@ -61,8 +61,14 @@ export default function BaseCard({ base }) {
                     <div className="stats-header" style={{"gridColumn": "1 / span 2"}}>
                         <p>Limited Edition</p>
                     </div>
-                    <div className="stats-value" style={{"gridColumn": "3 / span 2"}}>
+                    <div className="stats-value limited" style={{"gridColumn": "3 / span 2"}}>
                         <p>{base.limited}</p>
+                    </div>
+                    <div className="stats-header" style={{"gridColumn": "1 / span 2"}}>
+                        <p>Effect</p>
+                    </div>
+                    <div className="stats-value" style={{"gridColumn": "3 / span 2"}}>
+                        <p>{base.effect}</p>
                     </div>
                 </div>
 

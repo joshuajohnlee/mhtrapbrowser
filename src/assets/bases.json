@@ -382,7 +382,7 @@
       "cheese_effect": 6,
       "title_req": 12,
       "limited": "yes",
-      "effect": "Lost City"
+      "effect": "50% chance to break any curse in the Lost City and Cursed City upon catching a mouse."
     },
     {
       "name": "Deadwood Plank Base",
@@ -745,7 +745,7 @@
       "cheese_effect": 8,
       "title_req": 11,
       "limited": "no",
-      "effect": "Has the combined effects of:"
+      "effect": "Increases the attraction rate of the Tunnel Rats mice. Prevents any backwards movement from Brute mice. Capturing Bomb Squad mice propels you forward 20 feet. Repels Zealot mice. Provides the same bonus as the Deep Freeze Base."
     },
     {
       "name": "Jade Base",
@@ -1119,7 +1119,7 @@
       "cheese_effect": 12,
       "title_req": 12,
       "limited": "yes",
-      "effect": "Sand Crypts"
+      "effect": "Adds +1 to the salt level in the Sand Crypts upon catching a mouse with any salt charm."
     },
     {
       "name": "Snake Jade Base",

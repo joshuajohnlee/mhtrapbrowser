@@ -24,6 +24,7 @@ button {
 .content-container {
     width: 80%;
     margin: 5vh auto 0 auto;
+    text-align: left;
 }
 
 /* App Header Bar */

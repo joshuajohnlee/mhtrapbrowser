@@ -1,0 +1,1 @@
+- Refined Pollutinum Base image is incorrectly cropped.

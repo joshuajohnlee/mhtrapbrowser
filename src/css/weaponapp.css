@@ -72,13 +72,16 @@
 }
 
 .stats-value {
-    text-transform: capitalize;
     border-style: dotted none dotted none;
     border-color: #89A2BE;
     border-width: 0.1em;
     overflow-wrap: break-word;
     vertical-align: middle;
     margin: auto 0 auto 0;
+}
+
+.limited {
+    text-transform: capitalize;
 }
 
 .wiki-button {
