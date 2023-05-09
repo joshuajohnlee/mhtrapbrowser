@@ -1,4 +1,5 @@
 **v0.3**
+- Added bountiful beanstalk weapons/bases
 - Base images now cropped to exclude blank space where weapon would be
 - Added name search
 - Base information now includes special effects
