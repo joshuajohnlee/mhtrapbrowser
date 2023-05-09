@@ -1329,5 +1329,16 @@
       "title_req": 10,
       "limited": "yes",
       "effect": "While armed within the Queso Canyon Region: This base will blast 5 Solidified Amber Queso on every hunt. Bonus Queso Canyon loot will be found in the rubble after catching a mouse"
+    },
+    {
+      "name": "Royal Ruby Refractor Base",
+      "power": 2000,
+      "power_bonus": 0.20,
+      "attr_bonus": 0.15,
+      "luck": 26,
+      "cheese_effect": 9,
+      "title_req": 17,
+      "limited": "no",
+      "effect": "None"
     }
    ]

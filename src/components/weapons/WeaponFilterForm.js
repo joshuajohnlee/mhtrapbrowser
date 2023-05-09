@@ -180,11 +180,11 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
                     <fieldset className="slider-container">
                         <legend>Power</legend>
                         <label className="form-label" htmlFor="min_power">Minimum power</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="16500" step="100" value={filters.min_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="20000" step="100" value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
                         <label className="form-label" htmlFor="max_power">Maximum power</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="16500" step="100" value={filters.max_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="20000" step="100" value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
@@ -214,11 +214,11 @@ export default function FilterForm({ setFilters, filters , DEFAULTS}) {
                         <legend>Luck</legend>
 
                         <label className="form-label" htmlFor="min_luck">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max="40" value={filters.min_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_luck" min="0" max="42" value={filters.min_luck} onChange={handleChange} />
                         <output id="min_luck_value">{filters.min_luck}</output>
 
                         <label className="form-label" htmlFor="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max="40" value={filters.max_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_luck" min="0" max="42" value={filters.max_luck} onChange={handleChange} />
                         <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 

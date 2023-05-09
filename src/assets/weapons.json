@@ -2626,5 +2626,29 @@
     "cheese_effect": 1,
     "title_req": 11,
     "limited": "no"
+  },
+  {
+    "ID": "W220",
+    "name": "Legendary KingBot",
+    "power_type": "Physical",
+    "power": 20000,
+    "power_bonus": 0.35,
+    "attr_bonus": 0.20,
+    "luck": 42,
+    "cheese_effect": 10,
+    "title_req": 17,
+    "limited": "no"
+  },
+  {
+    "ID": "W221",
+    "name": "Infinite Dark Magic Mirrors Trap",
+    "power_type": "Shadow",
+    "power": 10000,
+    "power_bonus": 0.32,
+    "attr_bonus": 0.15,
+    "luck": 40,
+    "cheese_effect": 3,
+    "title_req": 17,
+    "limited": "no"
   }
 ]
