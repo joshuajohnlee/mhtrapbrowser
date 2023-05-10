@@ -64,7 +64,7 @@ export default function WeaponCard({ weapon }) {
                     <div className="stats-header" style={{"gridColumn": "1 / span 2"}}>
                         <p>Limited Edition</p>
                     </div>
-                    <div className="stats-value" style={{"gridColumn": "3 / span 2"}}>
+                    <div className="stats-value limited" style={{"gridColumn": "3 / span 2"}}>
                         <p>{weapon.limited}</p>
                     </div>
                 </div>
