@@ -1,3 +1,10 @@
+:root {
+    --dark-bg: #0A141B;
+    --light-bg: #11212D;
+    --link-green: #B5FFE1;
+    --button-blue: #6D9DC5;
+}
+
 /* Welcome Window Modal */
 
 .welcome-window {
@@ -34,10 +41,10 @@
 
 .card {
     display: flex;
-    max-width: 30%;
+    max-width: 45%;
     justify-content: center;
     flex-direction: column;
-    background-color: #2F384B;
+    background-color: var(--light-bg);
     padding: 1rem;
     margin: 1rem auto 1rem auto;
     border-radius: 15px;
@@ -45,8 +52,7 @@
 
 .trap-image {
     margin: 0 auto 0 auto;
-    width: 50%;
-    height: 50%;
+    width: 70%;
     background-image: url("base.png");
     background-size: contain;
 }
@@ -94,11 +100,10 @@
     width: 60%;
     z-index: 3;
     text-align: center;
-    margin: 4vh auto auto auto;
+    margin: 5vh auto auto auto;
     padding: 1rem;
-    border-style: solid;
     border-radius: 10px;
-    background-color: #0A141B;
+    background-color: var(--light-bg);
 }
 
 .modal-form legend {
@@ -107,6 +112,7 @@
 
 .slider-container {
     display:grid;
+    row-gap: 2vh;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -131,10 +137,6 @@
     display: none;
 }
 
-.form-label {
-    display: block;
-}
-
 fieldset {
     margin-top: 1vh;
 }
@@ -145,7 +147,6 @@ fieldset {
 }
 
 .form-buttons button {
-    height: 5vh;
     padding: 1em;
     margin: 0 2% 0 2%;
 }
@@ -174,18 +175,17 @@ fieldset {
 /* Filter and sort buttons */
 
 .filter-sort-container {
+    max-width: 60%;
     display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    column-gap: 2%;
     align-items: center;
-    grid-template-columns: 2fr 1fr;
+    margin: 1vh auto 0 auto;
 }
 
 .filter-button {
-    width: 80%;
-    min-height: 5vh;
-}
-
-.sorter {
-    width: auto;
+    width: 60%;
+    height: 5vh;
 }
 
 .sorter select {

@@ -42,7 +42,7 @@ export default function WeaponApp() {
 
   let filteredList = weaponsList.filter(x => {
 
-    if(filters.power_type[x.power_type] === false) {
+    if (filters.power_type[x.power_type] === false) {
       return false;
     }
 
@@ -95,24 +95,25 @@ export default function WeaponApp() {
   return (
     <>
 
-      <div className="filter-sort-container">
+
       <FilterForm
         setFilters={setFilters}
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
       />
-      <SortButton
-        setCurrentSortDirection={setCurrentSortDirection}
-        setCurrentSortField={setCurrentSortField}
-      />
 
+      <div className="filter-sort-container">
+        <SortButton
+          setCurrentSortDirection={setCurrentSortDirection}
+          setCurrentSortField={setCurrentSortField}
+        />
+
+        <NameSearch
+          filters={filters}
+          setFilters={setFilters}
+        />
       </div>
 
-      
-      <NameSearch 
-        filters={filters}
-        setFilters={setFilters}
-      />
 
       <div className="card-container">
         {sortedAndFilteredList.map((weapon) => (

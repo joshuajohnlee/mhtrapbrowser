@@ -13,7 +13,7 @@ import Help from './components/Help';
 import './css/app.css';
 import './css/responsive.css';
 import './css/weaponapp.css';
-import './css/baseapp.css'
+import './css/baseapp.css';
 
 const Routing = () => {
   return(

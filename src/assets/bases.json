@@ -815,7 +815,7 @@
     },
     {
       "name": "Minotaur Base",
-      "power": "1,000",
+      "power": "1000",
       "power_bonus": 0.2,
       "attr_bonus": 0.1,
       "luck": 15,

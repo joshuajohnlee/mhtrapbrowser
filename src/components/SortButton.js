@@ -71,7 +71,6 @@ export default function SortButton ({setCurrentSortField, setCurrentSortDirectio
 
     return (
         <>
-        <div className="sorter">
             <label htmlFor="">Sort: </label>
             <select name="sortdirection" defaultValue={"power_asc"} onChange={sortUpdate}>
                 <option value="power_asc">Power - Ascending</option>
@@ -87,7 +86,6 @@ export default function SortButton ({setCurrentSortField, setCurrentSortDirectio
                 <option value="cheese_effect_asc">Cheese Effect - Ascending</option>
                 <option value="cheese_effect_desc">Cheese Effect - Descending</option>
             </select>
-            </div>
         </>
     )
 }
