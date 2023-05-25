@@ -9,11 +9,8 @@ import Home from './components/Home';
 import reportWebVitals from './reportWebVitals';
 import PageHeader from './components/PageHeader';
 import Help from './components/Help';
-// CSS Imports
-import './css/app.css';
-import './css/responsive.css';
-import './css/weaponapp.css';
-import './css/baseapp.css';
+// CSS
+import './css/styles.css';
 
 const Routing = () => {
   return(

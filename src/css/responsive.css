@@ -1,89 +1,83 @@
+/* Header bar */
+.app-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 0;
+}
 
-/* 800px Breakpoint */
-@media (max-width: 800px) {
+.app-header h1 {
+    text-align: center;
+    margin: 4vh 0 0 0;
+}
 
-    /* header */
-    .app-header {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        z-index: 0;
-    }
+nav {
+    display: flex;
+    flex-direction: row;
+}
 
-    .app-header h1 {
-        text-align: center;
-        margin: 4vh 0 0 0;
-    }
+.nav-link {
+    margin: 1em 0 0 0;
+    width: 50%;
+    border-style: dotted;
+    border-width: 1px;
+    padding: 1vh 0 1vh 0;
+}
 
-    nav {
-        display: flex;
-        flex-direction: row;
-    }
+/* Cards */
+.card-container {
+    flex-direction: column;
+}
 
-    .nav-link {
-        margin: 1em 0 0 0;
-        width: 50%;
-        border-style: dotted;
-        border-width: 1px;
-        padding: 1vh 0 1vh 0;
-    }
+.card {
+    min-width: 80%;
+}
 
-    /* Weapon cards */
-    .card-container {
-        flex-direction: column;
-    }
-    
-    .card {
-        min-width: 80%;
-    }
+/* Filter modal takes up most of width on smaller devices */
+.modal-form {
+    min-width: 80%;
+}
 
-    /* Filter modal takes up most of width on smaller devices */
-    .modal-form {
-        min-width: 80%;
-    }
+.form-other-controls{
+    display:block;
+}
 
-    .form-other-controls{
-        display:block;
-    }
+.form-other-controls * {
+    margin-bottom: 1vh;
+}
 
-    .form-other-controls * {
-        margin-bottom: 1vh;
-    }
+fieldset legend {
+    text-align: center;
+}
 
-    fieldset legend {
-        text-align: center;
-    }
+/* Sort appears below filter button on smaller devices */
+.filter-sort-container {
+    display:flex !important; 
+    flex-direction: column;
+}
 
-    /* Sort appears below filter button on smaller devices */
-    .filter-sort-container {
-        display:flex !important; 
-        flex-direction: column;
-    }
+.form-buttons {
+    display: grid;
+} 
 
-    .form-buttons {
-        display: grid;
-    } 
+.form-other-controls select {
+    width: 100%;
+}
 
-    .form-other-controls select {
-        width: 100%;
-    }
+.name-search-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 
-    .name-search-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
+.name-search-container button {
+    display: none;
+}
 
-    .name-search-container button {
-        display: none;
-    }
-
-    .sorter {
-        display: flex;
-        flex-direction: column;
-        gap: 1vh;
-    }
-
+.sorter {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 /* Touchscreen specific */

@@ -1,0 +1,16 @@
+/* Styles for the app as a whole */
+@import "generic.css";
+
+/* Styles for specific apps */
+@import "browser.css";
+
+/* Responsive styles */
+@import "responsive.css" screen and (max-width: 800px);
+
+/* Colour palette used throughout */
+:root {
+    --dark-bg: #0A141B;
+    --light-bg: #11212D;
+    --link-green: #B5FFE1;
+    --button-blue: #6D9DC5;
+}

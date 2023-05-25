@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Kanit:wght@0,300;0,400;0,500;0,600&subset=latin');
 
-:root {
-    --dark-bg: #0A141B;
-    --light-bg: #11212D;
-    --link-green: #B5FFE1;
-    --button-blue: #6D9DC5;
-}
-
 body {
     margin: 0;
     font-family: 'Kanit', 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
-      font-weight: 300;
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     background-color: var(--dark-bg);
     color: white;
-  }
+}
 
 /* Generic classes for reuse throughout */
 
@@ -31,6 +24,12 @@ button {
     border: none;
     border-radius: 5px;
     height: 100%;
+    box-shadow: 0px 5px #343e75, 5px 10px 20px #000000;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 2px 2px 20px #000000;
 }
 
 .content-container {
@@ -48,7 +47,7 @@ button {
     grid-template-columns: 5fr 2fr;
     width: 100%;
     margin-bottom: 2vh;
-    z-index:2;
+    z-index: 2;
 }
 
 .app-header h1 {
@@ -74,10 +73,6 @@ nav {
     font-weight: 500;
 }
 
-.nav-button {
-    display: none;
-}
-
 /* Links */
 
 a:link, a:visited, a:hover, a:active { 
@@ -85,10 +80,10 @@ a:link, a:visited, a:hover, a:active {
     color: #B5FFE1;
 }
 
-/* top button */
- .top-button {
+/* "Jump to top" button */
+.top-button {
     position: fixed; /* Fixed/sticky position */
-    height: 10vh;
+    height: 5vh;
     bottom: 20px; /* Place the button at the bottom of the page */
     right: 30px; /* Place the button 30px from the right */
     z-index: 99; /* Make sure it does not overlap */
@@ -100,10 +95,10 @@ a:link, a:visited, a:hover, a:active {
     padding: 15px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
     font-size: 18px; /* Increase font size */
- }
+}
 
- 
- /* Name search bar */
+/* APP COMPONENTS COMMON TO BOTH APPS */
+/* Name search bar */
 
  .name-search-container {
     display:grid;
@@ -111,8 +106,4 @@ a:link, a:visited, a:hover, a:active {
     width: 60%;
     margin: 1vh auto 1vh auto;
     grid-template-columns: 1fr 1fr 1fr;
- }
-
- .name-search * {
-    margin: 0 auto 0 auto;
- }
+}
