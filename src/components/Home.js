@@ -17,6 +17,7 @@ export default function Home () {
             <ul>
                 <li>Accessibility is not properly implemented yet - apologies to any using screen readers, etc - it will be done as soon as possible.</li>
                 <li>Some text or buttons may display in the wrong positions.</li>
+                <li>Wooden base is slightly out of place in the trap browser.</li>
             </ul>
 
         </div>

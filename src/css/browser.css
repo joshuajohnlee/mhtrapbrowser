@@ -53,7 +53,7 @@
 
 .trap-image {
     margin: 0 auto 0 auto;
-    width: 70%;
+    width: auto;
     background-image: url("base.png");
     background-size: contain;
 }
