@@ -2650,5 +2650,29 @@
     "cheese_effect": 3,
     "title_req": 17,
     "limited": "no"
+  },
+  {
+    "ID": "W222",
+    "name": "Chrome Circlet of Pursuing Trap",
+    "power_type": "Arcane",
+    "power": 12000,
+    "power_bonus": 0.25,
+    "attr_bonus": 0.18,
+    "luck": 40,
+    "cheese_effect": 8,
+    "title_req": 16,
+    "limited": "no"
+  },
+  {
+    "ID": "W223",
+    "name": "The Dread Nautilus Trap",
+    "power_type": "Hydro",
+    "power": 6000,
+    "power_bonus": 0.1,
+    "attr_bonus": 0.15,
+    "luck": 23,
+    "cheese_effect": 8,
+    "title_req": 11,
+    "limited": "no"
   }
 ]
