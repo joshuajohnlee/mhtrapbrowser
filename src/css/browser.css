@@ -93,6 +93,22 @@
     padding: 0 1em 0 1em;
 }
 
+/* Page Buttons */
+
+.pagebuttons {
+    margin: 2% auto 2% auto;
+}
+
+.pagebuttons button {
+    min-width: 30px;
+    margin: 0 0.3vw 0 0.3vw;
+    padding: 0 10px 0 10px;
+}
+
+.activepage {
+    background-color: purple;
+}
+
 /* Filter Modal Component */
 
 .modal-form {

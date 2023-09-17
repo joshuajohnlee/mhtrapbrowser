@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import weaponsList from '../../assets/weapons.json';
 import WeaponCard from "./WeaponCard";
 import FilterForm from "./WeaponFilterForm";
 import SortButton from "../SortButton";
 import lodash from "lodash";
 import NameSearch from "../weapons/WeaponNameSearch";
-import ToTopButton from "../ToTopButton"
+import ToTopButton from "../ToTopButton";
+import PageTurner from "../PageTurner";
 
 export default function WeaponApp() {
 
@@ -74,11 +75,11 @@ export default function WeaponApp() {
       return false;
     }
 
-    // eslint-disable-next-line
-    let userString = (filters.weapon_name).toLowerCase();
+    // Search by name functionality
+    let userSearchString = (filters.weapon_name).toLowerCase();
     let testString = (x.name).toLowerCase();
 
-    if (!testString.includes(userString)) {
+    if (!testString.includes(userSearchString)) {
       return false;
     }
 
@@ -89,17 +90,27 @@ export default function WeaponApp() {
   const [currentSortField, setCurrentSortField] = useState(["power"])
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
+  // Sort the list and slice it to page length of 20
   let sortedAndFilteredList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
-  // return the page
+
+  const [currentPage, setCurrentPage] = useState(0);
+  const [numberOfResults, setNumberofResults] = useState(sortedAndFilteredList.length);
+  const [numberOfPages, setNumberofPages] = useState(Math.ceil(sortedAndFilteredList.length / 20));
+  //eslint-disable-next-line
+  useEffect( () => {setNumberofPages(Math.ceil(sortedAndFilteredList.length / 20))}, [filters] )
+  useEffect( () => setCurrentPage(0), [filters])
+
+  let slicedList = sortedAndFilteredList.slice(currentPage * 20, (currentPage * 20) + 20);
+
   return (
     <>
-
 
       <FilterForm
         setFilters={setFilters}
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
+        setNumberofResults={setNumberofResults}
       />
 
       <div className="filter-sort-container">
@@ -114,12 +125,25 @@ export default function WeaponApp() {
         />
       </div>
 
+        <PageTurner
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          numberOfPages={numberOfPages}
+          numberOfResults={numberOfResults}
+        />
 
       <div className="card-container">
-        {sortedAndFilteredList.map((weapon) => (
+        {slicedList.map((weapon) => (
           <WeaponCard key={weapon.name} weapon={weapon} />
         ))}
       </div>
+
+        <PageTurner
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+          numberOfPages={numberOfPages}
+          numberOfResults={numberOfResults}
+        />
 
       <ToTopButton />
 
