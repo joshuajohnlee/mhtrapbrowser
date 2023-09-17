@@ -1,3 +1,8 @@
+**v0.4**
+- Results now show in pages of 20 to reduce amount loaded at once
+- Page navigation added
+- Now shows the number of results
+
 **v0.3**
 - Added Bountiful Beanstalk weapons/bases
 - Base images now cropped to exclude blank space where weapon would be

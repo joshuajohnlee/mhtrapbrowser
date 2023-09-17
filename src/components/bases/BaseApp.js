@@ -6,6 +6,8 @@ import SortButton from "../SortButton";
 import lodash from "lodash";
 import ToTopButton from "../ToTopButton";
 import BaseNameSearch from '../bases/BaseNameSearch'
+import PageTurner from "../PageTurner";
+import { useEffect } from "react";
 
 export default function BaseApp() {
 
@@ -58,12 +60,12 @@ export default function BaseApp() {
       return false;
     }
 
-      let userString = (filters.base_name).toLowerCase();
-      let testString = (x.name).toLowerCase();
-  
-      if (!testString.includes(userString)) {
-        return false;
-      }
+    let userString = (filters.base_name).toLowerCase();
+    let testString = (x.name).toLowerCase();
+
+    if (!testString.includes(userString)) {
+      return false;
+    }
 
     return true;
   });
@@ -74,34 +76,58 @@ export default function BaseApp() {
 
   let sortedAndFilteredList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
+  const [currentPage, setCurrentPage] = useState(0);
+  const [numberOfResults, setNumberofResults] = useState(sortedAndFilteredList.length);
+  const [numberOfPages, setNumberofPages] = useState(Math.ceil(sortedAndFilteredList.length / 20));
+  //eslint-disable-next-line
+  useEffect(() => { setNumberofPages(Math.ceil(sortedAndFilteredList.length / 20)) }, [filters])
+  useEffect(() => setCurrentPage(0), [filters])
+
+  let slicedList = sortedAndFilteredList.slice(currentPage * 20, (currentPage * 20) + 20);
+
   // return the page
   return (
     <>
-      <ToTopButton />
-      <div className="filter-sort-container">
+
       <FilterForm
         setFilters={setFilters}
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
       />
-      <SortButton
-        setCurrentSortDirection={setCurrentSortDirection}
-        setCurrentSortField={setCurrentSortField}
-      />
+
+      <div className="filter-sort-container">
+        <SortButton
+          setCurrentSortDirection={setCurrentSortDirection}
+          setCurrentSortField={setCurrentSortField}
+        />
+
+        <BaseNameSearch
+          filters={filters}
+          setFilters={setFilters}
+        />
       </div>
 
-      <BaseNameSearch 
-        filters={filters}
-        setFilters={setFilters}
+      <PageTurner
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        numberOfPages={numberOfPages}
+        numberOfResults={numberOfResults}
       />
 
       <div className="card-container">
-        {sortedAndFilteredList.map((base) => (
+        {slicedList.map((base) => (
           <BaseCard key={base.name} base={base} />
         ))}
       </div>
 
+      <PageTurner
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        numberOfPages={numberOfPages}
+        numberOfResults={numberOfResults}
+      />
 
+      <ToTopButton />
     </>
 
   );
