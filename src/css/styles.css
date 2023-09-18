@@ -3,6 +3,7 @@
 
 /* Styles for specific apps */
 @import "browser.css";
+@import "compare.css";
 
 /* Responsive styles */
 @import "responsive.css" screen and (max-width: 800px);

@@ -6,11 +6,17 @@ import { HashRouter, Routes, Route, } from 'react-router-dom';
 import WeaponApp from './components/weapons/WeaponApp';
 import BaseApp from './components/bases/BaseApp'
 import Home from './components/Home';
-import reportWebVitals from './reportWebVitals';
 import PageHeader from './components/PageHeader';
 import Help from './components/Help';
+import Compare from './components/compare/Compare';
 // CSS
 import './css/styles.css';
+// Fonts
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const Routing = () => {
   return(
@@ -22,6 +28,7 @@ const Routing = () => {
         <Route path="/weapons" element={<WeaponApp />} />
         <Route path="/bases" element={<BaseApp />} />
         <Route path="/help" element={<Help />} />
+        <Route path="/compare" element={<Compare />} />
       </Routes>
     </HashRouter>
   )
@@ -33,8 +40,3 @@ root.render(
       <Routing />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals(console.log());
