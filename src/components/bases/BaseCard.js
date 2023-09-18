@@ -5,8 +5,8 @@ import dataList from '../../assets/data.json';
 export default function BaseCard({ base }) {
 
     let imglink = process.env.PUBLIC_URL + "/images/bases/" + base.name + ".png";
-    let weppowerbonus = (base.power_bonus * 100).toFixed(0) + "%";
-    let attrbonus = (base.attr_bonus * 100).toFixed(0) + "%";
+    let weaponPowerBonus = (base.power_bonus * 100).toFixed(0) + "%";
+    let attractionBonus = (base.attr_bonus * 100).toFixed(0) + "%";
     let cheese_effect = (dataList.freshness[(base.cheese_effect)]);
     let title_req = (dataList.title_req[base.title_req - 1]);
     let wiki_link = "https://mhwiki.hitgrab.com/wiki/index.php/" + base.name;
@@ -32,13 +32,13 @@ export default function BaseCard({ base }) {
                         <p>Power Bonus</p>
                     </div>
                     <div className="stats-value">
-                        <p>{weppowerbonus}</p>
+                        <p>{weaponPowerBonus}</p>
                     </div>
                     <div className="stats-header">
                         <p>Attraction <br />Bonus</p>
                     </div>
                     <div className="stats-value">
-                        <p>{attrbonus}</p>
+                        <p>{attractionBonus}</p>
                     </div>
                     <div className="stats-header">
                         <p>Luck</p>

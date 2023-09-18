@@ -1,7 +1,7 @@
-// Modal form component that users will set their filters.
 import { useState } from 'react';
 import ReactModal from 'react-modal';
-export default function FilterForm({ setFilters, filters , DEFAULTS, setNumberofResults}) {
+
+export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
     // modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
@@ -26,72 +26,72 @@ export default function FilterForm({ setFilters, filters , DEFAULTS, setNumberof
         if (Number(filters.min_power) > Number(filters.max_power)) {
             displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
             return (null)
-        }
-        if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
+        } else if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
             displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.")
             return (null)
-        }
-        if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
+        } else if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
             displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.")
             return (null)
-        }
-        if (Number(filters.min_luck) > Number(filters.max_luck)) {
+        } else if (Number(filters.min_luck) > Number(filters.max_luck)) {
             displayWarning("Your minimum luck is set higher than your maximum. Nothing will be")
             return (null)
-        }
-        if (Number(filters.min_title_req) > Number(filters.max_title_req)) {
+        } else if (Number(filters.min_title_req) > Number(filters.max_title_req)) {
             displayWarning("Your lowest title is higher than your highest title. Nothing will be shown.")
             return (null)
-        }
-        if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
+        } else if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
             displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.")
             return (null)
+        } else {
+            hideWarning();
         }
-
-        hideWarning();
-
     }
 
     const handleCheckboxChange = (e) => {
         if (e.target.checked) {
-            setFilters({...filters,
-                "power_type": {...filters.power_type, [e.target.value]: true}
+            setFilters({
+                ...filters,
+                "power_type": { ...filters.power_type, [e.target.value]: true }
             });
         } else {
-            setFilters({...filters,
-                "power_type": {...filters.power_type, [e.target.value]: false}
+            setFilters({
+                ...filters,
+                "power_type": { ...filters.power_type, [e.target.value]: false }
             });
         }
     }
 
     function selectAllPowerTypes() {
-        setFilters({...filters, power_type: {
-            "Arcane": true,
-            "Draconic": true,
-            "Forgotten": true,
-            "Hydro": true,
-            "Law": true,
-            "Parental": true,
-            "Physical": true,
-            "Rift": true,
-            "Shadow": true,
-            "Tactical": true,
-          }})
+        setFilters({
+            ...filters, power_type: {
+                "Arcane": true,
+                "Draconic": true,
+                "Forgotten": true,
+                "Hydro": true,
+                "Law": true,
+                "Parental": true,
+                "Physical": true,
+                "Rift": true,
+                "Shadow": true,
+                "Tactical": true,
+            }
+        })
     }
 
     function selectNoPowerTypes() {
-        setFilters({...filters, power_type: {
-            "Arcane": false,
-            "Draconic": false,
-            "Forgotten": false,
-            "Hydro": false,
-            "Law": false,
-            "Parental": false,
-            "Physical": false,
-            "Rift": false,
-            "Shadow": false,
-            "Tactical": false,
-          }})
+        setFilters({
+            ...filters, power_type: {
+                "Arcane": false,
+                "Draconic": false,
+                "Forgotten": false,
+                "Hydro": false,
+                "Law": false,
+                "Parental": false,
+                "Physical": false,
+                "Rift": false,
+                "Shadow": false,
+                "Tactical": false,
+            }
+        })
     }
 
     function openModal() {
@@ -141,11 +141,11 @@ export default function FilterForm({ setFilters, filters , DEFAULTS, setNumberof
 
                         <div className="power-type-buttons">
                             <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
-                            <button type= "button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button>
+                            <button type="button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button>
                         </div>
 
                         <div className="form-power-selection">
-                            <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onChange={handleCheckboxChange}/>
+                            <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={filters.power_type.Arcane} onChange={handleCheckboxChange} />
                             <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
 
                             <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={filters.power_type.Draconic} onChange={handleCheckboxChange} />

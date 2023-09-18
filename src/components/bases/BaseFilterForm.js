@@ -1,7 +1,7 @@
-// Modal form component that users will set their filters.
 import { useState } from 'react';
 import ReactModal from 'react-modal';
-export default function FilterForm({ setFilters, filters , DEFAULTS}) {
+
+export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
     // modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);

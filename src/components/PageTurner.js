@@ -1,4 +1,4 @@
-export default function PageTurner({currentPage, setCurrentPage, numberOfPages, numberOfResults}) {
+export default function PageTurner({ currentPage, setCurrentPage, numberOfPages, numberOfResults }) {
 
     let output = []
 
@@ -19,13 +19,13 @@ export default function PageTurner({currentPage, setCurrentPage, numberOfPages, 
             output.push(<button class="activepage" onClick={() => setCurrentPage(i)}>{i + 1}</button>)
             output.push(" ")
         } else {
-        output.push(<button onClick={() => setCurrentPage(i)}>{i + 1}</button>)
-        output.push(" ")
+            output.push(<button onClick={() => setCurrentPage(i)}>{i + 1}</button>)
+            output.push(" ")
         }
     }
 
     return (
-         <>
+        <>
             <div className="pagebuttons">
                 <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
                 {output}
