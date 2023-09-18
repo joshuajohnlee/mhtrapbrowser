@@ -4,6 +4,7 @@
 /* Styles for specific apps */
 @import "browser.css";
 @import "compare.css";
+@import "home.css";
 
 /* Responsive styles */
 @import "responsive.css" screen and (max-width: 800px);
@@ -14,4 +15,7 @@
     --light-bg: #11212D;
     --link-green: #B5FFE1;
     --button-blue: #6D9DC5;
+    --border-blue: #32b8da;
+    --blue-glow: #5787be;
+    --selected-background: rgba(168, 104, 221, 0.521);
 }

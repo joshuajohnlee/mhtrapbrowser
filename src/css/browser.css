@@ -106,7 +106,7 @@
 }
 
 .activepage {
-    background-color: purple;
+    background-color: var(--selected-background);
 }
 
 /* Filter Modal Component */

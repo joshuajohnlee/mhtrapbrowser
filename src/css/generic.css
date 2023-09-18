@@ -17,15 +17,19 @@ body {
 
 button {
     margin: 1vh auto 1vh auto;
-    background-color: var(--button-blue);
+    background: none;
     font-family: 'Kanit';
     font-size: 1rem;
     color: white;
-    border: none;
+    border: 1px solid var(--border-blue);
     border-radius: 5px;
     height: 100%;
-    box-shadow: 0px 5px #343e75, 5px 10px 20px #000000;
+    /* box-shadow: 0px 5px #343e75, 5px 10px 20px #000000; */
     cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 2px 10px 0 var(--blue-glow), 0 2px 10px 0 var(--blue-glow);
 }
 
 button:active {
@@ -55,7 +59,7 @@ button:active {
     margin-left: 5vw;
 }
 
-nav {
+.header-nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -71,6 +75,29 @@ nav {
     height: 100%;
     color: white !important;
     font-weight: 500;
+}
+
+/* App footer */
+
+.app-footer {
+    position: absolute;
+    bottom: 0px;
+    background-color: var(--light-bg);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    width: 100%;
+    margin-top: 2vh;
+    z-index: 2;
+}
+
+#footer-credit {
+    margin-left: 2vw;
+    text-align: left;
+}
+
+#footer-links {
+    margin-right: 2vw;
+    text-align: right;
 }
 
 /* Links */

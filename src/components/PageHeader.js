@@ -5,7 +5,7 @@ export default function PageHeader() {
         <div className="app-header">
             <h1>Joshy's MHTrapBrowser</h1>
             
-            <nav>
+            <nav className="header-nav">
                 <a className="nav-link" href="#/">Home</a>
                 <a className="nav-link" href="#/weapons">Weapons</a>
                 <a className="nav-link" href="#/bases">Bases</a>
