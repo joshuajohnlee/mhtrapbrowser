@@ -1,5 +1,5 @@
 // Import libraries
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import lodash from "lodash";
 // Import weapon data
 import weaponsList from '../../assets/weapons.json';
@@ -9,7 +9,6 @@ import FilterForm from "./WeaponFilterForm";
 import SortButton from "../SortButton";
 import NameSearch from "../weapons/WeaponNameSearch";
 import ToTopButton from "../ToTopButton";
-import PageTurner from "../PageTurner";
 
 // Define default filters which will include all weapons
 const DEFAULT_FILTERS = {
@@ -79,21 +78,49 @@ export default function WeaponApp() {
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
   // Sort and filter the list
-  let sortedAndFilteredList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
+  let filteredWeaponList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
   // Create states to use with the page selector
   const [currentPage, setCurrentPage] = useState(0);
-  const [numberOfResults, setNumberofResults] = useState(sortedAndFilteredList.length);
-  const [numberOfPages, setNumberofPages] = useState(Math.ceil(sortedAndFilteredList.length / 20));
-
-  // These use effects are apparently not the way to do this - need to find out the right way to update states when another state changes
-  //eslint-disable-next-line
-  useEffect(() => { setNumberofPages(Math.ceil(sortedAndFilteredList.length / 20)) }, [filters])
-  useEffect(() => setCurrentPage(0), [filters])  //eslint-disable-next-line
-  useEffect(() => setNumberofResults(sortedAndFilteredList.length), [filters])
 
   // Create the sliced list showing the results for the currently selected page
-  let slicedList = sortedAndFilteredList.slice(currentPage * 20, (currentPage * 20) + 20);
+  let slicedList = filteredWeaponList.slice(currentPage * 20, (currentPage * 20) + 20);
+
+  // Page turner functionality 
+
+  function handlePreviousOrNext(direction) {
+    if (direction === "previous" && currentPage > 0) {
+      changePage(currentPage - 1);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } else if (direction === "next" && currentPage < (Math.ceil(filteredWeaponList.length / 20))) {
+      changePage(currentPage + 1);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  }
+
+  let output = []
+
+  for (let i = 0; i < (Math.ceil(filteredWeaponList.length / 20)); i++) {
+    if (i === currentPage) {
+      output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+    } else {
+      output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
+    }
+  }
+
+  function changePage(pageNumber = 0) {
+    setCurrentPage(pageNumber);
+
+    for (let i = 0; i < (Math.ceil(filteredWeaponList.length / 20)); i++) {
+      if (i === currentPage) {
+        output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+      } else {
+        output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
+      }
+    }
+  }
 
   return (
     <>
@@ -102,6 +129,7 @@ export default function WeaponApp() {
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
       />
+
       <div className="filter-sort-container">
         <SortButton
           setCurrentSortDirection={setCurrentSortDirection}
@@ -112,12 +140,15 @@ export default function WeaponApp() {
           setFilters={setFilters}
         />
       </div>
-      <PageTurner
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        numberOfPages={numberOfPages}
-        numberOfResults={numberOfResults}
-      />
+
+      <div className="pagebuttons">
+        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+        {output}
+        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+      </div>
+
+      <div className="numberresults">{filteredWeaponList.length} results found.</div>
+
       <div className="card-container">
         {slicedList.map((weapon) => (
           <WeaponCard
@@ -126,12 +157,15 @@ export default function WeaponApp() {
           />
         ))}
       </div>
-      <PageTurner
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        numberOfPages={numberOfPages}
-        numberOfResults={numberOfResults}
-      />
+
+      <div className="pagebuttons">
+        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+        {output}
+        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+      </div>
+
+
+
       <ToTopButton />
     </>
   );

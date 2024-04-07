@@ -1,49 +1,52 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
 
 export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
-    // modal visibility state and toggle
+    // Modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
 
-    const [warningMessage, setWarningMessage] = useState("Default warning message")
-    const [warningVisibility, setWarningVisibility] = useState("warning-message-inactive")
+    // Set states for the warning message
+    const [warningMessage, setWarningMessage] = useState("")
+    const [warningVisibility, setWarningVisibility] = useState(false)
 
     function displayWarning(message) {
         setWarningMessage(message);
-        setWarningVisibility("warning-message")
+        setWarningVisibility(true)
     }
 
     function hideWarning() {
         setWarningMessage("");
-        setWarningVisibility("warning-message-inactive")
+        setWarningVisibility(false)
     }
 
-    const handleChange = (e) => {
-
-        setFilters({ ...filters, [e.target.name]: e.target.value });
-
-        if (Number(filters.min_power) > Number(filters.max_power)) {
-            displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        } else if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
-            displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        } else if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
-            displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        } else if (Number(filters.min_luck) > Number(filters.max_luck)) {
-            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be")
-            return (null)
-        } else if (Number(filters.min_title_req) > Number(filters.max_title_req)) {
-            displayWarning("Your lowest title is higher than your highest title. Nothing will be shown.")
-            return (null)
-        } else if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
-            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.")
-            return (null)
-        } else {
-            hideWarning();
+    useEffect(() => {
+        hideWarning();
+        
+        if(Number(filters.min_power) > Number(filters.max_power)) {
+            displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.");
         }
+
+        if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
+            displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.");
+        }
+
+        if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
+            displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.");
+        }
+
+        if (Number(filters.min_luck) > Number(filters.max_luck)) {
+            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be will be shown.");
+        }
+
+        if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
+            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.");
+        }
+
+    }, [filters]);
+
+    const handleChange = (e) => {
+        setFilters({ ...filters, [e.target.name]: e.target.value });
     }
 
     const handleCheckboxChange = (e) => {
@@ -136,7 +139,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             >
                 <form id="filterForm">
 
-                    <fieldset >
+                    <fieldset>
                         <legend>Power Type</legend>
 
                         <div className="power-type-buttons">
@@ -176,6 +179,9 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                             <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
                         </div>
                     </fieldset>
+
+                    {Number(filters.min_power) > Number(filters.max_power) 
+                        && <div id="warning-message">Your minimum power is set higher than your maximum. Nothing will be shown.</div>}
 
                     <fieldset className="slider-container">
                         <legend>Power</legend>
@@ -314,7 +320,9 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
                     </div>
 
-                    <div id="warning-message" className={warningVisibility}>{warningMessage}</div>
+                    {warningVisibility && <div id="warning-message">{warningMessage}</div>}
+
+                    
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>
@@ -324,5 +332,4 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             </ReactModal>
         </>
     )
-
 }

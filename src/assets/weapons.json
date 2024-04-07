@@ -19,7 +19,7 @@
     "power_bonus": 0.08,
     "attr_bonus": 0,
     "luck": 20,
-    "cheese_effect": 70,
+    "cheese_effect": 7,
     "title_req": 7,
     "limited": "yes"
   },

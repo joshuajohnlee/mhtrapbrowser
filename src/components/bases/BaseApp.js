@@ -1,5 +1,5 @@
 // Import libraries
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import lodash from "lodash";
 // Import base data
 import basesList from '../../assets/bases.json';
@@ -9,8 +9,6 @@ import FilterForm from "./BaseFilterForm";
 import SortButton from "../SortButton";
 import ToTopButton from "../ToTopButton";
 import BaseNameSearch from '../bases/BaseNameSearch'
-import PageTurner from "../PageTurner";
-
 // Define default filters which will include all bases
 const DEFAULT_FILTERS = {
   base_name: "",
@@ -65,18 +63,48 @@ export default function BaseApp() {
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
   // Sort and filter the list
-  let sortedAndFilteredList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
+  let filteredBaseList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
-  // Create states to use with the page selector
+  // Create state to use with the page selector
   const [currentPage, setCurrentPage] = useState(0);
-  const [numberOfResults, setNumberofResults] = useState(sortedAndFilteredList.length);
-  const [numberOfPages, setNumberofPages] = useState(Math.ceil(sortedAndFilteredList.length / 20));
-  //eslint-disable-next-line
-  useEffect(() => { setNumberofPages(Math.ceil(sortedAndFilteredList.length / 20)) }, [filters])
-  useEffect(() => setCurrentPage(0), [filters])  //eslint-disable-next-line
-  useEffect(() => setNumberofResults(sortedAndFilteredList.length), [filters])
 
-  let slicedList = sortedAndFilteredList.slice(currentPage * 20, (currentPage * 20) + 20);
+  let slicedList = filteredBaseList.slice(currentPage * 20, (currentPage * 20) + 20);
+
+  // Page turner functionality 
+
+  function handlePreviousOrNext(direction) {
+    if (direction === "previous" && currentPage > 0) {
+      changePage(currentPage - 1);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    } else if (direction === "next" && currentPage < (Math.ceil(filteredBaseList.length / 20))) {
+      changePage(currentPage + 1);
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+  }
+
+  let output = []
+
+  for (let i = 0; i < (Math.ceil(filteredBaseList.length / 20)); i++) {
+    if (i === currentPage) {
+      output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+    } else {
+      output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
+    }
+  }
+
+  function changePage(pageNumber = 0) {
+    setCurrentPage(pageNumber);
+
+    for (let i = 0; i < (Math.ceil(filteredBaseList.length / 20)); i++) {
+      if (i === currentPage) {
+        output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+      } else {
+        output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
+      }
+    }
+  }
 
   return (
     <>
@@ -95,12 +123,13 @@ export default function BaseApp() {
           setFilters={setFilters}
         />
       </div>
-      <PageTurner
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        numberOfPages={numberOfPages}
-        numberOfResults={numberOfResults}
-      />
+      <div className="pagebuttons">
+        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+        {output}
+        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+      </div>
+
+      <div className="numberresults">{filteredBaseList.length} results found.</div>
       <div className="card-container">
         {slicedList.map((base) => (
           <BaseCard
@@ -109,12 +138,11 @@ export default function BaseApp() {
           />
         ))}
       </div>
-      <PageTurner
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
-        numberOfPages={numberOfPages}
-        numberOfResults={numberOfResults}
-      />
+      <div className="pagebuttons">
+        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+        {output}
+        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+      </div>
       <ToTopButton />
     </>
   );
