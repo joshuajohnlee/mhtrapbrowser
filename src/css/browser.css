@@ -43,12 +43,14 @@
 
 .card {
     display: flex;
-    max-width: 400px;
+    max-width: 300px;
     flex-direction: column;
     background-color: var(--light-bg);
-    padding: 2rem;
+    padding: 0.5rem;
     margin: 1rem;
-    border-radius: 15px;
+    border-radius: 5px;
+    min-height: 0;
+    align-self: stretch;
 }
 
 .trap-image {
@@ -65,13 +67,11 @@
 
 .stats-container {
     display: grid;
-    column-gap: 1em;
+    column-gap: 0.7em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-bottom: 1em;
 }
 
 .stats-header {
-    font-weight: bold;
     vertical-align: middle;
     margin: auto 0 auto 0;
 }
@@ -85,12 +85,20 @@
     margin: auto 0 auto 0;
 }
 
+.info-header {
+    font-weight: 400;
+}
+
 .limited {
     text-transform: capitalize;
 }
 
 .wiki-button {
     padding: 0 1em 0 1em;
+}
+
+.breaker {
+    min-height: 10px;
 }
 
 /* Page Buttons */
@@ -190,7 +198,7 @@ fieldset {
 /* Filter and sort buttons */
 
 .filter-sort-container {
-    max-width: 60%;
+    max-width: 80%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr;
     column-gap: 2%;

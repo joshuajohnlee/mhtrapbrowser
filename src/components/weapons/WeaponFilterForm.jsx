@@ -118,7 +118,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
     return (
         <>
             <button className="filter-button" onClick={openModal}>
-                Set Filters
+                Change Filters
             </button>
 
             <ReactModal
