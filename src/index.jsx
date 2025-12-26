@@ -10,6 +10,7 @@ import Home from './components/Home.jsx';
 import PageHeader from './components/PageHeader.jsx';
 import Help from './components/Help.jsx';
 import Compare from './components/compare/Compare.jsx';
+import PageFooter from './components/Footer.jsx';
 
 // CSS Imports
 import './css/styles.css';
@@ -21,9 +22,9 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 const Routing = () => {
-  return(
+  return (
     <BrowserRouter>
-      <PageHeader/>
+      <PageHeader />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/weapons" element={<WeaponApp />} />
@@ -31,6 +32,7 @@ const Routing = () => {
         <Route path="/help" element={<Help />} />
         <Route path="/compare" element={<Compare />} />
       </Routes>
+      <PageFooter />
     </BrowserRouter>
   )
 }
@@ -38,6 +40,6 @@ const Routing = () => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <Routing />
+    <Routing />
   </React.StrictMode>
 );

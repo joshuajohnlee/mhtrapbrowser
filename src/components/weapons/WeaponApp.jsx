@@ -1,14 +1,14 @@
 // Import libraries
 import { useState } from "react";
 import lodash from "lodash";
+
 // Import weapon data
 import weaponsList from '../../assets/weapons.json';
+
 // Import other components
-import WeaponCard from "./WeaponCard.jsx";
 import FilterForm from "./WeaponFilterForm.jsx";
 import SortButton from "../SortButton.jsx";
 import NameSearch from "./WeaponNameSearch.jsx";
-import ToTopButton from "../ToTopButton.jsx";
 
 // Define default filters which will include all weapons
 const DEFAULT_FILTERS = {
@@ -77,6 +77,19 @@ export default function WeaponApp() {
   const [currentSortField, setCurrentSortField] = useState(["power"])
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
+  function changeSort(field) {
+    if (field === currentSortField) {
+      if (currentSortDirection === "asc") {
+        setCurrentSortDirection("desc");
+      } else {
+        setCurrentSortDirection("asc");
+      }
+    } else {
+      setCurrentSortField(field);
+      setCurrentSortDirection("asc");
+    }
+  }
+
   // Sort and filter the list
   let filteredWeaponList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
@@ -102,7 +115,47 @@ export default function WeaponApp() {
 
   let output = []
 
-  for (let i = 0; i < (Math.ceil(filteredWeaponList.length / 20)); i++) {
+  const dataList = {
+    freshness: [
+      "Über Stale",
+      "Ultimately Stale",
+      "Insanely Stale",
+      "Extremely Stale",
+      "Very Stale",
+      "Stale",
+      "No cheese effect",
+      "Fresh",
+      "Very Fresh",
+      "Extremely Fresh",
+      "Insanely Fresh",
+      "Ultimately Fresh",
+      "Über Fresh",
+    ],
+    title_req: [
+      "Novice",
+      "Recruit",
+      "Apprentice",
+      "Initiate",
+      "Journeyman/Journeywomen",
+      "Master",
+      "Grandmaster",
+      "Legendary",
+      "Hero",
+      "Knight",
+      "Lord/Lady",
+      "Baron/Baroness",
+      "Count/Countess",
+      "Duke/Duchess",
+      "Grand Duke/Duchess",
+      "Archduke/Archduchess",
+      "Viceroy",
+      "Elder",
+      "Sage",
+      "Fabled",
+    ]
+  }
+
+  for(let i = 0; i< (Math.ceil(filteredWeaponList.length / 20)); i++) {
     if (i === currentPage) {
       output.push(<button className="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
     } else {
@@ -147,16 +200,38 @@ export default function WeaponApp() {
         <button onClick={() => handlePreviousOrNext("next")}>Next</button>
       </div>
 
-      <div className="numberresults">{filteredWeaponList.length} results found.</div>
+      <div className="numberresults">{filteredWeaponList.length} results found.<br /></div>
 
-      <div className="card-container">
-        {slicedList.map((weapon) => (
-          <WeaponCard
-            key={weapon.name}
-            weapon={weapon}
-          />
-        ))}
-      </div>
+      <table id="weapontable">
+        <thead>
+          <tr>
+            <th>Weapon Name</th>
+            <th>Power Type</th>
+            <th>Power</th>
+            <th>Power Bonus</th>
+            <th>Attraction Bonus</th>
+            <th>Luck</th>
+            <th>Cheese Effect</th>
+            <th>Title Required</th>
+            <th>Limited Edition</th>
+          </tr>
+        </thead>
+        <tbody>
+          {slicedList.map((weapon) => (
+            <tr key={weapon.id}>
+              <td>{weapon.name}</td>
+              <td>{weapon.power_type}</td>
+              <td>{weapon.power}</td>
+              <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{(weapon.attr_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{weapon.luck}</td>
+              <td>{dataList.freshness[weapon.cheese_effect]}</td>
+              <td>{dataList.title_req[weapon.title_req - 1]}</td>
+              <td>{weapon.limited}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
 
       <div className="pagebuttons">
         <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
@@ -164,9 +239,6 @@ export default function WeaponApp() {
         <button onClick={() => handlePreviousOrNext("next")}>Next</button>
       </div>
 
-
-
-      <ToTopButton />
     </>
   );
 }
