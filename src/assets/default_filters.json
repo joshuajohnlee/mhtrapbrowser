@@ -1,0 +1,46 @@
+{
+    "DEFAULT_BASE_FILTERS": {
+        "base_name": "",
+        "min_power": 0,
+        "max_power": 16500,
+        "min_power_bonus": 0,
+        "max_power_bonus": 35,
+        "min_attr_bonus": 0,
+        "max_attr_bonus": 40,
+        "min_luck": 0,
+        "max_luck": 40,
+        "min_title_req": 0,
+        "max_title_req": 19,
+        "min_cheese_effect": 0,
+        "max_cheese_effect": 12,
+        "limited": "any"
+    },
+    "DEFAULT_WEAPON_FILTERS": {
+        "weapon_name": "",
+        "power_type": {
+            "Arcane": true,
+            "Draconic": true,
+            "Forgotten": true,
+            "Hydro": true,
+            "Law": true,
+            "Parental": true,
+            "Physical": true,
+            "Rift": true,
+            "Shadow": true,
+            "Tactical": true
+        },
+        "min_power": 0,
+        "max_power": 20000,
+        "min_power_bonus": 0,
+        "max_power_bonus": 35,
+        "min_attr_bonus": 0,
+        "max_attr_bonus": 40,
+        "min_luck": 0,
+        "max_luck": 42,
+        "min_title_req": 0,
+        "max_title_req": 19,
+        "min_cheese_effect": 0,
+        "max_cheese_effect": 12,
+        "limited": "any"
+    }
+}

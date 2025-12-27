@@ -6,79 +6,11 @@ import { faShield } from '@fortawesome/free-solid-svg-icons'
 
 // Import weapon data
 import weaponsList from '../../assets/weapons.json';
+import data from "../../assets/data.json";
 
 // Import other components
 import FilterForm from "./WeaponFilterForm.jsx";
-
-// Define default filters which will include all weapons
-const DEFAULT_FILTERS = {
-  weapon_name: "",
-  power_type: {
-    "Arcane": true,
-    "Draconic": true,
-    "Forgotten": true,
-    "Hydro": true,
-    "Law": true,
-    "Parental": true,
-    "Physical": true,
-    "Rift": true,
-    "Shadow": true,
-    "Tactical": true,
-  },
-  min_power: 0,
-  max_power: 20000,
-  min_power_bonus: 0,
-  max_power_bonus: 35,
-  min_attr_bonus: 0,
-  max_attr_bonus: 40,
-  min_luck: 0,
-  max_luck: 42,
-  min_title_req: 0,
-  max_title_req: 19,
-  min_cheese_effect: 0,
-  max_cheese_effect: 12,
-  limited: 'any'
-}
-
-const dataList = {
-  freshness: [
-    "Über Stale",
-    "Ultimately Stale",
-    "Insanely Stale",
-    "Extremely Stale",
-    "Very Stale",
-    "Stale",
-    "No cheese effect",
-    "Fresh",
-    "Very Fresh",
-    "Extremely Fresh",
-    "Insanely Fresh",
-    "Ultimately Fresh",
-    "Über Fresh",
-  ],
-  title_req: [
-    "Novice",
-    "Recruit",
-    "Apprentice",
-    "Initiate",
-    "Journeyman/Journeywomen",
-    "Master",
-    "Grandmaster",
-    "Legendary",
-    "Hero",
-    "Knight",
-    "Lord/Lady",
-    "Baron/Baroness",
-    "Count/Countess",
-    "Duke/Duchess",
-    "Grand Duke/Duchess",
-    "Archduke/Archduchess",
-    "Viceroy",
-    "Elder",
-    "Sage",
-    "Fabled",
-  ]
-}
+import { DEFAULT_WEAPON_FILTERS as DEFAULT_FILTERS } from "../../assets/default_filters.json";
 
 export default function WeaponApp() {
 
@@ -95,27 +27,23 @@ export default function WeaponApp() {
     let userSearchString = (filters.weapon_name).toLowerCase();
     let testString = (x.name).toLowerCase();
 
-    if (filters.power_type[x.power_type] === false) {
-      return false;
-    } else if (x.power < filters.min_power || x.power > filters.max_power) {
-      return false;
-    } else if (x.power_bonus < (filters.min_power_bonus / 100) || x.power_bonus > (filters.max_power_bonus / 100)) {
-      return false;
-    } else if (x.attr_bonus < (filters.min_attr_bonus / 100) || x.attr_bonus > (filters.max_attr_bonus / 100)) {
-      return false;
-    } else if (x.luck < filters.min_luck || x.luck > filters.max_luck) {
-      return false;
-    } else if (x.title_req < filters.min_title_req || x.title > filters.max_title_req) {
-      return false;
-    } else if (x.cheese_effect < filters.min_cheese_effect || x.cheese_effect > filters.max_cheese_effect) {
-      return false;
-    } else if (filters.limited !== 'any' && filters.limited !== x.limited) {
-      return false;
-    } else if (!testString.includes(userSearchString)) {
-      return false;
-    } else {
-      return true;
-    }
+    return (
+      filters.power_type[x.power_type] !== false &&
+      x.power >= filters.min_power &&
+      x.power <= filters.max_power &&
+      x.power_bonus >= filters.min_power_bonus / 100 &&
+      x.power_bonus <= filters.max_power_bonus / 100 &&
+      x.attr_bonus >= filters.min_attr_bonus / 100 &&
+      x.attr_bonus <= filters.max_attr_bonus / 100 &&
+      x.luck >= filters.min_luck &&
+      x.luck <= filters.max_luck &&
+      x.title_req >= filters.min_title_req &&
+      x.title_req <= filters.max_title_req &&
+      x.cheese_effect >= filters.min_cheese_effect &&
+      x.cheese_effect <= filters.max_cheese_effect &&
+      (filters.limited === 'any' || filters.limited === x.limited) &&
+      testString.includes(userSearchString)
+    );
   });
 
   // Create states for sorting
@@ -223,8 +151,8 @@ export default function WeaponApp() {
               <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
               <td>{(weapon.attr_bonus * 100).toFixed(0) + "%"}</td>
               <td>{weapon.luck}</td>
-              <td>{dataList.freshness[weapon.cheese_effect]}</td>
-              <td>{dataList.title_req[weapon.title_req - 1]}</td>
+              <td>{data.freshness[weapon.cheese_effect]}</td>
+              <td>{data.title_req[weapon.title_req - 1]}</td>
             </tr>
           ))}
         </tbody>

@@ -6,68 +6,11 @@ import { faShield } from '@fortawesome/free-solid-svg-icons'
 
 // Import base data
 import basesList from '../../assets/bases.json';
+import data from "../../assets/data.json";
+import { DEFAULT_BASE_FILTERS as DEFAULT_FILTERS } from "../../assets/default_filters.json";
 
 // Import other components
 import FilterForm from "./BaseFilterForm";
-
-// Define default filters which will include all bases
-const DEFAULT_FILTERS = {
-  base_name: "",
-  min_power: 0,
-  max_power: 16500,
-  min_power_bonus: 0,
-  max_power_bonus: 35,
-  min_attr_bonus: 0,
-  max_attr_bonus: 40,
-  min_luck: 0,
-  max_luck: 40,
-  min_title_req: 0,
-  max_title_req: 19,
-  min_cheese_effect: 0,
-  max_cheese_effect: 12,
-  limited: 'any'
-}
-
-// Define data lists for freshness and titles
-const dataList = {
-  freshness: [
-    "Über Stale",
-    "Ultimately Stale",
-    "Insanely Stale",
-    "Extremely Stale",
-    "Very Stale",
-    "Stale",
-    "No cheese effect",
-    "Fresh",
-    "Very Fresh",
-    "Extremely Fresh",
-    "Insanely Fresh",
-    "Ultimately Fresh",
-    "Über Fresh",
-  ],
-  title_req: [
-    "Novice",
-    "Recruit",
-    "Apprentice",
-    "Initiate",
-    "Journeyman/Journeywomen",
-    "Master",
-    "Grandmaster",
-    "Legendary",
-    "Hero",
-    "Knight",
-    "Lord/Lady",
-    "Baron/Baroness",
-    "Count/Countess",
-    "Duke/Duchess",
-    "Grand Duke/Duchess",
-    "Archduke/Archduchess",
-    "Viceroy",
-    "Elder",
-    "Sage",
-    "Fabled",
-  ]
-}
 
 export default function BaseApp() {
 
@@ -80,25 +23,22 @@ export default function BaseApp() {
     let userSearchString = (filters.base_name).toLowerCase();
     let testString = (x.name).toLowerCase();
 
-    if (x.power < filters.min_power || x.power > filters.max_power) {
-      return false;
-    } else if (x.power_bonus < (filters.min_power_bonus / 100) || x.power_bonus > (filters.max_power_bonus / 100)) {
-      return false;
-    } else if (x.attr_bonus < (filters.min_attr_bonus / 100) || x.attr_bonus > (filters.max_attr_bonus / 100)) {
-      return false;
-    } else if (x.luck < filters.min_luck || x.luck > filters.max_luck) {
-      return false;
-    } else if (x.title_req < filters.min_title_req || x.title > filters.max_title_req) {
-      return false;
-    } else if (x.cheese_effect < filters.min_cheese_effect || x.cheese_effect > filters.max_cheese_effect) {
-      return false;
-    } else if (filters.limited !== 'any' && filters.limited !== x.limited) {
-      return false;
-    } else if (!testString.includes(userSearchString)) {
-      return false;
-    } else {
-      return true;
-    }
+    return (
+      x.power >= filters.min_power &&
+      x.power <= filters.max_power &&
+      x.power_bonus >= filters.min_power_bonus / 100 &&
+      x.power_bonus <= filters.max_power_bonus / 100 &&
+      x.attr_bonus >= filters.min_attr_bonus / 100 &&
+      x.attr_bonus <= filters.max_attr_bonus / 100 &&
+      x.luck >= filters.min_luck &&
+      x.luck <= filters.max_luck &&
+      x.title_req >= filters.min_title_req &&
+      x.title_req <= filters.max_title_req &&
+      x.cheese_effect >= filters.min_cheese_effect &&
+      x.cheese_effect <= filters.max_cheese_effect &&
+      (filters.limited === 'any' || filters.limited === x.limited) &&
+      testString.includes(userSearchString)
+    );
   });
 
   // Sorting functionality
@@ -177,7 +117,7 @@ export default function BaseApp() {
         <label htmlFor="name-search">Search by name: </label>
         <input type="text" name="name-search" value={filters.base_name} onChange={handleTextSearch} />
       </div>
-      
+
       <div className="pagebuttons">
         <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
         {output}
@@ -206,8 +146,8 @@ export default function BaseApp() {
               <td>{(base.power_bonus * 100).toFixed(0) + "%"}</td>
               <td>{(base.attr_bonus * 100).toFixed(0) + "%"}</td>
               <td>{base.luck}</td>
-              <td>{dataList.freshness[base.cheese_effect]}</td>
-              <td>{dataList.title_req[base.title_req - 1]}</td>
+              <td>{data.freshness[base.cheese_effect]}</td>
+              <td>{data.title_req[base.title_req - 1]}</td>
             </tr>
           ))}
         </tbody>
