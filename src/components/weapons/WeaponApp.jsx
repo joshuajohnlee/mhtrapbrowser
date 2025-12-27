@@ -9,7 +9,6 @@ import weaponsList from '../../assets/weapons.json';
 
 // Import other components
 import FilterForm from "./WeaponFilterForm.jsx";
-import NameSearch from "./WeaponNameSearch.jsx";
 
 // Define default filters which will include all weapons
 const DEFAULT_FILTERS = {
@@ -41,7 +40,52 @@ const DEFAULT_FILTERS = {
   limited: 'any'
 }
 
+const dataList = {
+  freshness: [
+    "Über Stale",
+    "Ultimately Stale",
+    "Insanely Stale",
+    "Extremely Stale",
+    "Very Stale",
+    "Stale",
+    "No cheese effect",
+    "Fresh",
+    "Very Fresh",
+    "Extremely Fresh",
+    "Insanely Fresh",
+    "Ultimately Fresh",
+    "Über Fresh",
+  ],
+  title_req: [
+    "Novice",
+    "Recruit",
+    "Apprentice",
+    "Initiate",
+    "Journeyman/Journeywomen",
+    "Master",
+    "Grandmaster",
+    "Legendary",
+    "Hero",
+    "Knight",
+    "Lord/Lady",
+    "Baron/Baroness",
+    "Count/Countess",
+    "Duke/Duchess",
+    "Grand Duke/Duchess",
+    "Archduke/Archduchess",
+    "Viceroy",
+    "Elder",
+    "Sage",
+    "Fabled",
+  ]
+}
+
 export default function WeaponApp() {
+
+  const handleTextSearch = (e) => {
+    let searchText = e.target.value;
+    setFilters({ ...filters, weapon_name: searchText });
+  }
 
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
@@ -116,47 +160,7 @@ export default function WeaponApp() {
 
   let output = []
 
-  const dataList = {
-    freshness: [
-      "Über Stale",
-      "Ultimately Stale",
-      "Insanely Stale",
-      "Extremely Stale",
-      "Very Stale",
-      "Stale",
-      "No cheese effect",
-      "Fresh",
-      "Very Fresh",
-      "Extremely Fresh",
-      "Insanely Fresh",
-      "Ultimately Fresh",
-      "Über Fresh",
-    ],
-    title_req: [
-      "Novice",
-      "Recruit",
-      "Apprentice",
-      "Initiate",
-      "Journeyman/Journeywomen",
-      "Master",
-      "Grandmaster",
-      "Legendary",
-      "Hero",
-      "Knight",
-      "Lord/Lady",
-      "Baron/Baroness",
-      "Count/Countess",
-      "Duke/Duchess",
-      "Grand Duke/Duchess",
-      "Archduke/Archduchess",
-      "Viceroy",
-      "Elder",
-      "Sage",
-      "Fabled",
-    ]
-  }
-
-  for(let i = 0; i< (Math.ceil(filteredWeaponList.length / 20)); i++) {
+  for (let i = 0; i < (Math.ceil(filteredWeaponList.length / 20)); i++) {
     if (i === currentPage) {
       output.push(<button className="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
     } else {
@@ -185,10 +189,8 @@ export default function WeaponApp() {
       />
 
       <div className="filter-sort-container">
-        <NameSearch
-          filters={filters}
-          setFilters={setFilters}
-        />
+        <label htmlFor="name-search">Search by name: </label>
+        <input type="text" name="name-search" value={filters.weapon_name} onChange={handleTextSearch} />
       </div>
 
       <div className="pagebuttons">

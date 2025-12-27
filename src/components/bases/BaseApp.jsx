@@ -9,7 +9,6 @@ import basesList from '../../assets/bases.json';
 
 // Import other components
 import FilterForm from "./BaseFilterForm";
-import BaseNameSearch from './BaseNameSearch'
 
 // Define default filters which will include all bases
 const DEFAULT_FILTERS = {
@@ -29,8 +28,50 @@ const DEFAULT_FILTERS = {
   limited: 'any'
 }
 
+// Define data lists for freshness and titles
+const dataList = {
+  freshness: [
+    "Über Stale",
+    "Ultimately Stale",
+    "Insanely Stale",
+    "Extremely Stale",
+    "Very Stale",
+    "Stale",
+    "No cheese effect",
+    "Fresh",
+    "Very Fresh",
+    "Extremely Fresh",
+    "Insanely Fresh",
+    "Ultimately Fresh",
+    "Über Fresh",
+  ],
+  title_req: [
+    "Novice",
+    "Recruit",
+    "Apprentice",
+    "Initiate",
+    "Journeyman/Journeywomen",
+    "Master",
+    "Grandmaster",
+    "Legendary",
+    "Hero",
+    "Knight",
+    "Lord/Lady",
+    "Baron/Baroness",
+    "Count/Countess",
+    "Duke/Duchess",
+    "Grand Duke/Duchess",
+    "Archduke/Archduchess",
+    "Viceroy",
+    "Elder",
+    "Sage",
+    "Fabled",
+  ]
+}
+
 export default function BaseApp() {
 
+  // Always start with the default filters
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
 
   // Check the filters against each base
@@ -60,7 +101,7 @@ export default function BaseApp() {
     }
   });
 
-  // Create states for sorting
+  // Sorting functionality
   const [currentSortField, setCurrentSortField] = useState(["power"])
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
@@ -70,7 +111,7 @@ export default function BaseApp() {
         setCurrentSortDirection("desc");
       } else {
         setCurrentSortDirection("asc");
-      } 
+      }
     } else {
       setCurrentSortField(field);
       setCurrentSortDirection("asc");
@@ -80,12 +121,10 @@ export default function BaseApp() {
   // Sort and filter the list
   let filteredBaseList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
-  // Create state to use with the page selector
-  const [currentPage, setCurrentPage] = useState(0);
-
-  let slicedList = filteredBaseList.slice(currentPage * 20, (currentPage * 20) + 20);
-
   // Page turner functionality 
+
+  const [currentPage, setCurrentPage] = useState(0);
+  let slicedList = filteredBaseList.slice(currentPage * 20, (currentPage * 20) + 20);
 
   function handlePreviousOrNext(direction) {
     if (direction === "previous" && currentPage > 0) {
@@ -121,44 +160,9 @@ export default function BaseApp() {
     }
   }
 
-  const dataList = {
-    freshness: [
-      "Über Stale",
-      "Ultimately Stale",
-      "Insanely Stale",
-      "Extremely Stale",
-      "Very Stale",
-      "Stale",
-      "No cheese effect",
-      "Fresh",
-      "Very Fresh",
-      "Extremely Fresh",
-      "Insanely Fresh",
-      "Ultimately Fresh",
-      "Über Fresh",
-    ],
-    title_req: [
-      "Novice",
-      "Recruit",
-      "Apprentice",
-      "Initiate",
-      "Journeyman/Journeywomen",
-      "Master",
-      "Grandmaster",
-      "Legendary",
-      "Hero",
-      "Knight",
-      "Lord/Lady",
-      "Baron/Baroness",
-      "Count/Countess",
-      "Duke/Duchess",
-      "Grand Duke/Duchess",
-      "Archduke/Archduchess",
-      "Viceroy",
-      "Elder",
-      "Sage",
-      "Fabled",
-    ]
+  const handleTextSearch = (e) => {
+    let searchText = e.target.value;
+    setFilters({ ...filters, base_name: searchText });
   }
 
   return (
@@ -168,12 +172,12 @@ export default function BaseApp() {
         filters={filters}
         DEFAULTS={DEFAULT_FILTERS}
       />
+
       <div className="filter-sort-container">
-        <BaseNameSearch
-          filters={filters}
-          setFilters={setFilters}
-        />
+        <label htmlFor="name-search">Search by name: </label>
+        <input type="text" name="name-search" value={filters.base_name} onChange={handleTextSearch} />
       </div>
+      
       <div className="pagebuttons">
         <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
         {output}
