@@ -9,7 +9,6 @@ import BaseApp from './components/bases/BaseApp.jsx'
 import Home from './components/Home.jsx';
 import PageHeader from './components/PageHeader.jsx';
 import Help from './components/Help.jsx';
-import Compare from './components/compare/Compare.jsx';
 import PageFooter from './components/Footer.jsx';
 
 // CSS Imports
@@ -30,7 +29,6 @@ const Routing = () => {
         <Route path="/weapons" element={<WeaponApp />} />
         <Route path="/bases" element={<BaseApp />} />
         <Route path="/help" element={<Help />} />
-        <Route path="/compare" element={<Compare />} />
       </Routes>
       <PageFooter />
     </BrowserRouter>
