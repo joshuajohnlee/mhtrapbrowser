@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 
 //Component Imports
+import PageHeader from './components/PageHeader.jsx';
+import Home from './components/Home.jsx';
 import WeaponApp from './components/weapons/WeaponApp.jsx';
 import BaseApp from './components/bases/BaseApp.jsx'
-import Home from './components/Home.jsx';
-import PageHeader from './components/PageHeader.jsx';
 import Help from './components/Help.jsx';
 import PageFooter from './components/Footer.jsx';
 
@@ -26,9 +26,9 @@ const Routing = () => {
       <PageHeader />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/weapons" element={<WeaponApp />} />
-        <Route path="/bases" element={<BaseApp />} />
-        <Route path="/help" element={<Help />} />
+        <Route path="weapons" element={<WeaponApp />} />
+        <Route path="bases" element={<BaseApp />} />
+        <Route path="help" element={<Help />} />
       </Routes>
       <PageFooter />
     </BrowserRouter>

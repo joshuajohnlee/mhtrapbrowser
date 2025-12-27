@@ -1,0 +1,75 @@
+.modal-form {
+    width: 60%;
+    z-index: 3;
+    text-align: center;
+    margin: 5vh auto auto auto;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--light-bg);
+}
+
+.modal-form legend {
+    text-align: center;
+}
+
+.slider-container {
+    display:grid;
+    row-gap: 2vh;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.power-type-buttons button {
+    width: 40%;
+    margin: 1vh;
+}
+
+.warning-message {
+    margin: 1vh auto 1vh auto;
+    width: 90%;
+    border-color: red;
+    color: white;
+    background-color: #D95D39;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 1rem;
+    word-wrap: break-word;
+}
+
+.warning-message-inactive {
+    display: none;
+}
+
+fieldset {
+    margin-top: 1vh;
+}
+
+.form-buttons {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-buttons button {
+    padding: 1em;
+    margin: 0 2% 0 2%;
+}
+
+.form-power-selection {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+.form-check-label {
+    text-align: left;
+}
+
+.form-other-controls {
+    margin: 2vh auto 2vh auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1vh;
+    column-gap: 1vw;
+}
+
+.form-other-controls select {
+    width: 60%;
+}

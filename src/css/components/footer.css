@@ -1,0 +1,20 @@
+.app-footer {
+    position: sticky;
+    bottom: 0px;
+    background-color: var(--light-bg);
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    width: 100%;
+    margin-top: 2vh;
+    z-index: 2;
+}
+
+#footer-credit {
+    margin-left: 2vw;
+    text-align: left;
+}
+
+#footer-links {
+    margin-right: 2vw;
+    text-align: right;
+}

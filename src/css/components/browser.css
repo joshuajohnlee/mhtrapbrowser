@@ -1,0 +1,86 @@
+/* Filter and sort buttons */
+
+.filter-sort-container {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    column-gap: 2%;
+    align-items: center;
+    margin: 1vh auto 0 auto;
+}
+
+.filter-button {
+    width: 60%;
+    height: 5vh;
+}
+
+.sorter select {
+    background-color: #11212D;
+    color: white;
+    height: 5vh;
+    margin-left: 1vw;
+    text-align: center;
+}
+
+/* Page Buttons */
+
+.pagebuttons {
+    margin: 2% auto 2% auto;
+}
+
+.pagebuttons button {
+    min-width: 30px;
+    margin: 0 0.3vw 0 0.3vw;
+    padding: 0 10px 0 10px;
+}
+
+.activepage {
+    background-color: var(--selected-background);
+}
+
+/* Model content overlay animation */
+
+.ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+/* Name search bar */
+
+ .name-search-container {
+    display:grid;
+    align-items: center;
+    width: 60%;
+    margin: 1vh auto 1vh auto;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Tables */
+
+.traptable {
+    text-align: left;
+    margin: 1vh auto 1vh auto;
+    border-collapse: collapse;
+    width: 95%;
+}
+
+.traptable th, .traptable td {
+    border: 1px solid var(--dark-bg);
+    padding: 0.5em;
+}
+
+.limited {
+    color: rgb(190, 172, 68);
+    font-weight: bold;
+    padding: 2px 4px 2px 4px;
+    margin-left: 5px;
+    border-radius: 5px;
+}

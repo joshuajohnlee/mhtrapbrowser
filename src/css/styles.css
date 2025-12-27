@@ -1,15 +1,13 @@
-/* Styles for the app as a whole */
-@import "generic.css";
-
-/* Styles for specific apps */
-@import "browser.css";
-@import "compare.css";
-@import "home.css";
+/* Styles for specific components */
+@import "./components/header.css";
+@import "./components/browser.css";
+@import "./components/footer.css";
+@import "./components/filterform.css";
+@import "./components/home.css";
 
 /* Responsive styles */
 @import "responsive.css" screen and (max-width: 800px);
 
-/* Colour palette used throughout */
 :root {
     --dark-bg: #0A141B;
     --light-bg: #11212D;
@@ -18,4 +16,46 @@
     --border-blue: #32b8da;
     --blue-glow: #5787be;
     --selected-background: rgba(168, 104, 221, 0.521);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background-color: var(--dark-bg);
+    color: white;
+    font-size: smaller;
+}
+
+button {
+    margin: 1vh auto 1vh auto;
+    background: none;
+    color: white;
+    border: 1px solid var(--border-blue);
+    border-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 2px 2px 20px #000000;
+}
+
+.content-container {
+    width: 80%;
+    margin: 5vh auto 0 auto;
+    text-align: left;
+}
+
+/* Links */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #B5FFE1;
 }
