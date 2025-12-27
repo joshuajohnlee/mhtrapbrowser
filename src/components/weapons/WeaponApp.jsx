@@ -1,13 +1,14 @@
 // Import libraries
 import { useState } from "react";
 import lodash from "lodash";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShield } from '@fortawesome/free-solid-svg-icons'
 
 // Import weapon data
 import weaponsList from '../../assets/weapons.json';
 
 // Import other components
 import FilterForm from "./WeaponFilterForm.jsx";
-import SortButton from "../SortButton.jsx";
 import NameSearch from "./WeaponNameSearch.jsx";
 
 // Define default filters which will include all weapons
@@ -184,10 +185,6 @@ export default function WeaponApp() {
       />
 
       <div className="filter-sort-container">
-        <SortButton
-          setCurrentSortDirection={setCurrentSortDirection}
-          setCurrentSortField={setCurrentSortField}
-        />
         <NameSearch
           filters={filters}
           setFilters={setFilters}
@@ -202,24 +199,23 @@ export default function WeaponApp() {
 
       <div className="numberresults">{filteredWeaponList.length} results found.<br /></div>
 
-      <table id="weapontable">
+      <table className="traptable">
         <thead>
           <tr>
-            <th>Weapon Name</th>
-            <th>Power Type</th>
-            <th>Power</th>
-            <th>Power Bonus</th>
-            <th>Attraction Bonus</th>
-            <th>Luck</th>
-            <th>Cheese Effect</th>
-            <th>Title Required</th>
-            <th>Limited Edition</th>
+            <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("attr_bonus")}>Attraction Bonus {currentSortField === "attr_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("title_req")}>Title Required {currentSortField === "title_req" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
           </tr>
         </thead>
         <tbody>
           {slicedList.map((weapon) => (
             <tr key={weapon.id}>
-              <td>{weapon.name}</td>
+              <td>{weapon.name} {weapon.limited === "yes" && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
               <td>{weapon.power_type}</td>
               <td>{weapon.power}</td>
               <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
@@ -227,7 +223,6 @@ export default function WeaponApp() {
               <td>{weapon.luck}</td>
               <td>{dataList.freshness[weapon.cheese_effect]}</td>
               <td>{dataList.title_req[weapon.title_req - 1]}</td>
-              <td>{weapon.limited}</td>
             </tr>
           ))}
         </tbody>

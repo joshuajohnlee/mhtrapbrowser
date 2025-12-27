@@ -1,14 +1,16 @@
 // Import libraries
 import { useState } from "react";
 import lodash from "lodash";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShield } from '@fortawesome/free-solid-svg-icons'
+
 // Import base data
 import basesList from '../../assets/bases.json';
+
 // Import other components
-import BaseCard from "./BaseCard";
 import FilterForm from "./BaseFilterForm";
-import SortButton from "../SortButton";
-import ToTopButton from "../ToTopButton";
 import BaseNameSearch from './BaseNameSearch'
+
 // Define default filters which will include all bases
 const DEFAULT_FILTERS = {
   base_name: "",
@@ -62,6 +64,19 @@ export default function BaseApp() {
   const [currentSortField, setCurrentSortField] = useState(["power"])
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
 
+  function changeSort(field) {
+    if (field === currentSortField) {
+      if (currentSortDirection === "asc") {
+        setCurrentSortDirection("desc");
+      } else {
+        setCurrentSortDirection("asc");
+      } 
+    } else {
+      setCurrentSortField(field);
+      setCurrentSortDirection("asc");
+    }
+  }
+
   // Sort and filter the list
   let filteredBaseList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
 
@@ -88,7 +103,7 @@ export default function BaseApp() {
 
   for (let i = 0; i < (Math.ceil(filteredBaseList.length / 20)); i++) {
     if (i === currentPage) {
-      output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+      output.push(<button className="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
     } else {
       output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
     }
@@ -99,11 +114,51 @@ export default function BaseApp() {
 
     for (let i = 0; i < (Math.ceil(filteredBaseList.length / 20)); i++) {
       if (i === currentPage) {
-        output.push(<button class="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
+        output.push(<button className="activepage" onClick={() => changePage(i)}>{i + 1}</button>)
       } else {
         output.push(<button onClick={() => changePage(i)}>{i + 1}</button>)
       }
     }
+  }
+
+  const dataList = {
+    freshness: [
+      "Über Stale",
+      "Ultimately Stale",
+      "Insanely Stale",
+      "Extremely Stale",
+      "Very Stale",
+      "Stale",
+      "No cheese effect",
+      "Fresh",
+      "Very Fresh",
+      "Extremely Fresh",
+      "Insanely Fresh",
+      "Ultimately Fresh",
+      "Über Fresh",
+    ],
+    title_req: [
+      "Novice",
+      "Recruit",
+      "Apprentice",
+      "Initiate",
+      "Journeyman/Journeywomen",
+      "Master",
+      "Grandmaster",
+      "Legendary",
+      "Hero",
+      "Knight",
+      "Lord/Lady",
+      "Baron/Baroness",
+      "Count/Countess",
+      "Duke/Duchess",
+      "Grand Duke/Duchess",
+      "Archduke/Archduchess",
+      "Viceroy",
+      "Elder",
+      "Sage",
+      "Fabled",
+    ]
   }
 
   return (
@@ -114,10 +169,6 @@ export default function BaseApp() {
         DEFAULTS={DEFAULT_FILTERS}
       />
       <div className="filter-sort-container">
-        <SortButton
-          setCurrentSortDirection={setCurrentSortDirection}
-          setCurrentSortField={setCurrentSortField}
-        />
         <BaseNameSearch
           filters={filters}
           setFilters={setFilters}
@@ -130,20 +181,39 @@ export default function BaseApp() {
       </div>
 
       <div className="numberresults">{filteredBaseList.length} results found.</div>
-      <div className="card-container">
-        {slicedList.map((base) => (
-          <BaseCard
-            key={base.name}
-            base={base}
-          />
-        ))}
-      </div>
+
+      <table className="traptable">
+        <thead>
+          <tr>
+            <th onClick={() => changeSort("name")}>Base Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("attr_bonus")}>Attraction Bonus {currentSortField === "attr_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("title_req")}>Title Required {currentSortField === "title_req" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {slicedList.map((base) => (
+            <tr key={base.id}>
+              <td>{base.name} {base.limited === "yes" && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
+              <td>{base.power}</td>
+              <td>{(base.power_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{(base.attr_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{base.luck}</td>
+              <td>{dataList.freshness[base.cheese_effect]}</td>
+              <td>{dataList.title_req[base.title_req - 1]}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
       <div className="pagebuttons">
         <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
         {output}
         <button onClick={() => handlePreviousOrNext("next")}>Next</button>
       </div>
-      <ToTopButton />
     </>
   );
 }
