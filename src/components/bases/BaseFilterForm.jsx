@@ -81,10 +81,15 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                 style={
                     {
                         overlay: {
+                            position: "fixed",
+                            inset: 0,
                             background: "rgba(0, 0, 0, 0.5)",
-                            overflowY: "scroll"
+                            zIndex: 10,
+                            overflowY: "auto",
                         },
                         content: {
+                            position: "relative",
+                            zIndex: 11,
                         }
                     }
                 }

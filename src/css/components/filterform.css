@@ -1,4 +1,5 @@
 .modal-form {
+    position: relative;
     width: 60%;
     z-index: 3;
     text-align: center;

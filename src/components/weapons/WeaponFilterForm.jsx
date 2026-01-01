@@ -22,8 +22,8 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
     useEffect(() => {
         hideWarning();
-        
-        if(Number(filters.min_power) > Number(filters.max_power)) {
+
+        if (Number(filters.min_power) > Number(filters.max_power)) {
             displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.");
         }
 
@@ -128,10 +128,15 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                 style={
                     {
                         overlay: {
+                            position: "fixed",
+                            inset: 0,
                             background: "rgba(0, 0, 0, 0.5)",
-                            overflowY: "scroll"
+                            zIndex: 10,
+                            overflowY: "auto",
                         },
                         content: {
+                            position: "relative",
+                            zIndex: 11,
                         }
                     }
                 }
@@ -180,7 +185,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                         </div>
                     </fieldset>
 
-                    {Number(filters.min_power) > Number(filters.max_power) 
+                    {Number(filters.min_power) > Number(filters.max_power)
                         && <div id="warning-message">Your minimum power is set higher than your maximum. Nothing will be shown.</div>}
 
                     <fieldset className="slider-container">
@@ -322,7 +327,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
                     {warningVisibility && <div id="warning-message">{warningMessage}</div>}
 
-                    
+
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>
