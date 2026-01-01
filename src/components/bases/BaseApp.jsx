@@ -28,12 +28,12 @@ export default function BaseApp() {
       x.power <= filters.max_power &&
       x.power_bonus >= filters.min_power_bonus / 100 &&
       x.power_bonus <= filters.max_power_bonus / 100 &&
-      x.attr_bonus >= filters.min_attr_bonus / 100 &&
-      x.attr_bonus <= filters.max_attr_bonus / 100 &&
+      x.attraction_bonus >= filters.min_attraction_bonus / 100 &&
+      x.attraction_bonus <= filters.max_attraction_bonus / 100 &&
       x.luck >= filters.min_luck &&
       x.luck <= filters.max_luck &&
-      x.title_req >= filters.min_title_req &&
-      x.title_req <= filters.max_title_req &&
+      x.title_required >= filters.min_title_required &&
+      x.title_required <= filters.max_title_required &&
       x.cheese_effect >= filters.min_cheese_effect &&
       x.cheese_effect <= filters.max_cheese_effect &&
       (filters.limited === 'any' || filters.limited === x.limited) &&
@@ -132,10 +132,10 @@ export default function BaseApp() {
             <th onClick={() => changeSort("name")}>Base Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("attr_bonus")}>Attraction Bonus {currentSortField === "attr_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("attraction_bonus")}>Attraction Bonus {currentSortField === "attraction_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("title_req")}>Title Required {currentSortField === "title_req" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("title_required")}>Title Required {currentSortField === "title_required" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
           </tr>
         </thead>
         <tbody>
@@ -144,10 +144,10 @@ export default function BaseApp() {
               <td>{base.name} {base.limited === "yes" && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
               <td>{base.power}</td>
               <td>{(base.power_bonus * 100).toFixed(0) + "%"}</td>
-              <td>{(base.attr_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{(base.attraction_bonus * 100).toFixed(0) + "%"}</td>
               <td>{base.luck}</td>
               <td>{data.freshness[base.cheese_effect]}</td>
-              <td>{data.title_req[base.title_req - 1]}</td>
+              <td>{data.title_required[base.title_required]}</td>
             </tr>
           ))}
         </tbody>

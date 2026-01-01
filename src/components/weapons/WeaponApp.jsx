@@ -33,15 +33,15 @@ export default function WeaponApp() {
       x.power <= filters.max_power &&
       x.power_bonus >= filters.min_power_bonus / 100 &&
       x.power_bonus <= filters.max_power_bonus / 100 &&
-      x.attr_bonus >= filters.min_attr_bonus / 100 &&
-      x.attr_bonus <= filters.max_attr_bonus / 100 &&
+      x.attraction_bonus >= filters.min_attraction_bonus / 100 &&
+      x.attraction_bonus <= filters.max_attraction_bonus / 100 &&
       x.luck >= filters.min_luck &&
       x.luck <= filters.max_luck &&
-      x.title_req >= filters.min_title_req &&
-      x.title_req <= filters.max_title_req &&
+      x.title_required >= filters.min_title_required &&
+      x.title_required <= filters.max_title_required &&
       x.cheese_effect >= filters.min_cheese_effect &&
       x.cheese_effect <= filters.max_cheese_effect &&
-      (filters.limited === 'any' || filters.limited === x.limited) &&
+      (filters.limited_edition === 'any' || filters.limited_edition === x.limited_edition) &&
       testString.includes(userSearchString)
     );
   });
@@ -136,23 +136,23 @@ export default function WeaponApp() {
             <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("attr_bonus")}>Attraction Bonus {currentSortField === "attr_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("attraction_bonus")}>Attraction Bonus {currentSortField === "attraction_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("title_req")}>Title Required {currentSortField === "title_req" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+            <th onClick={() => changeSort("title_required")}>Title Required {currentSortField === "title_required" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
           </tr>
         </thead>
         <tbody>
           {slicedList.map((weapon) => (
             <tr key={weapon.id}>
-              <td>{weapon.name} {weapon.limited === "yes" && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
+              <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
               <td>{weapon.power_type}</td>
               <td>{weapon.power}</td>
               <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
-              <td>{(weapon.attr_bonus * 100).toFixed(0) + "%"}</td>
+              <td>{(weapon.attraction_bonus * 100).toFixed(0) + "%"}</td>
               <td>{weapon.luck}</td>
               <td>{data.freshness[weapon.cheese_effect]}</td>
-              <td>{data.title_req[weapon.title_req - 1]}</td>
+              <td>{data.title_required[weapon.title_required]}</td>
             </tr>
           ))}
         </tbody>
