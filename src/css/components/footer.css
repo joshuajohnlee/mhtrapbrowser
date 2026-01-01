@@ -1,11 +1,10 @@
 .app-footer {
-    position: sticky;
-    bottom: 0px;
+    position: relative;
+    bottom: 0;
     background-color: var(--light-bg);
     display: grid;
     grid-template-columns: 5fr 2fr;
     width: 100%;
-    margin-top: 2vh;
     z-index: 2;
 }
 

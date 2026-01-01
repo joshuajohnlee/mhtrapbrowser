@@ -68,6 +68,7 @@ export default function WeaponApp() {
 
   // Create states to use with the page selector
   const [currentPage, setCurrentPage] = useState(0);
+  const totalPages = Math.ceil(filteredWeaponList.length / 20);
 
   // Create the sliced list showing the results for the currently selected page
   let slicedList = filteredWeaponList.slice(currentPage * 20, (currentPage * 20) + 20);
@@ -110,60 +111,69 @@ export default function WeaponApp() {
 
   return (
     <>
-      <FilterForm
-        setFilters={setFilters}
-        filters={filters}
-        DEFAULTS={DEFAULT_FILTERS}
-      />
+      <main>
+        <FilterForm
+          setFilters={setFilters}
+          filters={filters}
+          DEFAULTS={DEFAULT_FILTERS}
+        />
 
-      <div className="filter-sort-container">
-        <label htmlFor="name-search">Search by name: </label>
-        <input type="text" name="name-search" value={filters.weapon_name} onChange={handleTextSearch} />
-      </div>
+        <div className="filter-sort-container">
+          <label htmlFor="name-search">Search by name: </label>
+          <input type="text" name="name-search" value={filters.weapon_name} onChange={handleTextSearch} />
+        </div>
 
-      <div className="pagebuttons">
-        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
-        {output}
-        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
-      </div>
+        {totalPages > 1 &&
+          <>
+            <div className="pagebuttons">
+              <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+              {output}
+              <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+            </div>
+          </>
+        }
 
-      <div className="numberresults">{filteredWeaponList.length} results found.<br /></div>
+        <div className="numberresults">{filteredWeaponList.length} results found.<br /></div>
 
-      <table className="traptable">
-        <thead>
-          <tr>
-            <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("attraction_bonus")}>Attraction Bonus {currentSortField === "attraction_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-            <th onClick={() => changeSort("title_required")}>Title Required {currentSortField === "title_required" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {slicedList.map((weapon) => (
-            <tr key={weapon.id}>
-              <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
-              <td>{weapon.power_type}</td>
-              <td>{weapon.power}</td>
-              <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
-              <td>{(weapon.attraction_bonus * 100).toFixed(0) + "%"}</td>
-              <td>{weapon.luck}</td>
-              <td>{data.freshness[weapon.cheese_effect]}</td>
-              <td>{data.title_required[weapon.title_required]}</td>
+        <table className="traptable">
+          <thead>
+            <tr>
+              <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("attraction_bonus")}>Attraction Bonus {currentSortField === "attraction_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
+              <th onClick={() => changeSort("title_required")}>Title Required {currentSortField === "title_required" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {slicedList.map((weapon) => (
+              <tr key={weapon.id}>
+                <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
+                <td>{weapon.power_type}</td>
+                <td>{weapon.power}</td>
+                <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
+                <td>{(weapon.attraction_bonus * 100).toFixed(0) + "%"}</td>
+                <td>{weapon.luck}</td>
+                <td>{data.freshness[weapon.cheese_effect]}</td>
+                <td>{data.title_required[weapon.title_required]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
-      <div className="pagebuttons">
-        <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
-        {output}
-        <button onClick={() => handlePreviousOrNext("next")}>Next</button>
-      </div>
-
+        {totalPages > 1 &&
+          <>
+            <div className="pagebuttons">
+              <button onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+              {output}
+              <button onClick={() => handlePreviousOrNext("next")}>Next</button>
+            </div>
+          </>
+        }
+      </main>
     </>
   );
 }

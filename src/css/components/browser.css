@@ -70,6 +70,16 @@
     margin: 1vh auto 1vh auto;
     border-collapse: collapse;
     width: 95%;
+    table-layout: fixed;
+}
+
+.traptable th:nth-child(1),
+.traptable td:nth-child(1) {
+    width: 25%; /* Base Name */
+}
+
+.traptable th {
+    text-align: center;
 }
 
 .traptable th, .traptable td {

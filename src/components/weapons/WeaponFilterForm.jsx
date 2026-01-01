@@ -143,7 +143,8 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                 shouldCloseOnOverlayClick={true}
             >
                 <form id="filterForm">
-
+                    {warningVisibility && <div id="warning-message">{warningMessage}</div>}
+                    
                     <fieldset>
                         <legend>Power Type</legend>
 
@@ -324,10 +325,6 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                         </select>
 
                     </div>
-
-                    {warningVisibility && <div id="warning-message">{warningMessage}</div>}
-
-
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>

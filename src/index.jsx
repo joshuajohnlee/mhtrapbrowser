@@ -23,14 +23,16 @@ import '@fontsource/roboto/700.css';
 const Routing = () => {
   return (
     <BrowserRouter>
-      <PageHeader />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="weapons" element={<WeaponApp />} />
-        <Route path="bases" element={<BaseApp />} />
-        <Route path="help" element={<Help />} />
-      </Routes>
-      <PageFooter />
+      <div id="app">
+        <PageHeader />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="weapons" element={<WeaponApp />} />
+          <Route path="bases" element={<BaseApp />} />
+          <Route path="help" element={<Help />} />
+        </Routes>
+        <PageFooter />
+      </div>
     </BrowserRouter>
   )
 }

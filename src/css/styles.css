@@ -19,7 +19,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     margin: 0;
+    padding: 0;
     font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
@@ -48,6 +52,16 @@ button:active {
     width: 80%;
     margin: 5vh auto 0 auto;
     text-align: left;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
 }
 
 /* Links */
