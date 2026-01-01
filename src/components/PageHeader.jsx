@@ -5,7 +5,7 @@ export default function PageHeader() {
     return (
         <>
             <div className="app-header">
-                <h1>Joshy's MHTrapBrowser</h1>
+                <Link className="nav-link" to="/"><h1>Joshy's MHTrapBrowser</h1></Link>
 
                 <nav className="header-nav">
                     <Link className="nav-link" to="/">Home</Link>
