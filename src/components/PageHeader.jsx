@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function PageHeader() {
 
     return (
         <>
-        <div className="app-header">
-            <h1>Joshy's MHTrapBrowser</h1>
-            
-            <nav className="header-nav">
-                <a className="nav-link" href="#/">Home</a>
-                <a className="nav-link" href="#/weapons">Weapons</a>
-                <a className="nav-link" href="#/bases">Bases</a>
-                <a className="nav-link" href="#/help">Help</a>
-            </nav>
-        </div>
+            <div className="app-header">
+                <h1>Joshy's MHTrapBrowser</h1>
+
+                <nav className="header-nav">
+                    <Link className="nav-link" to="/">Home</Link>
+                    <Link className="nav-link" to="/bases">Bases</Link>
+                    <Link className="nav-link" to="/weapons">Weapons</Link>
+                    <Link className="nav-link" to="/help">Help</Link>
+                </nav>
+            </div>
         </>
     )
 }
