@@ -1,6 +1,6 @@
 {
     "DEFAULT_BASE_FILTERS": {
-        "base_name": "",
+        "name": "",
         "min_power": 0,
         "max_power": 16500,
         "min_power_bonus": 0,
@@ -16,7 +16,7 @@
         "limited_edition": "any"
     },
     "DEFAULT_WEAPON_FILTERS": {
-        "weapon_name": "",
+        "name": "",
         "power_type": {
             "Arcane": true,
             "Draconic": true,

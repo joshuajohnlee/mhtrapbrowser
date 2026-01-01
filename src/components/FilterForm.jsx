@@ -1,57 +1,96 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
+import { useResourceType } from "../context.jsx";
 
 export default function FilterForm({ setFilters, filters, DEFAULTS }) {
+    const resource = useResourceType();
 
-    // modal visibility state and toggle
+    // Modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
 
-    const [warningMessage, setWarningMessage] = useState("Default warning message")
-    const [warningVisibility, setWarningVisibility] = useState("warning-message-inactive")
+    // Set states for the warning message
+    const [warningMessage, setWarningMessage] = useState("")
+    const [warningVisibility, setWarningVisibility] = useState(false)
 
     function displayWarning(message) {
         setWarningMessage(message);
-        setWarningVisibility("warning-message")
+        setWarningVisibility(true)
     }
 
     function hideWarning() {
         setWarningMessage("");
-        setWarningVisibility("warning-message-inactive")
+        setWarningVisibility(false)
     }
 
-    const handleChange = (e) => {
-
-        setFilters({ ...filters, [e.target.name]: e.target.value });
-
-        console.log("Limited is set to " + filters.limited);
-
-        if (Number(filters.min_power) > Number(filters.max_power)) {
-            displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        }
-        if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
-            displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        }
-        if (Number(filters.min_attr_bonus) > Number(filters.max_attr_bonus)) {
-            displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.")
-            return (null)
-        }
-        if (Number(filters.min_luck) > Number(filters.max_luck)) {
-            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be")
-            return (null)
-        }
-        if (Number(filters.min_title_req) > Number(filters.max_title_req)) {
-            displayWarning("Your lowest title is higher than your highest title. Nothing will be shown.")
-            return (null)
-        }
-        if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
-            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.")
-            return (null)
-        }
-
+    useEffect(() => {
         hideWarning();
 
+        if (Number(filters.min_power) > Number(filters.max_power)) {
+            displayWarning("Your minimum power is set higher than your maximum. Nothing will be shown.");
+        }
+
+        if (Number(filters.min_power_bonus) > Number(filters.max_power_bonus)) {
+            displayWarning("Your minimum power bonus is set higher than your maximum. Nothing will be shown.");
+        }
+
+        if (Number(filters.min_attraction_bonus) > Number(filters.max_attraction_bonus)) {
+            displayWarning("Your minimum attraction bonus is set higher than your maximum. Nothing will be shown.");
+        }
+
+        if (Number(filters.min_luck) > Number(filters.max_luck)) {
+            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be will be shown.");
+        }
+
+        if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
+            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.");
+        }
+
+    }, [filters]);
+
+    const handleChange = (e) => {
+        setFilters({ ...filters, [e.target.name]: e.target.value });
+    }
+
+    const handleCheckboxChange = (e) => {
+        const prev = filters.power_type || {};
+        setFilters({
+            ...filters,
+            power_type: { ...prev, [e.target.value]: e.target.checked }
+        });
+    }
+    
+    function selectAllPowerTypes() {
+        setFilters({
+            ...filters, power_type: {
+                "Arcane": true,
+                "Draconic": true,
+                "Forgotten": true,
+                "Hydro": true,
+                "Law": true,
+                "Parental": true,
+                "Physical": true,
+                "Rift": true,
+                "Shadow": true,
+                "Tactical": true,
+            }
+        })
+    }
+
+    function selectNoPowerTypes() {
+        setFilters({
+            ...filters, power_type: {
+                "Arcane": false,
+                "Draconic": false,
+                "Forgotten": false,
+                "Hydro": false,
+                "Law": false,
+                "Parental": false,
+                "Physical": false,
+                "Rift": false,
+                "Shadow": false,
+                "Tactical": false,
+            }
+        })
     }
 
     function openModal() {
@@ -65,13 +104,17 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
     }
 
     function resetAllFilters() {
-        setFilters(DEFAULTS);
+        let checkResponse = window.confirm("Are you sure you want to reset your filters?");
+
+        if (checkResponse) {
+            setFilters(DEFAULTS);
+        }
     }
 
     return (
         <>
             <button className="filter-button" onClick={openModal}>
-                Set Filters
+                Change Filters
             </button>
 
             <ReactModal
@@ -96,15 +139,60 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                 shouldCloseOnOverlayClick={true}
             >
                 <form id="filterForm">
+                    {warningVisibility && <div id="warning-message">{warningMessage}</div>}
+                    {resource === "weapons" && (
+                        <fieldset>
+                            <legend>Power Type</legend>
+
+                            <div className="power-type-buttons">
+                                <button type="button" name="select-all-power-types" onClick={selectAllPowerTypes}>Select All</button>
+                                <button type="button" name="select-no-power-types" onClick={selectNoPowerTypes}>Select None</button>
+                            </div>
+
+                            <div className="form-power-selection">
+                                <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={!!filters.power_type?.Arcane} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={!!filters.power_type?.Draconic} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={!!filters.power_type?.Forgotten} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={!!filters.power_type?.Hydro} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={!!filters.power_type?.Law} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-7">Law</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={!!filters.power_type?.Parental} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={!!filters.power_type?.Physical} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={!!filters.power_type?.Rift} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={!!filters.power_type?.Shadow} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
+
+                                <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={!!filters.power_type?.Tactical} onChange={handleCheckboxChange} />
+                                <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
+                            </div>
+                        </fieldset>
+                    )}
+                    {Number(filters.min_power) > Number(filters.max_power)
+                        && <div id="warning-message">Your minimum power is set higher than your maximum. Nothing will be shown.</div>}
 
                     <fieldset className="slider-container">
                         <legend>Power</legend>
                         <label className="form-label" htmlFor="min_power">Minimum power</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="16500" step="100" value={filters.min_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="20000" step="100" value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
                         <label className="form-label" htmlFor="max_power">Maximum power</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="16500" step="100" value={filters.max_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="20000" step="100" value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
@@ -121,30 +209,30 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
 
                     <fieldset className="slider-container">
                         <legend>Attraction Bonus</legend>
-                        <label className="form-label" htmlFor="min_attr_bonus">Minimum attraction bonus</label>
-                        <input className="form-range" type="range" name="min_attr_bonus" min="0" max="40" step="1" value={filters.min_attr_bonus} onChange={handleChange} />
-                        <output id="min_attr_bonus_value">{filters.min_attr_bonus + "%"}</output>
+                        <label className="form-label" htmlFor="min_attraction_bonus">Minimum attraction bonus</label>
+                        <input className="form-range" type="range" name="min_attraction_bonus" min="0" max="40" step="1" value={filters.min_attraction_bonus} onChange={handleChange} />
+                        <output id="min_attraction_bonus_value">{filters.min_attraction_bonus + "%"}</output>
 
-                        <label className="form-label" htmlFor="max_attr_bonus">Maximum attraction bonus</label>
-                        <input className="form-range" type="range" name="max_attr_bonus" min="0" max="40" value={filters.max_attr_bonus} onChange={handleChange} />
-                        <output id="max_attr_bonus_value">{filters.max_attr_bonus + "%"}</output>
+                        <label className="form-label" htmlFor="max_attraction_bonus">Maximum attraction bonus</label>
+                        <input className="form-range" type="range" name="max_attraction_bonus" min="0" max="40" value={filters.max_attraction_bonus} onChange={handleChange} />
+                        <output id="max_attraction_bonus_value">{filters.max_attraction_bonus + "%"}</output>
                     </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Luck</legend>
 
                         <label className="form-label" htmlFor="min_luck">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max="40" value={filters.min_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_luck" min="0" max="42" value={filters.min_luck} onChange={handleChange} />
                         <output id="min_luck_value">{filters.min_luck}</output>
 
                         <label className="form-label" htmlFor="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max="40" value={filters.max_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_luck" min="0" max="42" value={filters.max_luck} onChange={handleChange} />
                         <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 
                     <div className="form-other-controls">
-                        <label className="form-label" htmlFor="min_title_req">Lowest title needed</label>
-                        <select name="min_title_req" value={filters.min_title_req} onChange={handleChange}>
+                        <label className="form-label" htmlFor="min_title_required">Lowest title needed</label>
+                        <select name="min_title_required" value={filters.min_title_required} onChange={handleChange}>
                             <option value="0">Novice</option>
                             <option value="1">Recruit</option>
                             <option value="2">Apprentice</option>
@@ -167,8 +255,8 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                             <option value="19">Fabled</option>
                         </select>
 
-                        <label className="form-label" htmlFor="max_title_req">Highest title needed</label>
-                        <select name="max_title_req" value={filters.max_title_req} onChange={handleChange}>
+                        <label className="form-label" htmlFor="max_title_required">Highest title needed</label>
+                        <select name="max_title_required" value={filters.max_title_required} onChange={handleChange}>
                             <option value="0">Novice</option>
                             <option value="1">Recruit</option>
                             <option value="2">Apprentice</option>
@@ -225,16 +313,14 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                             <option value="12">Über Fresh</option>
                         </select>
 
-                        <label className="form-label" htmlFor="limited">Limited Edition?</label>
-                        <select name="limited" value={filters.limited} onChange={handleChange}>
+                        <label className="form-label" htmlFor="limited_edition">Limited Edition?</label>
+                        <select name="limited_edition" value={filters.limited_edition} onChange={handleChange}>
                             <option value="any">Any</option>
-                            <option value="yes">Limited edition only</option>
-                            <option value="no">Not limited edition</option>
+                            <option value="1">Limited edition only</option>
+                            <option value="0">Not limited edition</option>
                         </select>
 
                     </div>
-
-                    <div id="warning-message" className={warningVisibility}>{warningMessage}</div>
 
                     <div className="form-buttons">
                         <button type="button" onClick={closeModal}>Close</button>
@@ -244,5 +330,4 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             </ReactModal>
         </>
     )
-
 }
