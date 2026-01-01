@@ -11,6 +11,7 @@ export default function PageHeader() {
                     <Link className="nav-link" to="/">Home</Link>
                     <Link className="nav-link" to="/bases">Bases</Link>
                     <Link className="nav-link" to="/weapons">Weapons</Link>
+                    <Link className="nav-link" to="/wishlist">Wishlist</Link>
                     <Link className="nav-link" to="/help">Help</Link>
                 </nav>
             </div>

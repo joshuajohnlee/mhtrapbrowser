@@ -2,12 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
-import { ResourceTypeProvider } from './context.jsx';
+import { ResourceTypeProvider, WishlistProvider } from './context.jsx';
 
 //Component Imports
 import PageHeader from './components/PageHeader.jsx';
 import Home from './components/Home.jsx';
 import App from './components/App.jsx';
+import Wishlist from './components/Wishlist.jsx';
 import Help from './components/Help.jsx';
 import PageFooter from './components/Footer.jsx';
 
@@ -27,8 +28,11 @@ const Routing = () => {
         <PageHeader />
         <Routes>
           <Route index element={<Home />} />
+          <WishlistProvider>
           <Route path="weapons" element={<ResourceTypeProvider value="weapons"><App /></ResourceTypeProvider>} />
           <Route path="bases" element={<ResourceTypeProvider value="bases"><App /></ResourceTypeProvider>} />
+          <Route path="wishlist" element={<Wishlist />} />
+          </WishlistProvider>
           <Route path="help" element={<Help />} />
         </Routes>
         <PageFooter />
