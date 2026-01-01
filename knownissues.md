@@ -1,1 +1,3 @@
-- Refined Pollutinum Base image is incorrectly cropped.
+- Mobile responsiveness not implemented.
+- Accessbility not implemented.
+- Some CSS elements appear in incorrect locations.

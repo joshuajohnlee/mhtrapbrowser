@@ -1,3 +1,7 @@
+**v0.5**
+- Results no longer appear as cards, but as a table.
+- Weapon and bases updated to data as of 01-01-2026.
+
 **v0.4**
 - Results now show in pages of 20 to reduce amount loaded at once
 - Page navigation added
