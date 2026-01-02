@@ -1,7 +1,7 @@
 export default function Help() {
     return (
         <>
-            <div className="content-container">
+            <main>
 
                 <h1>Welcome to the MHTrapBrowser!</h1>
                 <p>This tool can be used to filter and sort
@@ -41,6 +41,6 @@ export default function Help() {
 
                 <h2>I've found a problem, or the page doesn't look right on my browser, what can I do?</h2>
                 <p>You can raise issues by contacting me on Discord (JoystickJoshy#8283). If you have a GitHub account, you can also raise an issue on the project's <a rel="noreferrer" target="_blank" href="https://github.com/joshuajohnlee/mhtrapbrowser/issues">issue tracker</a>. Please be aware this is a pet project and issues will not necessarily be fixed immediately after reporting!</p>
-            </div>
+            </main>
         </>)
 }

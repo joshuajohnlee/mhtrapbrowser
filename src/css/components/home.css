@@ -1,9 +1,0 @@
-#home-content {
-    margin: auto 20%;
-}
-
-@media (max-width: 800px) {
-    #home-content {
-        margin: auto 5%;
-    }
-}

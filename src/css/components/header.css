@@ -12,15 +12,21 @@ header {
 
 header h1 {
     text-align: left;
-    margin-left: 2vw;
+    margin-left: 5vw;
 }
 
 #hamburger-button {
-    background: none;
+    padding: 0;
+    width: 100%;
     border: none;
     color: white;
     font-size: 1em;
     cursor: pointer;
+    font-size: x-large;
+}
+
+#hamburger-button:hover {
+    background-color: var(--blue-glow);
 }
 
 /* Modal */
@@ -32,11 +38,6 @@ header h1 {
     top: 0;
     height: 100%;
     width: 30%;
-    z-index: 10;
-}
-
-.header-nav-modal-content {
-    background: var(--dark-bg);
     z-index: 10;
 }
 
@@ -54,6 +55,10 @@ header h1 {
     margin: 2vh auto;
 }
 
+#header-nav-modal button:hover {
+    background-color: var(--blue-glow);
+}
+
 .header-nav-modal-content nav {
     display: flex;
     flex-direction: column;
@@ -69,16 +74,39 @@ header h1 {
     list-style-type: none;
 }
 
-#hamburger-nav-list li {
+#hamburger-nav-list a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-link {
     width: 100%;
+    text-align: center;
     height: 5vh;
     border-width: 1px 0 1px 0;
     border-style: solid;
     border-color: var(--light-bg);
+    min-height: 3rem;
+}
+
+.nav-link:hover {
+    background-color: var(--blue-glow);
+}
+
+.nav-link li {
+    width: 100%;
 }
 
 /* Responsive */
 @media (max-width: 480px) {
+    .header-nav-modal-overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
+
     header {
         grid-template-columns: 2fr 1fr;
         justify-content: center;
@@ -89,14 +117,8 @@ header h1 {
         font-size: 1.2em;
     }
 
-    h1 a {
-        margin-left: 2vw;
-    }
-
     #hamburger-button {
-        width: 100%;
         padding: 0;
-        border-left: 1px solid rgb(102, 102, 102);
         border-radius: 0
     }
 

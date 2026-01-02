@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, } from 'react-router-dom';
 import { ResourceTypeProvider } from './context.jsx';
 
 //Component Imports
-import PageHeader from './components/PageHeader.jsx';
+import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
 import App from './components/App.jsx';
 import Help from './components/Help.jsx';
@@ -24,7 +24,7 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <div id="app">
-        <PageHeader />
+        <Header />
         <Routes>
           <Route index element={<Home />} />
           <Route path="weapons" element={<ResourceTypeProvider value="weapons"><App /></ResourceTypeProvider>} />

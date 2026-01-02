@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect, use } from "react";
+import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-modal';
@@ -18,7 +18,7 @@ export default function PageHeader() {
             <header>
                 <h1><Link to="/">Joshy's MHTrapBrowser</Link></h1>
                 <button id="hamburger-button" onClick={() => setIsNavMenuOpen(!isNavMenuOpen)}>
-                    <FontAwesomeIcon icon={faBars} /> Menu
+                    <FontAwesomeIcon icon={faBars} />
                 </button>
             </header>
 
@@ -33,10 +33,10 @@ export default function PageHeader() {
                 <nav>
                     <button onClick={() => setIsNavMenuOpen(false)}>Close</button>
                     <ul id="hamburger-nav-list">
-                        <Link to="/"><li>Home</li></Link>
-                        <Link to="/bases"><li>Bases</li></Link>
-                        <Link to="/weapons"><li>Weapons</li></Link>
-                        <Link to="/help"><li>Help</li></Link>
+                        <Link className="nav-link" to="/"><li>Home</li></Link>
+                        <Link className="nav-link" to="/bases"><li>Bases</li></Link>
+                        <Link className="nav-link" to="/weapons"><li>Weapons</li></Link>
+                        <Link className="nav-link" to="/help"><li>Help</li></Link>
                     </ul>
                 </nav>
             </Modal>
