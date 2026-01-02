@@ -1,18 +1,9 @@
-.home-container {
-    display: flex;
+#home-content {
+    margin: auto 20%;
 }
 
-.home-nav-item {
-    font-size: 2rem;
-    height: 40vh;
-    width: 30%;
-    border: 1px solid var(--border-blue);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-nav-item:hover {
-    box-shadow: 0 4px 8px 0 var(--blue-glow), 0 6px 20px 0 var(--blue-glow);
+@media (max-width: 800px) {
+    #home-content {
+        margin: auto 5%;
+    }
 }

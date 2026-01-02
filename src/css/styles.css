@@ -5,17 +5,14 @@
 @import "./components/filterform.css";
 @import "./components/home.css";
 
-/* Responsive styles */
-@import "responsive.css" screen and (max-width: 800px);
-
 :root {
     --dark-bg: #0A141B;
     --light-bg: #11212D;
-    --link-green: #B5FFE1;
+    --link-green: #d0d6d4;
     --button-blue: #6D9DC5;
     --border-blue: #32b8da;
     --blue-glow: #5787be;
-    --selected-background: rgba(168, 104, 221, 0.521);
+    --selected-background: rgba(104, 112, 221, 1);
 }
 
 body {
@@ -31,7 +28,11 @@ body {
     text-align: center;
     background-color: var(--dark-bg);
     color: white;
-    font-size: smaller;
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
 }
 
 button {
@@ -46,12 +47,6 @@ button {
 
 button:active {
     box-shadow: 2px 2px 20px #000000;
-}
-
-.content-container {
-    width: 80%;
-    margin: 5vh auto 0 auto;
-    text-align: left;
 }
 
 #app {
@@ -71,5 +66,14 @@ a:visited,
 a:hover,
 a:active {
     text-decoration: none;
-    color: #B5FFE1;
+    color: #a1afdd;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    body {
+        font-size:medium;
+    }
 }
