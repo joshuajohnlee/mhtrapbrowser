@@ -1,0 +1,20 @@
+.home-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.home-nav-item {
+    font-size: 2rem;
+    height: 40vh;
+    width: 30%;
+    border: 1px solid var(--border-blue);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-nav-item:hover {
+    box-shadow: 0 4px 8px 0 var(--blue-glow), 0 6px 20px 0 var(--blue-glow);
+}
