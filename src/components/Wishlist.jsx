@@ -1,5 +1,5 @@
 // Import libraries
-import { useWishlist } from "../context.jsx";
+import { useWishlist } from "../contexts/TrapTypeContext.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 

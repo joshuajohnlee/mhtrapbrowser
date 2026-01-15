@@ -1,9 +1,12 @@
 // Import libraries
 import { useState, useEffect } from "react";
-import { useResourceType, useWishlist } from "../context.jsx";
-import lodash, { add } from "lodash";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShield, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import lodash from "lodash";
+
+// Import contexts
+import { useTrapType } from "../contexts/TrapTypeContext.jsx";
+import { useWishlist } from "../contexts/WishlistContext.jsx";
 
 // Import data
 import weaponsList from '../assets/weapons.json';
@@ -15,7 +18,8 @@ import FilterForm from "./FilterForm.jsx";
 import { DEFAULT_WEAPON_FILTERS, DEFAULT_BASE_FILTERS } from "../assets/default_filters.json";
 
 export default function App() {
-  const resource = useResourceType();
+  // load contexts
+  const trapType = useTrapType();
   const wishlist = useWishlist();
 
   const handleTextSearch = (e) => {
@@ -23,27 +27,27 @@ export default function App() {
     setFilters({ ...filters, name: searchText });
   }
 
-  const [filters, setFilters] = useState(resource === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
+  const [filters, setFilters] = useState(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
   const [currentSortField, setCurrentSortField] = useState("power")
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
   const [currentPage, setCurrentPage] = useState(0);
   
-  // Reset state when resource changes
+  // change filters and sorting when trapType changes
   useEffect(() => {
-    setFilters(resource === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
+    setFilters(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
     setCurrentSortField("power");
     setCurrentSortDirection("asc");
     setCurrentPage(0);
-  }, [resource]);
+  }, [trapType]);
   
-  // Check the filters against each weapon
-  let currentList = resource === "weapons" ? weaponsList : baseList;
+  // filter the weapons list
+  let currentList = trapType === "weapons" ? weaponsList : baseList;
   let filteredList = currentList.filter(item => {
     let userSearchString = (filters.name || "").toLowerCase();
     let testString = (item.name || "").toLowerCase();
 
     return (
-      (resource === "weapons" ? (filters.power_type?.[item.power_type] !== false) : true) &&
+      (trapType === "weapons" ? (filters.power_type?.[item.power_type] !== false) : true) &&
       item.power >= (filters.min_power ?? -Infinity) &&
       item.power <= (filters.max_power ?? Infinity) &&
       item.power_bonus >= ((filters.min_power_bonus ?? 0) / 100) &&
@@ -74,14 +78,13 @@ export default function App() {
     }
   }
 
-  // Sort and filter the list
+  // sort the filtered list
   let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
   const totalPages = Math.ceil(sortedList.length / 20);
 
-  // Create the sliced list showing the results for the currently selected page
+  // paging functionality 
   let slicedList = sortedList.slice(currentPage * 20, (currentPage * 20) + 20);
 
-  // Page turner functionality 
   function handlePreviousOrNext(direction) {
     if (direction === "previous" && currentPage > 0) {
       changePage(currentPage - 1);
@@ -108,17 +111,19 @@ export default function App() {
     </button>
   ));
 
+  // wishlist functionality
   function handleWishlistAdd(itemName) {
-    wishlist.addToWishlist(itemName, resource);
+    wishlist.addToWishlist(itemName, trapType);
   }
   
+  // return the component
   return (
     <>
       <main>
         <FilterForm
           setFilters={setFilters}
           filters={filters}
-          DEFAULTS={resource === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS}
+          DEFAULTS={trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS}
         />
 
         <div className="filter-sort-container">
@@ -143,7 +148,7 @@ export default function App() {
             <tr>
               <th></th>
               <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-              {resource === "weapons" &&
+              {trapType === "weapons" &&
                 <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
               }
               <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
@@ -159,7 +164,7 @@ export default function App() {
               <tr key={weapon.id}>
                 <td><button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}><FontAwesomeIcon icon={faCirclePlus} /></button></td>
                 <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
-                {resource === "weapons" &&
+                {trapType === "weapons" &&
                   <td>{weapon.power_type}</td>
                 }
                 <td>{weapon.power}</td>

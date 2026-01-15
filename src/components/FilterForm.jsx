@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
-import { useResourceType } from "../context.jsx";
+import { useTrapType } from "../contexts/TrapTypeContext.jsx";
 
 export default function FilterForm({ setFilters, filters, DEFAULTS }) {
-    const resource = useResourceType();
+    const resource = useTrapType();
 
     // Modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
