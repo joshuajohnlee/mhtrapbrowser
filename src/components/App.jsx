@@ -1,9 +1,9 @@
 // Import libraries
 import { useState, useEffect } from "react";
-import { useResourceType } from "../context.jsx";
-import lodash from "lodash";
+import { useResourceType, useWishlist } from "../context.jsx";
+import lodash, { add } from "lodash";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShield } from '@fortawesome/free-solid-svg-icons'
+import { faShield, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 // Import data
 import weaponsList from '../assets/weapons.json';
@@ -16,6 +16,7 @@ import { DEFAULT_WEAPON_FILTERS, DEFAULT_BASE_FILTERS } from "../assets/default_
 
 export default function App() {
   const resource = useResourceType();
+  const wishlist = useWishlist();
 
   const handleTextSearch = (e) => {
     let searchText = e.target.value;
@@ -106,6 +107,10 @@ export default function App() {
       {i + 1}
     </button>
   ));
+
+  function handleWishlistAdd(itemName) {
+    wishlist.addToWishlist(itemName, resource);
+  }
   
   return (
     <>
@@ -136,6 +141,7 @@ export default function App() {
         <table className="traptable">
           <thead>
             <tr>
+              <th></th>
               <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
               {resource === "weapons" &&
                 <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
@@ -151,6 +157,7 @@ export default function App() {
           <tbody>
             {slicedList.map((weapon) => (
               <tr key={weapon.id}>
+                <td><button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}><FontAwesomeIcon icon={faCirclePlus} /></button></td>
                 <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
                 {resource === "weapons" &&
                   <td>{weapon.power_type}</td>

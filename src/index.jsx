@@ -28,11 +28,10 @@ const Routing = () => {
         <PageHeader />
         <Routes>
           <Route index element={<Home />} />
-          <WishlistProvider>
-          <Route path="weapons" element={<ResourceTypeProvider value="weapons"><App /></ResourceTypeProvider>} />
-          <Route path="bases" element={<ResourceTypeProvider value="bases"><App /></ResourceTypeProvider>} />
-          <Route path="wishlist" element={<Wishlist />} />
-          </WishlistProvider>
+          
+          <Route path="weapons" element={<ResourceTypeProvider value="weapons"><WishlistProvider><App /></WishlistProvider></ResourceTypeProvider>} />
+          <Route path="bases" element={<ResourceTypeProvider value="bases"><WishlistProvider><App /></WishlistProvider></ResourceTypeProvider>} />
+          <Route path="wishlist" element={<WishlistProvider><Wishlist /></WishlistProvider>} />
           <Route path="help" element={<Help />} />
         </Routes>
         <PageFooter />
