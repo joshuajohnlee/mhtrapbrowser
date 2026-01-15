@@ -94,3 +94,34 @@
     margin-left: 5px;
     border-radius: 5px;
 }
+
+/* Wishlist stuff */
+.cost-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.cost-list li {
+    margin-bottom: 0.5em;
+}
+
+.cost-list input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+.wishlist-table {
+    text-align: left;
+    margin: 1vh auto 1vh auto;
+    border-collapse: collapse;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.wishlist-table thead {
+    margin-bottom: 5px;
+}
+
+.wishlist-table tbody tr {
+    border: 1px solid white;
+}

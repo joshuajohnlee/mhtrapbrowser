@@ -2,12 +2,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
-import { ResourceTypeProvider } from './context.jsx';
+import { TrapTypeProvider } from './contexts/TrapTypeContext.jsx';
+import { WishlistProvider } from './contexts/WishlistContext.jsx';
 
 //Component Imports
 import PageHeader from './components/PageHeader.jsx';
 import Home from './components/Home.jsx';
 import App from './components/App.jsx';
+import Wishlist from './components/Wishlist.jsx';
 import Help from './components/Help.jsx';
 import PageFooter from './components/Footer.jsx';
 
@@ -23,16 +25,30 @@ import '@fontsource/roboto/700.css';
 const Routing = () => {
   return (
     <BrowserRouter>
-      <div id="app">
-        <PageHeader />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="weapons" element={<ResourceTypeProvider value="weapons"><App /></ResourceTypeProvider>} />
-          <Route path="bases" element={<ResourceTypeProvider value="bases"><App /></ResourceTypeProvider>} />
-          <Route path="help" element={<Help />} />
-        </Routes>
-        <PageFooter />
-      </div>
+      <WishlistProvider>
+        <div id="app">
+          <PageHeader />
+          <Routes>
+            <Route index element={<Home />} />
+
+            <Route path="weapons" element={
+              <TrapTypeProvider value="weapons">
+                <App />
+              </TrapTypeProvider>
+            } />
+
+            <Route path="bases" element={
+              <TrapTypeProvider value="bases">
+                <App />
+              </TrapTypeProvider>
+            } />
+
+            <Route path="wishlist" element={<Wishlist />} />
+            <Route path="help" element={<Help />} />
+          </Routes>
+          <PageFooter />
+        </div>
+      </WishlistProvider>
     </BrowserRouter>
   )
 }

@@ -8,7 +8,9 @@
     "luck": 25,
     "cheese_effect": 4,
     "title_required": 4,
-    "cost": "512,800 Gold",
+    "cost": [
+      "512,800 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -24,7 +26,10 @@
     "luck": 25,
     "cheese_effect": 3,
     "title_required": 4,
-    "cost": "600,000 Gold100 Firecracker Charm",
+    "cost": [
+      "600,000 Gold",
+      "100 Firecracker Charm"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -40,7 +45,9 @@
     "luck": 1,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "3,000 gold",
+    "cost": [
+      "3,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -56,7 +63,9 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -72,7 +81,9 @@
     "luck": 0,
     "cheese_effect": 7,
     "title_required": 5,
-    "cost": "8,000 gold",
+    "cost": [
+      "8,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -88,7 +99,11 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "63,410 Gold1 Master's Seal1 Ambush Trap Blueprints",
+    "cost": [
+      "63,410 Gold",
+      "1 Master's Seal",
+      "1 Ambush Trap Blueprints"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -104,7 +119,18 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_required": 8,
-    "cost": "158,175 gold1 Ancient Ripped Blueprint Piece1 Ancient Frayed Blueprint Piece1 Ancient Mangled Blueprint Piece1 Ancient Relic Staff1 Timeless Mystic Gem1 Hinge of Eternity1 Ethereal Rope1 Engraved Solid Stone Slab1 Encrusted Metal of Time",
+    "cost": [
+      "158,175 gold",
+      "1 Ancient Ripped Blueprint Piece",
+      "1 Ancient Frayed Blueprint Piece",
+      "1 Ancient Mangled Blueprint Piece",
+      "1 Ancient Relic Staff",
+      "1 Timeless Mystic Gem",
+      "1 Hinge of Eternity",
+      "1 Ethereal Rope",
+      "1 Engraved Solid Stone Slab",
+      "1 Encrusted Metal of Time"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -120,7 +146,9 @@
     "luck": 4,
     "cheese_effect": 9,
     "title_required": 0,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -136,7 +164,11 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 7,
-    "cost": "160,000 gold1 Ancient Spear1 Launcher Parts",
+    "cost": [
+      "160,000 gold",
+      "1 Ancient Spear",
+      "1 Launcher Parts"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -152,7 +184,14 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_required": 6,
-    "cost": "6,341 Gold50 Time Thread10 Pausing Pin10 Spacetime Spool10 Paradox Pattern10 Fabric of Time",
+    "cost": [
+      "6,341 Gold",
+      "50 Time Thread",
+      "10 Pausing Pin",
+      "10 Spacetime Spool",
+      "10 Paradox Pattern",
+      "10 Fabric of Time"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -168,7 +207,14 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_required": 8,
-    "cost": "15,817 gold10 Time Thread10 Pausing Pin50 Spacetime Spool10 Paradox Pattern10 Fabric of Time",
+    "cost": [
+      "15,817 gold",
+      "10 Time Thread",
+      "10 Pausing Pin",
+      "50 Spacetime Spool",
+      "10 Paradox Pattern",
+      "10 Fabric of Time"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -184,7 +230,14 @@
     "luck": 25,
     "cheese_effect": 2,
     "title_required": 7,
-    "cost": "94,905 Gold10 Time Thread50 Pausing Pin10 Spacetime Spool10 Paradox Pattern10 Fabric of Time",
+    "cost": [
+      "94,905 Gold",
+      "10 Time Thread",
+      "50 Pausing Pin",
+      "10 Spacetime Spool",
+      "10 Paradox Pattern",
+      "10 Fabric of Time"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -200,7 +253,14 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "25,640 gold10 Time Thread10 Pausing Pin10 Spacetime Spool50 Paradox Pattern10 Fabric of Time",
+    "cost": [
+      "25,640 gold",
+      "10 Time Thread",
+      "10 Pausing Pin",
+      "10 Spacetime Spool",
+      "50 Paradox Pattern",
+      "10 Fabric of Time"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -216,7 +276,14 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "276,775 gold10 Time Thread10 Pausing Pin10 Spacetime Spool10 Paradox Pattern50 Fabric of Time",
+    "cost": [
+      "276,775 gold",
+      "10 Time Thread",
+      "10 Pausing Pin",
+      "10 Spacetime Spool",
+      "10 Paradox Pattern",
+      "50 Fabric of Time"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -232,7 +299,9 @@
     "luck": 20,
     "cheese_effect": 10,
     "title_required": 6,
-    "cost": "1,470,000 gold",
+    "cost": [
+      "1,470,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -248,7 +317,13 @@
     "luck": 18,
     "cheese_effect": 2,
     "title_required": 7,
-    "cost": "632,700 gold12 Scrap Metal1 Onyx Stone3 Magic Essence1 Obelisk Parts",
+    "cost": [
+      "632,700 gold",
+      "12 Scrap Metal",
+      "1 Onyx Stone",
+      "3 Magic Essence",
+      "1 Obelisk Parts"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -264,7 +339,9 @@
     "luck": 23,
     "cheese_effect": 7,
     "title_required": 12,
-    "cost": "6,800,000 gold",
+    "cost": [
+      "6,800,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -280,7 +357,12 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "150,000 gold15 Iron Pellet30 Copper Bead15 Tin Scrap",
+    "cost": [
+      "150,000 gold",
+      "15 Iron Pellet",
+      "30 Copper Bead",
+      "15 Tin Scrap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -296,7 +378,9 @@
     "luck": 0,
     "cheese_effect": 8,
     "title_required": 12,
-    "cost": "5,000,000 gold",
+    "cost": [
+      "5,000,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -312,7 +396,10 @@
     "luck": 36,
     "cheese_effect": 10,
     "title_required": 16,
-    "cost": "24,000,000 gold800 Pearl of Wisdom",
+    "cost": [
+      "24,000,000 gold",
+      "800 Pearl of Wisdom"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -328,7 +415,9 @@
     "luck": 14,
     "cheese_effect": 4,
     "title_required": 4,
-    "cost": "289,000 gold",
+    "cost": [
+      "289,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -344,7 +433,9 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "305,000 gold",
+    "cost": [
+      "305,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -360,7 +451,11 @@
     "luck": 12,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "650,000 Gold1 Mystic Crystal4 Coal",
+    "cost": [
+      "650,000 Gold",
+      "1 Mystic Crystal",
+      "4 Coal"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -376,7 +471,12 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_required": 12,
-    "cost": "1,000,000 gold4 Ember Root8 Ember Stone500 Nachore",
+    "cost": [
+      "1,000,000 gold",
+      "4 Ember Root",
+      "8 Ember Stone",
+      "500 Nachore"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -392,7 +492,9 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_required": 1,
-    "cost": "2,260,600 gold",
+    "cost": [
+      "2,260,600 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -408,7 +510,9 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 5,
-    "cost": "65,400 gold",
+    "cost": [
+      "65,400 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -424,7 +528,9 @@
     "luck": 6,
     "cheese_effect": 7,
     "title_required": 5,
-    "cost": "237,000 gold",
+    "cost": [
+      "237,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -440,7 +546,9 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_required": 8,
-    "cost": "0 Gold",
+    "cost": [
+      "0 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -456,7 +564,9 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_required": 8,
-    "cost": "2,628,340 gold",
+    "cost": [
+      "2,628,340 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -472,7 +582,9 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -488,7 +600,9 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_required": 6,
-    "cost": "175,000 gold",
+    "cost": [
+      "175,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -504,7 +618,10 @@
     "luck": 10,
     "cheese_effect": 7,
     "title_required": 15,
-    "cost": "13,600,000 gold20 Core of the Eclipse",
+    "cost": [
+      "13,600,000 gold",
+      "20 Core of the Eclipse"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -520,7 +637,9 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_required": 9,
-    "cost": "800 Spooky Ship Parts",
+    "cost": [
+      "800 Spooky Ship Parts"
+    ],
     "limited_edition": 1,
     "crafted": null,
     "has_skins": 1,
@@ -536,7 +655,10 @@
     "luck": 36,
     "cheese_effect": 9,
     "title_required": 15,
-    "cost": "26,000,000 gold2,500 Gnawbel Prize for Literature",
+    "cost": [
+      "26,000,000 gold",
+      "2,500 Gnawbel Prize for Literature"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -552,7 +674,9 @@
     "luck": 21,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "7,999,999 gold",
+    "cost": [
+      "7,999,999 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -568,7 +692,9 @@
     "luck": 16,
     "cheese_effect": 9,
     "title_required": 10,
-    "cost": "0 Gold",
+    "cost": [
+      "0 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -584,7 +710,10 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_required": 7,
-    "cost": "150,000 gold1 Nugget of Nougat",
+    "cost": [
+      "150,000 gold",
+      "1 Nugget of Nougat"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -600,7 +729,9 @@
     "luck": 24,
     "cheese_effect": 8,
     "title_required": 3,
-    "cost": "One Droid Action FigureTwo Festive MittsThree Santa HatsFour Festive StockingsFive OrnamentsSix Snow BallsSeven Gingerbread MiceEight Elf ShoesNine Reindeer AntlersTen Candy CanesEleven Coloured Lights",
+    "cost": [
+      "One Droid Action FigureTwo Festive MittsThree Santa HatsFour Festive StockingsFive OrnamentsSix Snow BallsSeven Gingerbread MiceEight Elf ShoesNine Reindeer AntlersTen Candy CanesEleven Coloured Lights"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -616,7 +747,10 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_required": 12,
-    "cost": "150,000 gold1 Nugget of Nougat",
+    "cost": [
+      "150,000 gold",
+      "1 Nugget of Nougat"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -632,7 +766,9 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_required": 7,
-    "cost": "1,900,000 gold",
+    "cost": [
+      "1,900,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -648,7 +784,9 @@
     "luck": 13,
     "cheese_effect": 9,
     "title_required": 15,
-    "cost": "51,850,000 gold",
+    "cost": [
+      "51,850,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -664,7 +802,9 @@
     "luck": 40,
     "cheese_effect": 8,
     "title_required": 15,
-    "cost": "36,950,000 gold",
+    "cost": [
+      "36,950,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -680,7 +820,9 @@
     "luck": 30,
     "cheese_effect": 4,
     "title_required": 4,
-    "cost": "512,800 gold",
+    "cost": [
+      "512,800 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -696,7 +838,9 @@
     "luck": 30,
     "cheese_effect": 7,
     "title_required": 14,
-    "cost": "52,999,999 gold",
+    "cost": [
+      "52,999,999 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -712,7 +856,9 @@
     "luck": 26,
     "cheese_effect": 2,
     "title_required": 6,
-    "cost": "897,400 gold",
+    "cost": [
+      "897,400 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -728,7 +874,9 @@
     "luck": 23,
     "cheese_effect": 7,
     "title_required": 11,
-    "cost": "6,200,000 gold",
+    "cost": [
+      "6,200,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -744,7 +892,9 @@
     "luck": 30,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "15,504,080 gold",
+    "cost": [
+      "15,504,080 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -760,7 +910,9 @@
     "luck": 6,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "508,000 gold",
+    "cost": [
+      "508,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -776,7 +928,9 @@
     "luck": 24,
     "cheese_effect": 7,
     "title_required": 11,
-    "cost": "13,250,800 gold",
+    "cost": [
+      "13,250,800 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -792,7 +946,9 @@
     "luck": 20,
     "cheese_effect": 4,
     "title_required": 8,
-    "cost": "950,000 gold",
+    "cost": [
+      "950,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -808,7 +964,9 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_required": 11,
-    "cost": "17,050,800 gold",
+    "cost": [
+      "17,050,800 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -824,7 +982,9 @@
     "luck": 27,
     "cheese_effect": 1,
     "title_required": 7,
-    "cost": "3,200,000 gold",
+    "cost": [
+      "3,200,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -840,7 +1000,9 @@
     "luck": 32,
     "cheese_effect": 9,
     "title_required": 12,
-    "cost": "43,000,000 gold",
+    "cost": [
+      "43,000,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -856,7 +1018,9 @@
     "luck": 42,
     "cheese_effect": 2,
     "title_required": 15,
-    "cost": "73,250,000 Gold",
+    "cost": [
+      "73,250,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -872,7 +1036,9 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_required": 11,
-    "cost": "13,628,000 Gold",
+    "cost": [
+      "13,628,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -888,7 +1054,9 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_required": 14,
-    "cost": "13,700,000 gold",
+    "cost": [
+      "13,700,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -904,7 +1072,9 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_required": 0,
-    "cost": "158,000 gold",
+    "cost": [
+      "158,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -920,7 +1090,9 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_required": 13,
-    "cost": "50,499,999 gold",
+    "cost": [
+      "50,499,999 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -936,7 +1108,9 @@
     "luck": 21,
     "cheese_effect": 9,
     "title_required": 15,
-    "cost": "41,999,999 gold",
+    "cost": [
+      "41,999,999 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -952,7 +1126,14 @@
     "luck": 35,
     "cheese_effect": 10,
     "title_required": 15,
-    "cost": "13,000,000 gold4 Sky Sprocket4 Skysoft Silk4 Enchanted Wing4 Cloudstone Bangle65 Adorned Empyrean Jewel",
+    "cost": [
+      "13,000,000 gold",
+      "4 Sky Sprocket",
+      "4 Skysoft Silk",
+      "4 Enchanted Wing",
+      "4 Cloudstone Bangle",
+      "65 Adorned Empyrean Jewel"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -968,7 +1149,13 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_required": 15,
-    "cost": "10,950,000 gold4 Sky Sprocket4 Skysoft Silk4 Enchanted Wing4 Cloudstone Bangle",
+    "cost": [
+      "10,950,000 gold",
+      "4 Sky Sprocket",
+      "4 Skysoft Silk",
+      "4 Enchanted Wing",
+      "4 Cloudstone Bangle"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -984,7 +1171,9 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_required": 6,
-    "cost": "750,000 Gold",
+    "cost": [
+      "750,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1000,7 +1189,9 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_required": 7,
-    "cost": "1,800,000 gold",
+    "cost": [
+      "1,800,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1016,7 +1207,9 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_required": 7,
-    "cost": "1,800,000 gold",
+    "cost": [
+      "1,800,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1032,7 +1225,12 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "4,000,000 gold1 Fel Essence1 Icuri Essence1 Clockapult of Time",
+    "cost": [
+      "4,000,000 gold",
+      "1 Fel Essence",
+      "1 Icuri Essence",
+      "1 Clockapult of Time"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1048,7 +1246,9 @@
     "luck": 7,
     "cheese_effect": 3,
     "title_required": 5,
-    "cost": "Donation",
+    "cost": [
+      "Donation"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -1064,7 +1264,13 @@
     "luck": 8,
     "cheese_effect": 8,
     "title_required": 13,
-    "cost": "6,640,000 gold800 Mineral10 Gemstone5 Diamond8 Crystal Crucible",
+    "cost": [
+      "6,640,000 gold",
+      "800 Mineral",
+      "10 Gemstone",
+      "5 Diamond",
+      "8 Crystal Crucible"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1080,7 +1286,9 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_required": 11,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1096,7 +1304,10 @@
     "luck": 0,
     "cheese_effect": 6,
     "title_required": 12,
-    "cost": "4,900,000 gold1 Raw Rift Crystal",
+    "cost": [
+      "4,900,000 gold",
+      "1 Raw Rift Crystal"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1112,7 +1323,10 @@
     "luck": 35,
     "cheese_effect": 4,
     "title_required": 15,
-    "cost": "59,000,000 gold2,500 Gnawbel Prize for Literature",
+    "cost": [
+      "59,000,000 gold",
+      "2,500 Gnawbel Prize for Literature"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1128,7 +1342,9 @@
     "luck": 2,
     "cheese_effect": 4,
     "title_required": 12,
-    "cost": "400 Chocolatonium",
+    "cost": [
+      "400 Chocolatonium"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1144,7 +1360,9 @@
     "luck": 3,
     "cheese_effect": 6,
     "title_required": 12,
-    "cost": "6,500,000 gold",
+    "cost": [
+      "6,500,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -1160,7 +1378,9 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 5,
-    "cost": "256,000 gold",
+    "cost": [
+      "256,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -1176,7 +1396,10 @@
     "luck": 21,
     "cheese_effect": 9,
     "title_required": 11,
-    "cost": "1,200,000 Gold175 Flameshard",
+    "cost": [
+      "1,200,000 Gold",
+      "175 Flameshard"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1192,7 +1415,9 @@
     "luck": 18,
     "cheese_effect": 10,
     "title_required": 9,
-    "cost": "1,090,000 gold",
+    "cost": [
+      "1,090,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1208,7 +1433,11 @@
     "luck": 38,
     "cheese_effect": 7,
     "title_required": 16,
-    "cost": "40,000,000 gold3 Mythical Dragon Heart50,000 Dragon's Breath Opal",
+    "cost": [
+      "40,000,000 gold",
+      "3 Mythical Dragon Heart",
+      "50,000 Dragon's Breath Opal"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1224,7 +1453,9 @@
     "luck": 12,
     "cheese_effect": 3,
     "title_required": 9,
-    "cost": "8,900,000 gold",
+    "cost": [
+      "8,900,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1240,7 +1471,19 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_required": 14,
-    "cost": "18,000,000 gold310 Cork Bark15 Congealed Rubber30 Geyserite60 Tungsten2 Ember Root2 Ember Stone415 Dragon Scale1 Ful'Mina's Tooth1 Kalor'ignis Rib1 Chrome Storm Wrought Ballista Trap Parts",
+    "cost": [
+      "18,000,000 gold",
+      "310 Cork Bark",
+      "15 Congealed Rubber",
+      "30 Geyserite",
+      "60 Tungsten",
+      "2 Ember Root",
+      "2 Ember Stone",
+      "415 Dragon Scale",
+      "1 Ful'Mina's Tooth",
+      "1 Kalor'ignis Rib",
+      "1 Chrome Storm Wrought Ballista Trap Parts"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -1256,7 +1499,9 @@
     "luck": 26,
     "cheese_effect": 5,
     "title_required": 16,
-    "cost": "24,000,000 gold",
+    "cost": [
+      "24,000,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1272,7 +1517,11 @@
     "luck": 14,
     "cheese_effect": 5,
     "title_required": 14,
-    "cost": "1,700,000 gold300 Dragon Scale90 Mineral",
+    "cost": [
+      "1,700,000 gold",
+      "300 Dragon Scale",
+      "90 Mineral"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1288,7 +1537,9 @@
     "luck": 10,
     "cheese_effect": 4,
     "title_required": 8,
-    "cost": "2,400,000 gold",
+    "cost": [
+      "2,400,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1304,7 +1555,12 @@
     "luck": 20,
     "cheese_effect": 5,
     "title_required": 11,
-    "cost": "4,700,000 gold1 Animatronic Bird50 Bloodstone50 Howlite",
+    "cost": [
+      "4,700,000 gold",
+      "1 Animatronic Bird",
+      "50 Bloodstone",
+      "50 Howlite"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1320,7 +1576,13 @@
     "luck": 16,
     "cheese_effect": 5,
     "title_required": 12,
-    "cost": "1,500,000 gold15 Unstable Ember Gadget8 Ember Root8 Ember Stone5,000 Nachore",
+    "cost": [
+      "1,500,000 gold",
+      "15 Unstable Ember Gadget",
+      "8 Ember Root",
+      "8 Ember Stone",
+      "5,000 Nachore"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1336,7 +1598,15 @@
     "luck": 9,
     "cheese_effect": 4,
     "title_required": 13,
-    "cost": "6,980,000 gold1 Powercore Hammer1 Infused Plate1 Sacred Script150 Scholar Scroll150 Tech Power Core150 Plate of Fealty",
+    "cost": [
+      "6,980,000 gold",
+      "1 Powercore Hammer",
+      "1 Infused Plate",
+      "1 Sacred Script",
+      "150 Scholar Scroll",
+      "150 Tech Power Core",
+      "150 Plate of Fealty"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1352,7 +1622,12 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "150,000 gold10 Iron Pellet20 Copper Bead30 Tin Scrap",
+    "cost": [
+      "150,000 gold",
+      "10 Iron Pellet",
+      "20 Copper Bead",
+      "30 Tin Scrap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -1368,7 +1643,12 @@
     "luck": 20,
     "cheese_effect": 2,
     "title_required": 7,
-    "cost": "360,000 gold1 RhinoBot3 Rhino Horn24 Stale SUPER|brie+",
+    "cost": [
+      "360,000 gold",
+      "1 RhinoBot",
+      "3 Rhino Horn",
+      "24 Stale SUPER|brie+"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1384,7 +1664,13 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_required": 13,
-    "cost": "7,300,000 gold1 Essence of Destruction1 Sacred Script30 Scrap Metal225 Scholar Scroll",
+    "cost": [
+      "7,300,000 gold",
+      "1 Essence of Destruction",
+      "1 Sacred Script",
+      "30 Scrap Metal",
+      "225 Scholar Scroll"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1400,7 +1686,9 @@
     "luck": 16,
     "cheese_effect": 9,
     "title_required": 5,
-    "cost": "10,000 goldFestive FuseHeart of IceHoliday ExplosivesIciclesPacked SnowSled",
+    "cost": [
+      "10,000 goldFestive FuseHeart of IceHoliday ExplosivesIciclesPacked SnowSled"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1416,7 +1704,11 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_required": 7,
-    "cost": "25,000 gold40 Snowflake Sugar Cookie10 Ornament Sugar Cookie",
+    "cost": [
+      "25,000 gold",
+      "40 Snowflake Sugar Cookie",
+      "10 Ornament Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1432,7 +1724,9 @@
     "luck": 10,
     "cheese_effect": 9,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1448,7 +1742,9 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_required": 0,
-    "cost": "250 Ice Coin",
+    "cost": [
+      "250 Ice Coin"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1464,7 +1760,9 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "100 King's Credit",
+    "cost": [
+      "100 King's Credit"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1480,7 +1778,11 @@
     "luck": 0,
     "cheese_effect": 6,
     "title_required": 13,
-    "cost": "1,500,000 gold1 Crystal Tower50 Rift Circuitry",
+    "cost": [
+      "1,500,000 gold",
+      "1 Crystal Tower",
+      "50 Rift Circuitry"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1496,7 +1798,10 @@
     "luck": 2,
     "cheese_effect": 7,
     "title_required": 7,
-    "cost": "400,000 gold6 Rune",
+    "cost": [
+      "400,000 gold",
+      "6 Rune"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -1512,7 +1817,9 @@
     "luck": 22,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "612,800 Gold",
+    "cost": [
+      "612,800 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1528,7 +1835,9 @@
     "luck": 8,
     "cheese_effect": 12,
     "title_required": 4,
-    "cost": "See current Great Winter Hunt event location",
+    "cost": [
+      "See current Great Winter Hunt event location"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1544,7 +1853,9 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "909,000 gold",
+    "cost": [
+      "909,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1560,7 +1871,10 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_required": 11,
-    "cost": "5,510,000 gold1 Nugget of Nougat",
+    "cost": [
+      "5,510,000 gold",
+      "1 Nugget of Nougat"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1576,7 +1890,11 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "25,000 gold40 Snowflake Sugar Cookie10 Nutcracker Sugar Cookie",
+    "cost": [
+      "25,000 gold",
+      "40 Snowflake Sugar Cookie",
+      "10 Nutcracker Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1592,7 +1910,12 @@
     "luck": 15,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "25,000 gold20 Snowflake Sugar Cookie40 Ornament Sugar Cookie10 Toboggan Sugar Cookie",
+    "cost": [
+      "25,000 gold",
+      "20 Snowflake Sugar Cookie",
+      "40 Ornament Sugar Cookie",
+      "10 Toboggan Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1608,7 +1931,9 @@
     "luck": 28,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1624,7 +1949,13 @@
     "luck": 32,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "25,000 gold30 Snowflake Sugar Cookie10 Ornament Sugar Cookie10 Nutcracker Sugar Cookie40 Toboggan Sugar Cookie",
+    "cost": [
+      "25,000 gold",
+      "30 Snowflake Sugar Cookie",
+      "10 Ornament Sugar Cookie",
+      "10 Nutcracker Sugar Cookie",
+      "40 Toboggan Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1640,7 +1971,12 @@
     "luck": 30,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "25,000 Gold15 Snowflake Sugar Cookie5 Ornament Sugar Cookie40 Nutcracker Sugar Cookie",
+    "cost": [
+      "25,000 Gold",
+      "15 Snowflake Sugar Cookie",
+      "5 Ornament Sugar Cookie",
+      "40 Nutcracker Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1656,7 +1992,9 @@
     "luck": 7,
     "cheese_effect": 4,
     "title_required": 7,
-    "cost": "700,000 gold",
+    "cost": [
+      "700,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -1672,7 +2010,12 @@
     "luck": 23,
     "cheese_effect": 7,
     "title_required": 12,
-    "cost": "13,000,000 Gold1,000 Solidified Amber Queso150 Nachore3 Thermal Chisel",
+    "cost": [
+      "13,000,000 Gold",
+      "1,000 Solidified Amber Queso",
+      "150 Nachore",
+      "3 Thermal Chisel"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1688,7 +2031,12 @@
     "luck": 22,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "4,900,000 gold1 Gur Essence1 Icuri Essence1 Arcane Capturing Rod of Never Yielding Mystery",
+    "cost": [
+      "4,900,000 gold",
+      "1 Gur Essence",
+      "1 Icuri Essence",
+      "1 Arcane Capturing Rod of Never Yielding Mystery"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1704,7 +2052,9 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "100 King's Credit",
+    "cost": [
+      "100 King's Credit"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1720,7 +2070,9 @@
     "luck": 0,
     "cheese_effect": 5,
     "title_required": 7,
-    "cost": "450,000 gold",
+    "cost": [
+      "450,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1736,7 +2088,10 @@
     "luck": 13,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "150,000 gold1 Nugget of Nougat",
+    "cost": [
+      "150,000 gold",
+      "1 Nugget of Nougat"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1752,7 +2107,9 @@
     "luck": 10,
     "cheese_effect": 4,
     "title_required": 8,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -1768,7 +2125,12 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_required": 9,
-    "cost": "2 Launcher Parts1 Heat Bath Blueprints6 Scrap Metal6 Coal",
+    "cost": [
+      "2 Launcher Parts",
+      "1 Heat Bath Blueprints",
+      "6 Scrap Metal",
+      "6 Coal"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1784,7 +2146,9 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "600 gold",
+    "cost": [
+      "600 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1800,7 +2164,9 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_required": 0,
-    "cost": "15,850 gold",
+    "cost": [
+      "15,850 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1816,7 +2182,9 @@
     "luck": 25,
     "cheese_effect": 12,
     "title_required": 6,
-    "cost": "75,900 gold",
+    "cost": [
+      "75,900 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1832,7 +2200,9 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_required": 2,
-    "cost": "158,500 gold",
+    "cost": [
+      "158,500 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1848,7 +2218,9 @@
     "luck": 20,
     "cheese_effect": 9,
     "title_required": 9,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -1864,7 +2236,10 @@
     "luck": 16,
     "cheese_effect": 6,
     "title_required": 7,
-    "cost": "20 Radioactive Sludge1 Thorned Venus Mouse Trap",
+    "cost": [
+      "20 Radioactive Sludge",
+      "1 Thorned Venus Mouse Trap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1880,7 +2255,9 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "189,000 gold",
+    "cost": [
+      "189,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1896,7 +2273,11 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_required": 9,
-    "cost": "12 Rune1 Frozen Scroll1 High Tension Spring",
+    "cost": [
+      "12 Rune",
+      "1 Frozen Scroll",
+      "1 High Tension Spring"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1912,7 +2293,9 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_required": 7,
-    "cost": "1,344,340 gold",
+    "cost": [
+      "1,344,340 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -1928,7 +2311,13 @@
     "luck": 40,
     "cheese_effect": 3,
     "title_required": 16,
-    "cost": "50,000,000 gold12 Golden Goose15 Golden Goose Egg1 Royal Ruby Bean1 Fabled Fertilizer",
+    "cost": [
+      "50,000,000 gold",
+      "12 Golden Goose",
+      "15 Golden Goose Egg",
+      "1 Royal Ruby Bean",
+      "1 Fabled Fertilizer"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1944,7 +2333,13 @@
     "luck": 11,
     "cheese_effect": 5,
     "title_required": 13,
-    "cost": "1,800,000 gold1 Enigmatic Core1 Endless Labyrinth Trap1 Powercore Hammer225 Tech Power Core",
+    "cost": [
+      "1,800,000 gold",
+      "1 Enigmatic Core",
+      "1 Endless Labyrinth Trap",
+      "1 Powercore Hammer",
+      "225 Tech Power Core"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -1960,7 +2355,9 @@
     "luck": 26,
     "cheese_effect": 9,
     "title_required": 13,
-    "cost": "10,700,000 gold",
+    "cost": [
+      "10,700,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -1976,7 +2373,12 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_required": 11,
-    "cost": "5,360,000 gold10 Silver Bolt25 Bloodstone100 Howlite",
+    "cost": [
+      "5,360,000 gold",
+      "10 Silver Bolt",
+      "25 Bloodstone",
+      "100 Howlite"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -1992,7 +2394,9 @@
     "luck": 7,
     "cheese_effect": 5,
     "title_required": 7,
-    "cost": "1,250,000 gold",
+    "cost": [
+      "1,250,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -2008,7 +2412,9 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_required": 7,
-    "cost": "1,250,000 gold",
+    "cost": [
+      "1,250,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -2024,7 +2430,9 @@
     "luck": 14,
     "cheese_effect": 5,
     "title_required": 7,
-    "cost": "1,250,000 Gold",
+    "cost": [
+      "1,250,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -2040,7 +2448,9 @@
     "luck": 25,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "See current Spring Egg Hunt event",
+    "cost": [
+      "See current Spring Egg Hunt event"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2056,7 +2466,9 @@
     "luck": 6,
     "cheese_effect": 8,
     "title_required": 12,
-    "cost": "470,000 gold",
+    "cost": [
+      "470,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2072,7 +2484,9 @@
     "luck": 18,
     "cheese_effect": 4,
     "title_required": 6,
-    "cost": "860,000 gold",
+    "cost": [
+      "860,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2088,7 +2502,9 @@
     "luck": 3,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "750,000 gold",
+    "cost": [
+      "750,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2104,7 +2520,9 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "1,250,000 gold",
+    "cost": [
+      "1,250,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2120,7 +2538,10 @@
     "luck": 42,
     "cheese_effect": 10,
     "title_required": 16,
-    "cost": "20,000,000 gold3 Golden Goose",
+    "cost": [
+      "20,000,000 gold",
+      "3 Golden Goose"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2136,7 +2557,9 @@
     "luck": 35,
     "cheese_effect": 4,
     "title_required": 16,
-    "cost": "30,000,000 Gold",
+    "cost": [
+      "30,000,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2152,7 +2575,9 @@
     "luck": 13,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "692,800 gold",
+    "cost": [
+      "692,800 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2168,7 +2593,10 @@
     "luck": 42,
     "cheese_effect": 11,
     "title_required": 16,
-    "cost": "40,000,000 gold2000 Pearl of Wisdom",
+    "cost": [
+      "40,000,000 gold",
+      "2000 Pearl of Wisdom"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2184,7 +2612,12 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "1,200,000 gold1 Meteoric Core Fragments10 Bloodstone60 Howlite",
+    "cost": [
+      "1,200,000 gold",
+      "1 Meteoric Core Fragments",
+      "10 Bloodstone",
+      "60 Howlite"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2200,7 +2633,9 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_required": 11,
-    "cost": "2,500,000 gold",
+    "cost": [
+      "2,500,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2216,7 +2651,9 @@
     "luck": 4,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "150,000 gold",
+    "cost": [
+      "150,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -2232,7 +2669,9 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "600 gold",
+    "cost": [
+      "600 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2248,7 +2687,9 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_required": 1,
-    "cost": "6,250 gold",
+    "cost": [
+      "6,250 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2264,7 +2705,9 @@
     "luck": 3,
     "cheese_effect": 3,
     "title_required": 2,
-    "cost": "22,400 gold",
+    "cost": [
+      "22,400 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2280,7 +2723,9 @@
     "luck": 1,
     "cheese_effect": 8,
     "title_required": 2,
-    "cost": "11,000 gold",
+    "cost": [
+      "11,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2296,7 +2741,11 @@
     "luck": 3,
     "cheese_effect": 6,
     "title_required": 13,
-    "cost": "1,500,000 gold1 Crystal Tower50 Rift Circuitry",
+    "cost": [
+      "1,500,000 gold",
+      "1 Crystal Tower",
+      "50 Rift Circuitry"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2312,7 +2761,10 @@
     "luck": 8,
     "cheese_effect": 2,
     "title_required": 5,
-    "cost": "20 Radioactive Sludge1 Venus Mouse Trap",
+    "cost": [
+      "20 Radioactive Sludge",
+      "1 Venus Mouse Trap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2328,7 +2780,12 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 14,
-    "cost": "16,400,000 gold1 Rift Blossom Branch8 Null Onyx Stones20 Rift Circuitry",
+    "cost": [
+      "16,400,000 gold",
+      "1 Rift Blossom Branch",
+      "8 Null Onyx Stones",
+      "20 Rift Circuitry"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2344,7 +2801,9 @@
     "luck": 0,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "300,000 Gold",
+    "cost": [
+      "300,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2360,7 +2819,9 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2376,7 +2837,9 @@
     "luck": 5,
     "cheese_effect": 5,
     "title_required": 7,
-    "cost": "450,000 gold",
+    "cost": [
+      "450,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -2392,7 +2855,9 @@
     "luck": 26,
     "cheese_effect": 7,
     "title_required": 13,
-    "cost": "10,700,000 gold",
+    "cost": [
+      "10,700,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2408,7 +2873,9 @@
     "luck": 23,
     "cheese_effect": 5,
     "title_required": 9,
-    "cost": "600,000 gold",
+    "cost": [
+      "600,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2424,7 +2891,9 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "195 King's Credit",
+    "cost": [
+      "195 King's Credit"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -2440,7 +2909,9 @@
     "luck": 16,
     "cheese_effect": 10,
     "title_required": 9,
-    "cost": "900 gold",
+    "cost": [
+      "900 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2456,7 +2927,9 @@
     "luck": 12,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "180,000 gold",
+    "cost": [
+      "180,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2472,7 +2945,11 @@
     "luck": 20,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "2,000,800 gold1 Oasis Bead150 Flameshard",
+    "cost": [
+      "2,000,800 gold",
+      "1 Oasis Bead",
+      "150 Flameshard"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -2488,7 +2965,12 @@
     "luck": 6,
     "cheese_effect": 2,
     "title_required": 7,
-    "cost": "45,529 gold2 Scrap Metal1 Coal1 Obelisk of Slumber Trap",
+    "cost": [
+      "45,529 gold",
+      "2 Scrap Metal",
+      "1 Coal",
+      "1 Obelisk of Slumber Trap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2504,7 +2986,9 @@
     "luck": 0,
     "cheese_effect": 9,
     "title_required": 7,
-    "cost": "316,350 gold",
+    "cost": [
+      "316,350 gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -2520,7 +3004,10 @@
     "luck": 12,
     "cheese_effect": 4,
     "title_required": 10,
-    "cost": "650,000 Gold1 Droid Jetpack",
+    "cost": [
+      "650,000 Gold",
+      "1 Droid Jetpack"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2536,7 +3023,11 @@
     "luck": 12,
     "cheese_effect": 5,
     "title_required": 6,
-    "cost": "600,000 gold3 Onyx Stone1 Onyx Mallet Blueprints",
+    "cost": [
+      "600,000 gold",
+      "3 Onyx Stone",
+      "1 Onyx Mallet Blueprints"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2552,7 +3043,9 @@
     "luck": 22,
     "cheese_effect": 7,
     "title_required": 7,
-    "cost": "2,400,000 gold",
+    "cost": [
+      "2,400,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2568,7 +3061,9 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_required": 4,
-    "cost": "271,400 gold",
+    "cost": [
+      "271,400 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2584,7 +3079,13 @@
     "luck": 26,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "3,000,000 gold1 Est Essence1 Fel Essence1 Icuri Essence1 Oasis Water Node Trap",
+    "cost": [
+      "3,000,000 gold",
+      "1 Est Essence",
+      "1 Fel Essence",
+      "1 Icuri Essence",
+      "1 Oasis Water Node Trap"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -2600,7 +3101,9 @@
     "luck": 18,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "370,000 gold",
+    "cost": [
+      "370,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2616,7 +3119,9 @@
     "luck": 30,
     "cheese_effect": 5,
     "title_required": 11,
-    "cost": "",
+    "cost": [
+      ""
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2632,7 +3137,9 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_required": 5,
-    "cost": "168,000 gold",
+    "cost": [
+      "168,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -2648,7 +3155,10 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_required": 10,
-    "cost": "117,000 gold5 Golden Punch Ticket",
+    "cost": [
+      "117,000 gold",
+      "5 Golden Punch Ticket"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2664,7 +3174,12 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_required": 12,
-    "cost": "12,000,000 gold500 Solidified Amber Queso75 Nachore3 Queso Thermal Spring",
+    "cost": [
+      "12,000,000 gold",
+      "500 Solidified Amber Queso",
+      "75 Nachore",
+      "3 Queso Thermal Spring"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2680,7 +3195,12 @@
     "luck": 16,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "2,767,750 gold1 Reaper's Perch Blueprints6 Onyx Stone6 Rune",
+    "cost": [
+      "2,767,750 gold",
+      "1 Reaper's Perch Blueprints",
+      "6 Onyx Stone",
+      "6 Rune"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2696,7 +3216,9 @@
     "luck": 25,
     "cheese_effect": 7,
     "title_required": 4,
-    "cost": "605,000 Gold",
+    "cost": [
+      "605,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2712,7 +3234,11 @@
     "luck": 8,
     "cheese_effect": 4,
     "title_required": 7,
-    "cost": "940,000 gold12 Stale SUPER|brie+1 Rhino Horn1 Digby DrillBot",
+    "cost": [
+      "940,000 gold",
+      "12 Stale SUPER|brie+1 Rhino Horn",
+      "1 Digby DrillBot"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -2728,7 +3254,13 @@
     "luck": 3,
     "cheese_effect": 8,
     "title_required": 12,
-    "cost": "25,000 gold40 Toboggan Sugar Cookie10 Nutcracker Sugar Cookie10 Ornament Sugar Cookie30 Snowflake Sugar Cookie",
+    "cost": [
+      "25,000 gold",
+      "40 Toboggan Sugar Cookie",
+      "10 Nutcracker Sugar Cookie",
+      "10 Ornament Sugar Cookie",
+      "30 Snowflake Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2744,7 +3276,9 @@
     "luck": 22,
     "cheese_effect": 5,
     "title_required": 9,
-    "cost": "2,500,000 gold",
+    "cost": [
+      "2,500,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2760,7 +3294,9 @@
     "luck": 12,
     "cheese_effect": 8,
     "title_required": 1,
-    "cost": "50 Dragonhide Sliver",
+    "cost": [
+      "50 Dragonhide Sliver"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2776,7 +3312,14 @@
     "luck": 27,
     "cheese_effect": 8,
     "title_required": 12,
-    "cost": "18,000,000 gold800 Sand Dollar30 Rune100 Barnacle100 Mouse Scale100 Damaged Coral Fragment",
+    "cost": [
+      "18,000,000 gold",
+      "800 Sand Dollar",
+      "30 Rune",
+      "100 Barnacle",
+      "100 Mouse Scale",
+      "100 Damaged Coral Fragment"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2792,7 +3335,10 @@
     "luck": 15,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "375,000 Gold750 Cruise Bux",
+    "cost": [
+      "375,000 Gold",
+      "750 Cruise Bux"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2808,7 +3354,9 @@
     "luck": 0,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "150,000 gold",
+    "cost": [
+      "150,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2824,7 +3372,10 @@
     "luck": 2,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "275,000 gold50 Fool's Gold",
+    "cost": [
+      "275,000 gold",
+      "50 Fool's Gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2840,7 +3391,11 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_required": 3,
-    "cost": "64,000 gold40 Snowflake Sugar Cookie10 Nutcracker Sugar Cookie",
+    "cost": [
+      "64,000 gold",
+      "40 Snowflake Sugar Cookie",
+      "10 Nutcracker Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2856,7 +3411,13 @@
     "luck": 10,
     "cheese_effect": 5,
     "title_required": 15,
-    "cost": "1,500,000 gold1 Sky Sprocket1 Skysoft Silk1 Enchanted Wing1 Cloudstone Bangle",
+    "cost": [
+      "1,500,000 gold",
+      "1 Sky Sprocket",
+      "1 Skysoft Silk",
+      "1 Enchanted Wing",
+      "1 Cloudstone Bangle"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2872,7 +3433,14 @@
     "luck": 20,
     "cheese_effect": 3,
     "title_required": 15,
-    "cost": "3,000,000 Gold1 Sky Sprocket1 Skysoft Silk1 Enchanted Wing1 Cloudstone Bangle15 Adorned Empyrean Jewel",
+    "cost": [
+      "3,000,000 Gold",
+      "1 Sky Sprocket",
+      "1 Skysoft Silk",
+      "1 Enchanted Wing",
+      "1 Cloudstone Bangle",
+      "15 Adorned Empyrean Jewel"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2888,7 +3456,13 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_required": 8,
-    "cost": "1 Scum Scrubber100 Pollutinum10 Scrap Metal2 Canister Ring10 Soapy Suds",
+    "cost": [
+      "1 Scum Scrubber",
+      "100 Pollutinum",
+      "10 Scrap Metal",
+      "2 Canister Ring",
+      "10 Soapy Suds"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -2904,7 +3478,9 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -2920,7 +3496,14 @@
     "luck": 27,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "999,000 gold2 Sandblasted Metal400 Flameshard1 RhinoBot1 Digby DrillBot1 Mouse DeathBot",
+    "cost": [
+      "999,000 gold",
+      "2 Sandblasted Metal",
+      "400 Flameshard",
+      "1 RhinoBot",
+      "1 Digby DrillBot",
+      "1 Mouse DeathBot"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -2936,7 +3519,10 @@
     "luck": 25,
     "cheese_effect": 6,
     "title_required": 11,
-    "cost": "3,000,000 gold300 Flameshard",
+    "cost": [
+      "3,000,000 gold",
+      "300 Flameshard"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2952,7 +3538,11 @@
     "luck": 7,
     "cheese_effect": 4,
     "title_required": 12,
-    "cost": "900,000 gold1 Ember Root100 Nachore",
+    "cost": [
+      "900,000 gold",
+      "1 Ember Root",
+      "100 Nachore"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -2968,7 +3558,16 @@
     "luck": 30,
     "cheese_effect": 9,
     "title_required": 12,
-    "cost": "11,000,000 gold1 Rune Shark Trap800 Sand Dollar3 Predatory Processor60 Rune200 Barnacle200 Mouse Scale200 Damaged Coral Fragment",
+    "cost": [
+      "11,000,000 gold",
+      "1 Rune Shark Trap",
+      "800 Sand Dollar",
+      "3 Predatory Processor",
+      "60 Rune",
+      "200 Barnacle",
+      "200 Mouse Scale",
+      "200 Damaged Coral Fragment"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -2984,7 +3583,13 @@
     "luck": 13,
     "cheese_effect": 5,
     "title_required": 8,
-    "cost": "1 Scum Scrubber Blueprints400 Pollutinum20 Scrap Metal40 Soapy Suds4 Canister Ring",
+    "cost": [
+      "1 Scum Scrubber Blueprints",
+      "400 Pollutinum",
+      "20 Scrap Metal",
+      "40 Soapy Suds",
+      "4 Canister Ring"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3000,7 +3605,9 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_required": 0,
-    "cost": "45 King's Credit",
+    "cost": [
+      "45 King's Credit"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3016,7 +3623,9 @@
     "luck": 0,
     "cheese_effect": 5,
     "title_required": 5,
-    "cost": "9,800 gold",
+    "cost": [
+      "9,800 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3032,7 +3641,13 @@
     "luck": 32,
     "cheese_effect": 4,
     "title_required": 15,
-    "cost": "22,250,000 Gold6 Sky Sprocket6 Skysoft Silk6 Enchanted Wing6 Cloudstone Bangle",
+    "cost": [
+      "22,250,000 Gold",
+      "6 Sky Sprocket",
+      "6 Skysoft Silk",
+      "6 Enchanted Wing",
+      "6 Cloudstone Bangle"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3048,7 +3663,14 @@
     "luck": 40,
     "cheese_effect": 2,
     "title_required": 15,
-    "cost": "45,250,000 Gold6 Sky Sprocket6 Skysoft Silk6 Enchanted Wing6 Cloudstone Bangle115 Adorned Empyrean Jewel",
+    "cost": [
+      "45,250,000 Gold",
+      "6 Sky Sprocket",
+      "6 Skysoft Silk",
+      "6 Enchanted Wing",
+      "6 Cloudstone Bangle",
+      "115 Adorned Empyrean Jewel"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3064,7 +3686,12 @@
     "luck": 25,
     "cheese_effect": 4,
     "title_required": 12,
-    "cost": "15,000,000 gold300 Nachore2,500 Solidified Amber Queso3 Geyser Smolder Stone",
+    "cost": [
+      "15,000,000 gold",
+      "300 Nachore",
+      "2,500 Solidified Amber Queso",
+      "3 Geyser Smolder Stone"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3080,7 +3707,9 @@
     "luck": 28,
     "cheese_effect": 8,
     "title_required": 3,
-    "cost": "140,600 Gold",
+    "cost": [
+      "140,600 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3096,7 +3725,9 @@
     "luck": 16,
     "cheese_effect": 6,
     "title_required": 4,
-    "cost": "341,000 gold",
+    "cost": [
+      "341,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3112,7 +3743,9 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 5,
-    "cost": "190,000 gold",
+    "cost": [
+      "190,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -3128,7 +3761,9 @@
     "luck": 12,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "1,844,400 gold",
+    "cost": [
+      "1,844,400 gold"
+    ],
     "limited_edition": 1,
     "crafted": 1,
     "has_skins": 0,
@@ -3144,7 +3779,11 @@
     "luck": 25,
     "cheese_effect": 8,
     "title_required": 11,
-    "cost": "1,628,000 Gold1 Sphynx Crystal200 Flameshard",
+    "cost": [
+      "1,628,000 Gold",
+      "1 Sphynx Crystal",
+      "200 Flameshard"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -3160,7 +3799,9 @@
     "luck": 9,
     "cheese_effect": 8,
     "title_required": 6,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3176,7 +3817,9 @@
     "luck": 0,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3192,7 +3835,9 @@
     "luck": 20,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3208,7 +3853,12 @@
     "luck": 14,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "345,000 gold4 Wire Spool4 Heating Oil4 Frosty Metal",
+    "cost": [
+      "345,000 gold",
+      "4 Wire Spool",
+      "4 Heating Oil",
+      "4 Frosty Metal"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3224,7 +3874,14 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "1 Steam Laser Mk. I4 Bottled Cold Fusion12 Wire Spool12 Frosty Metal12 Heating Oil1 Well-sealed Canister",
+    "cost": [
+      "1 Steam Laser Mk. I",
+      "4 Bottled Cold Fusion",
+      "12 Wire Spool",
+      "12 Frosty Metal",
+      "12 Heating Oil",
+      "1 Well-sealed Canister"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3240,7 +3897,9 @@
     "luck": 0,
     "cheese_effect": 12,
     "title_required": 10,
-    "cost": "345,000 gold",
+    "cost": [
+      "345,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3256,7 +3915,10 @@
     "luck": 18,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "1 Steam Laser Mk. II Parts1 Steam Nine",
+    "cost": [
+      "1 Steam Laser Mk. II Parts",
+      "1 Steam Nine"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3272,7 +3934,10 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_required": 14,
-    "cost": "1 Dragonvine Ballista Trap3 Ful'Mina's Tooth",
+    "cost": [
+      "1 Dragonvine Ballista Trap",
+      "3 Ful'Mina's Tooth"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -3288,7 +3953,12 @@
     "luck": 4,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "150,000 gold30 Iron Pellet20 Copper Bead10 Tin Scrap",
+    "cost": [
+      "150,000 gold",
+      "30 Iron Pellet",
+      "20 Copper Bead",
+      "10 Tin Scrap"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3304,7 +3974,10 @@
     "luck": 4,
     "cheese_effect": 9,
     "title_required": 7,
-    "cost": "1,000 gold3 Golden Punch Ticket",
+    "cost": [
+      "1,000 gold",
+      "3 Golden Punch Ticket"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3320,7 +3993,9 @@
     "luck": 10,
     "cheese_effect": 6,
     "title_required": 3,
-    "cost": "55,000 gold",
+    "cost": [
+      "55,000 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3336,7 +4011,9 @@
     "luck": 2,
     "cheese_effect": 5,
     "title_required": 0,
-    "cost": "550 gold",
+    "cost": [
+      "550 gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3352,7 +4029,9 @@
     "luck": 8,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "4,000,000 gold",
+    "cost": [
+      "4,000,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3368,7 +4047,9 @@
     "luck": 0,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "300,000 Gold",
+    "cost": [
+      "300,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 0,
@@ -3384,7 +4065,12 @@
     "luck": 25,
     "cheese_effect": 5,
     "title_required": 13,
-    "cost": "10,500,000 gold2 Temporal Shadow Plate1 Infused Plate225 Plate of Fealty",
+    "cost": [
+      "10,500,000 gold",
+      "2 Temporal Shadow Plate",
+      "1 Infused Plate",
+      "225 Plate of Fealty"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -3400,7 +4086,9 @@
     "luck": 13,
     "cheese_effect": 6,
     "title_required": 10,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3416,7 +4104,9 @@
     "luck": 23,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "5,000,000 gold",
+    "cost": [
+      "5,000,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3432,7 +4122,9 @@
     "luck": 6,
     "cheese_effect": 6,
     "title_required": 9,
-    "cost": "See currentMouseHunt Birthdayevent",
+    "cost": [
+      "See currentMouseHunt Birthdayevent"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -3448,7 +4140,9 @@
     "luck": 15,
     "cheese_effect": 5,
     "title_required": 10,
-    "cost": "800 Spooky Ship Parts",
+    "cost": [
+      "800 Spooky Ship Parts"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -3464,7 +4158,12 @@
     "luck": 8,
     "cheese_effect": 12,
     "title_required": 3,
-    "cost": "90,000 gold40 Nutcracker Sugar Cookie10 Ornament Sugar Cookie10 Snowflake Sugar Cookie",
+    "cost": [
+      "90,000 gold",
+      "40 Nutcracker Sugar Cookie",
+      "10 Ornament Sugar Cookie",
+      "10 Snowflake Sugar Cookie"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3480,7 +4179,9 @@
     "luck": 5,
     "cheese_effect": 7,
     "title_required": 10,
-    "cost": "600,000 gold",
+    "cost": [
+      "600,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3496,7 +4197,11 @@
     "luck": 14,
     "cheese_effect": 8,
     "title_required": 7,
-    "cost": "550,000 Gold1 Thorned Vine1 Venus Mouse Trap Husk",
+    "cost": [
+      "550,000 Gold",
+      "1 Thorned Vine",
+      "1 Venus Mouse Trap Husk"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -3512,7 +4217,13 @@
     "luck": 12,
     "cheese_effect": 7,
     "title_required": 15,
-    "cost": "10,700,000 gold3 Sky Sprocket3 Skysoft Silk3 Enchanted Wing3 Cloudstone Bangle",
+    "cost": [
+      "10,700,000 gold",
+      "3 Sky Sprocket",
+      "3 Skysoft Silk",
+      "3 Enchanted Wing",
+      "3 Cloudstone Bangle"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3528,7 +4239,14 @@
     "luck": 18,
     "cheese_effect": 9,
     "title_required": 15,
-    "cost": "21,000,000 gold3 Sky Sprocket3 Skysoft Silk3 Enchanted Wing3 Cloudstone Bangle30 Adorned Empyrean Jewel",
+    "cost": [
+      "21,000,000 gold",
+      "3 Sky Sprocket",
+      "3 Skysoft Silk",
+      "3 Enchanted Wing",
+      "3 Cloudstone Bangle",
+      "30 Adorned Empyrean Jewel"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 1,
@@ -3544,7 +4262,11 @@
     "luck": 7,
     "cheese_effect": 6,
     "title_required": 14,
-    "cost": "36,400,000 gold50 Clockwork Cog10 Timesplit Rune",
+    "cost": [
+      "36,400,000 gold",
+      "50 Clockwork Cog",
+      "10 Timesplit Rune"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3560,7 +4282,10 @@
     "luck": 16,
     "cheese_effect": 4,
     "title_required": 15,
-    "cost": "15,000,000 gold100 Gnawbel Prize for Literature",
+    "cost": [
+      "15,000,000 gold",
+      "100 Gnawbel Prize for Literature"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3576,7 +4301,9 @@
     "luck": 10,
     "cheese_effect": 3,
     "title_required": 9,
-    "cost": "400 Chocolatonium",
+    "cost": [
+      "400 Chocolatonium"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3592,7 +4319,14 @@
     "luck": 8,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "1 Repurposed Robot Head10 Blue Leg Robot Scrap10 Green Arm Robot Scrap10 Pink Leg Robot Scrap10 Red Chest Robot Scrap10 Yellow Arm Robot Scrap",
+    "cost": [
+      "1 Repurposed Robot Head",
+      "10 Blue Leg Robot Scrap",
+      "10 Green Arm Robot Scrap",
+      "10 Pink Leg Robot Scrap",
+      "10 Red Chest Robot Scrap",
+      "10 Yellow Arm Robot Scrap"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3608,7 +4342,9 @@
     "luck": 20,
     "cheese_effect": 4,
     "title_required": 6,
-    "cost": "1,150,000 Gold",
+    "cost": [
+      "1,150,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3624,7 +4360,9 @@
     "luck": 5,
     "cheese_effect": 9,
     "title_required": 5,
-    "cost": "220,000 Gold",
+    "cost": [
+      "220,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -3640,7 +4378,10 @@
     "luck": 4,
     "cheese_effect": 7,
     "title_required": 12,
-    "cost": "10,000 gold3 Golden Punch Ticket",
+    "cost": [
+      "10,000 gold",
+      "3 Golden Punch Ticket"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3656,7 +4397,9 @@
     "luck": 17,
     "cheese_effect": 6,
     "title_required": 9,
-    "cost": "0 gold",
+    "cost": [
+      "0 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3672,7 +4415,9 @@
     "luck": 6,
     "cheese_effect": 5,
     "title_required": 9,
-    "cost": "2,150,000 gold",
+    "cost": [
+      "2,150,000 gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3688,7 +4433,9 @@
     "luck": 22,
     "cheese_effect": 10,
     "title_required": 7,
-    "cost": "600,000 Gold",
+    "cost": [
+      "600,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 1,
@@ -3704,7 +4451,16 @@
     "luck": 5,
     "cheese_effect": 6,
     "title_required": 0,
-    "cost": "150,000 gold100 Ice Coin1 Ball and Cup1 Dragon Mouse Action Figure1 Moon Mobile1 Toasty Scarf1 Toy Raygun1 Toy Robot",
+    "cost": [
+      "150,000 gold",
+      "100 Ice Coin",
+      "1 Ball and Cup",
+      "1 Dragon Mouse Action Figure",
+      "1 Moon Mobile",
+      "1 Toasty Scarf",
+      "1 Toy Raygun",
+      "1 Toy Robot"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3720,7 +4476,11 @@
     "luck": 17,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "615,000 Gold1 Zugzwang's Last Move1 Magic Feather",
+    "cost": [
+      "615,000 Gold",
+      "1 Zugzwang's Last Move",
+      "1 Magic Feather"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
@@ -3736,7 +4496,9 @@
     "luck": 7,
     "cheese_effect": 7,
     "title_required": 6,
-    "cost": "310,000 Gold",
+    "cost": [
+      "310,000 Gold"
+    ],
     "limited_edition": 0,
     "crafted": 1,
     "has_skins": 0,
@@ -3752,7 +4514,9 @@
     "luck": 20,
     "cheese_effect": 8,
     "title_required": 10,
-    "cost": "1,400,000 Gold",
+    "cost": [
+      "1,400,000 Gold"
+    ],
     "limited_edition": 1,
     "crafted": 0,
     "has_skins": 0,
@@ -3768,7 +4532,17 @@
     "luck": 12,
     "cheese_effect": 1,
     "title_required": 10,
-    "cost": "1 Desert Travel Almanac1 Encyclopedia Gnawnia6 Luscious Lumber1 Mesh Netting3 Ectoplasmic Essence3 Warp Nail3 Runestone1 Draconic Book1 Lich Jewel",
+    "cost": [
+      "1 Desert Travel Almanac",
+      "1 Encyclopedia Gnawnia",
+      "6 Luscious Lumber",
+      "1 Mesh Netting",
+      "3 Ectoplasmic Essence",
+      "3 Warp Nail",
+      "3 Runestone",
+      "1 Draconic Book",
+      "1 Lich Jewel"
+    ],
     "limited_edition": 0,
     "crafted": 0,
     "has_skins": 1,
