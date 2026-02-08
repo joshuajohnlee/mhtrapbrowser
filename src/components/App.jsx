@@ -1,7 +1,5 @@
 // Import libraries
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShield, faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 import lodash from "lodash";
 
 // Import contexts
@@ -29,7 +27,7 @@ export default function App() {
 
   const [filters, setFilters] = useState(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
   const [currentSortField, setCurrentSortField] = useState("power")
-  const [currentSortDirection, setCurrentSortDirection] = useState("asc")
+  const [currentSorspanirection, setCurrentSortDirection] = useState("asc")
   const [currentPage, setCurrentPage] = useState(0);
 
   // change filters and sorting when trapType changes
@@ -65,21 +63,14 @@ export default function App() {
     );
   });
 
-  function changeSort(field) {
-    if (field === currentSortField) {
-      if (currentSortDirection === "asc") {
-        setCurrentSortDirection("desc");
-      } else {
-        setCurrentSortDirection("asc");
-      }
-    } else {
-      setCurrentSortField(field);
-      setCurrentSortDirection("asc");
-    }
+  function changeSort(field, direction) {
+    setCurrentSortField(field);
+    setCurrentSortDirection(direction);
   }
 
+
   // sort the filtered list
-  let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
+  let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSorspanirection);
   const totalPages = Math.ceil(sortedList.length / 20);
 
   // paging functionality 
@@ -113,7 +104,11 @@ export default function App() {
 
   // wishlist functionality
   function handleWishlistAdd(itemName) {
-    wishlist.addToWishlist(itemName, trapType);
+    if (wishlist.isInWishlist(itemName, trapType)) {
+      wishlist.removeFromWishlist(itemName, trapType);
+    } else {
+      wishlist.addToWishlist(itemName, trapType);
+    }
   }
 
   // return the component
@@ -127,9 +122,23 @@ export default function App() {
             DEFAULTS={trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS}
           />
 
-          <div id="name-search">
-            <input className="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
-          </div>
+            <input id="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
+
+          <select id="sorting-select" value={currentSortField + "_" + currentSorspanirection} onChange={(e) => {
+            let [field, direction] = e.target.value.split("_");
+            changeSort(field, direction);
+          }}>
+            <option value="power_asc">Power - Ascending</option>
+            <option value="power_desc">Power - Descending</option>
+            <option value="power_bonus_asc">Power Bonus - Ascending</option>
+            <option value="power_bonus_desc">Power Bonus - Descending</option>
+            <option value="attraction_bonus_asc">Attraction Bonus - Ascending</option>
+            <option value="attraction_bonus_desc">Attraction Bonus - Descending</option>
+            <option value="luck_asc">Luck - Ascending</option>
+            <option value="luck_desc">Luck - Descending</option>
+            <option value="cheese_effect_asc">Cheese Effect - Ascending</option>
+            <option value="cheese_effect_desc">Cheese Effect - Descending</option>
+          </select>
 
           {totalPages > 1 &&
             <>
@@ -152,54 +161,58 @@ export default function App() {
           </>
         }
 
-        {sortedList.length > 0 &&
-          <table className="traptable">
-            <thead>
-              <tr>
-                <th></th>
-                <th onClick={() => changeSort("name")}>Weapon Name {currentSortField === "name" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                {trapType === "weapons" &&
-                  <th onClick={() => changeSort("power_type")}>Power Type {currentSortField === "power_type" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                }
-                <th onClick={() => changeSort("power")}>Power {currentSortField === "power" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                <th onClick={() => changeSort("power_bonus")}>Power Bonus {currentSortField === "power_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                <th onClick={() => changeSort("attraction_bonus")}>Attraction Bonus {currentSortField === "attraction_bonus" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                <th onClick={() => changeSort("luck")}>Luck {currentSortField === "luck" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                <th onClick={() => changeSort("cheese_effect")}>Cheese Effect {currentSortField === "cheese_effect" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-                <th onClick={() => changeSort("title_required")}>Title Required {currentSortField === "title_required" && (currentSortDirection === "asc" ? "↑" : "↓")}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {slicedList.map((weapon) => (
-                <tr key={weapon.id}>
-                  <td><button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}><FontAwesomeIcon icon={faCirclePlus} /></button></td>
-                  <td>{weapon.name} {weapon.limited_edition === 1 && <span className="limited"><FontAwesomeIcon icon={faShield} /></span>}</td>
-                  {trapType === "weapons" &&
-                    <td>{weapon.power_type}</td>
-                  }
-                  <td>{weapon.power}</td>
-                  <td>{(weapon.power_bonus * 100).toFixed(0) + "%"}</td>
-                  <td>{(weapon.attraction_bonus * 100).toFixed(0) + "%"}</td>
-                  <td>{weapon.luck}</td>
-                  <td>{data.freshness[weapon.cheese_effect]}</td>
-                  <td>{data.title_required[weapon.title_required]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <ul id="results-list">
+          {slicedList.map((weapon) => (
+            <li className="results-card" key={"card_" + weapon.name}>
 
-        }
+              <div className="card-info">
+                <span className="trap-name">{weapon.name}</span>
+                {trapType === "weapons" && <span className="subtitle">{weapon.power_type}</span>}
+                <span className="subtitle">{data.title_required[weapon.title_required]}</span>
+                {weapon.limited_edition === 1 && <span className="subtitle">Limited Edition</span>}
+              </div>
+
+              <table className="card-stats-table">
+                <thead>
+                  <tr>
+                    <th><img className="stat-image" src="../images/trapstats/stat_power.png" alt="Power" /></th>
+                    <th><img className="stat-image" src="../images/trapstats/stat_power_bonus.png" alt="Power Bonus" /></th>
+                    <th><img className="stat-image" src="../images/trapstats/stat_attraction_bonus.png" alt="Attraction Bonus" /></th>
+                    <th><img className="stat-image" src="../images/trapstats/stat_luck.png" alt="Luck" /></th>
+                    <th><img className="stat-image" src="../images/trapstats/stat_cheese_effect.png" alt="Cheese Effect" /></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span>{weapon.power}</span></td>
+                    <td><span>{(weapon.power_bonus * 100).toFixed(0) + "%"}</span></td>
+                    <td><span>{(weapon.attraction_bonus * 100).toFixed(0) + "%"}</span></td>
+                    <td><span>{weapon.luck}</span></td>
+                    <td><span>{data.freshness[weapon.cheese_effect]}</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}>
+                <img
+                  className="star-icon"
+                  src={wishlist.isInWishlist(weapon.name, trapType) ? "../images/trapstats/star_favorite.png" : "../images/trapstats/star_empty.png"}
+                  alt="Wishlist"
+                />
+              </button>
+            </li>
+          ))}
+        </ul>
 
         {totalPages > 1 &&
           <>
-            <div className="page-buttons">
-              <button className="previous-button" onClick={() => handlePreviousOrNext("previous")}>Previous</button>
+            <div id="page-buttons-bottom" className="page-buttons">
+              <button id="previous-button-bottom" className="previous-button" onClick={() => handlePreviousOrNext("previous")}>Previous</button>
               {pageButtons}
-              <button className="next-button" onClick={() => handlePreviousOrNext("next")}>Next</button>
+              <button id="next-button-bottom" className="next-button" onClick={() => handlePreviousOrNext("next")}>Next</button>
             </div>
           </>
         }
-      </main>
+      </main >
     </>
   );
 }
