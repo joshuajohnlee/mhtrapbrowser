@@ -4,6 +4,7 @@
 @import "./components/footer.css";
 @import "./components/filterform.css";
 @import "./components/home.css";
+@import "./components/wishlist.css";
 
 :root {
     --dark-bg: #0A141B;
@@ -49,14 +50,8 @@ button:active {
     box-shadow: 2px 2px 20px #000000;
 }
 
-#app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 main{
-    margin: 0 5vw;
+    margin: 0 3vw;
     flex: 1;
 }
 
@@ -68,17 +63,4 @@ a:hover,
 a:active {
     text-decoration: none;
     color: #a1afdd;
-}
-
-/* Responsive */
-
-@media (max-width: 800px) {
-
-    body {
-        font-size:medium;
-    }
-
-    main {
-        margin-left: 5vw;
-    }
 }

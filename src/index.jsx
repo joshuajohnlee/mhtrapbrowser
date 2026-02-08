@@ -27,7 +27,7 @@ const Routing = () => {
     <BrowserRouter>
       <WishlistProvider>
         <div id="app">
-          <PageHeader />
+          <Header />
           <Routes>
             <Route index element={<Home />} />
 

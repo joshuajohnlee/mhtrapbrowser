@@ -5,7 +5,6 @@ header {
     grid-template-columns: 6fr 1fr;
     top: 0px;
     background-color: var(--light-bg);
-    width: 100%;
     z-index: 2;
     margin-bottom: 2vh;
 }
@@ -99,7 +98,7 @@ header h1 {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .header-nav-modal-overlay {
         position: fixed;
         height: 100%;

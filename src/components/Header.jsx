@@ -13,6 +13,8 @@ export default function PageHeader() {
         setIsNavMenuOpen(false);
     }, [location]);
 
+    const appEl = document.getElementById('app');
+
     return (
         <>
             <header>
@@ -29,13 +31,14 @@ export default function PageHeader() {
                 isOpen={isNavMenuOpen}
                 onRequestClose={() => setIsNavMenuOpen(false)}
                 shouldCloseOnEsc={true}
+                appElement={appEl}
             >
                 <nav>
                     <button onClick={() => setIsNavMenuOpen(false)}>Close</button>
                     <ul id="hamburger-nav-list">
                         <Link className="nav-link" to="/"><li>Home</li></Link>
-                        <Link className="nav-link" to="/bases"><li>Bases</li></Link>
                         <Link className="nav-link" to="/weapons"><li>Weapons</li></Link>
+                        <Link className="nav-link" to="/bases"><li>Bases</li></Link>
                         <Link className="nav-link" to="/help"><li>Help</li></Link>
                     </ul>
                 </nav>
