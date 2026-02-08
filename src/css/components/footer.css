@@ -1,4 +1,4 @@
-.app-footer {
+footer {
     background-color: var(--light-bg);
     display: grid;
     grid-template-columns: 5fr 2fr;
@@ -8,11 +8,18 @@
 }
 
 #footer-credit {
-    margin-left: 2vw;
+    margin-left: 5vw;
     text-align: left;
 }
 
 #footer-links {
-    margin-right: 2vw;
+    margin-right: 5vw;
     text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    footer {
+        display: none;
+    }
 }

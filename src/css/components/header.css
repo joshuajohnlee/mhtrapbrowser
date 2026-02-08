@@ -1,33 +1,127 @@
-.app-header {
+header {
     position: sticky;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 6fr 1fr;
     top: 0px;
     background-color: var(--light-bg);
-    display: grid;
-    grid-template-columns: 5fr 2fr;
-    width: 100%;
-    margin-bottom: 2vh;
     z-index: 2;
+    margin-bottom: 2vh;
 }
 
-.app-header h1 {
+header h1 {
     text-align: left;
     margin-left: 5vw;
 }
 
-.header-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+#hamburger-button {
+    padding: 0;
+    width: 100%;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-size: x-large;
+}
+
+#hamburger-button:hover {
+    background-color: var(--blue-glow);
+}
+
+/* Modal */
+
+.header-nav-modal-overlay {
+    background: var(--dark-bg);
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+    z-index: 10;
+}
+
+#header-nav-modal button {
+    background: none;
+    border: solid 1px white;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: left;
+    margin: 5vh 0;
+    width: 100%;
+    text-align: center;
+    width: 90%;
+    margin: 2vh auto;
+}
+
+#header-nav-modal button:hover {
+    background-color: var(--blue-glow);
+}
+
+.header-nav-modal-content nav {
+    display: flex;
     flex-direction: column;
-    width: auto;
+    align-items: flex-start;
+    text-align: left;
+}
+
+#hamburger-nav-list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+#hamburger-nav-list a {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .nav-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 100%;
-    color: white !important;
-    font-weight: 500;
+    text-align: center;
+    height: 5vh;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: var(--light-bg);
+    min-height: 3rem;
+}
+
+.nav-link:hover {
+    background-color: var(--blue-glow);
+}
+
+.nav-link li {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .header-nav-modal-overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+    }
+
+    header {
+        grid-template-columns: 2fr 1fr;
+        justify-content: center;
+        height: 10vh;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #hamburger-button {
+        padding: 0;
+        border-radius: 0
+    }
+
+    .header-nav-modal-overlay {
+        width: 100%;
+    }
 }

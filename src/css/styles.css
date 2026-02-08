@@ -4,18 +4,17 @@
 @import "./components/footer.css";
 @import "./components/filterform.css";
 @import "./components/home.css";
-
-/* Responsive styles */
-@import "responsive.css" screen and (max-width: 800px);
+@import "./components/wishlist.css";
 
 :root {
     --dark-bg: #0A141B;
     --light-bg: #11212D;
-    --link-green: #B5FFE1;
+    --link-green: #d0d6d4;
     --button-blue: #6D9DC5;
     --border-blue: #32b8da;
     --blue-glow: #5787be;
-    --selected-background: rgba(168, 104, 221, 0.521);
+    --selected-background: rgba(104, 112, 221, 1);
+    --lighter-text: #a1afdd;
 }
 
 body {
@@ -28,10 +27,14 @@ body {
     font-weight: 200;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    text-align: left;
     background-color: var(--dark-bg);
     color: white;
-    font-size: smaller;
+    font-size: medium;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
 }
 
 button {
@@ -48,20 +51,18 @@ button:active {
     box-shadow: 2px 2px 20px #000000;
 }
 
-.content-container {
-    width: 80%;
-    margin: 5vh auto 0 auto;
-    text-align: left;
-}
-
-#app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 main{
+    margin: 0 3vw;
     flex: 1;
+    width: calc(100% - 6vw);
+    overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+    main {
+        margin: 0 2vw;
+        width: calc(100% - 4vw);
+    }
 }
 
 /* Links */
@@ -71,5 +72,5 @@ a:visited,
 a:hover,
 a:active {
     text-decoration: none;
-    color: #B5FFE1;
+    color: #a1afdd;
 }
