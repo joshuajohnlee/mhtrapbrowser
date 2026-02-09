@@ -409,7 +409,7 @@
     "custom_wiki_name": ""
   },
   {
-    "name": "Birthday Drag\u00c3\u00a9e Cake Base",
+    "name": "Birthday Dragée Cake Base",
     "power": "175",
     "power_bonus": 0.05,
     "attraction_bonus": 0.15,
@@ -2510,6 +2510,25 @@
     "crafted": 0,
     "cost": [
       "850 gold"
+    ],
+    "special_effects": "None",
+    "custom_wiki_name": ""
+  },
+  {
+    "name": "Rainbow Diamond Refractor Base",
+    "power": "3500",
+    "power_bonus": 0.2,
+    "attraction_bonus": 0.5,
+    "luck": 40,
+    "cheese_effect": 12,
+    "title_required": 16,
+    "limited_edition": 0,
+    "event_only": 0,
+    "rift_base": 0,
+    "crafted": 0,
+    "cost": [
+      "35,000,000 gold",
+      "225 Mythical Rainbow Diamond"
     ],
     "special_effects": "None",
     "custom_wiki_name": ""
