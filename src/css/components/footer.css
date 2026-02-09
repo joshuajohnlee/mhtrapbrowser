@@ -18,7 +18,7 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 900px) {
     footer {
         display: none;
     }

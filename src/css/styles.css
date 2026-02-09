@@ -5,6 +5,7 @@
 @import "./components/filterform.css";
 @import "./components/home.css";
 @import "./components/wishlist.css";
+@import "./components/imageviewer.css";
 
 :root {
     --dark-bg: #0A141B;
@@ -58,7 +59,7 @@ main{
     overflow-x: hidden;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
     main {
         margin: 0 2vw;
         width: calc(100% - 4vw);

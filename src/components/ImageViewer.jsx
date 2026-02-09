@@ -10,27 +10,35 @@ export default function ImageViewer({ itemName, isModalOpen, onClose }) {
             <ReactModal
                 isOpen={isModalOpen}
                 onRequestClose={onClose}
-                className="modal-form"
+                className="image-viewer-modal"
                 closeTimeoutMS={500}
-                style={
-                    {
+                style={{
                         overlay: {
                             position: "fixed",
                             inset: 0,
                             background: "rgba(0, 0, 0, 0.5)",
                             zIndex: 10,
-                            overflowY: "auto",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                         },
                         content: {
                             position: "relative",
                             zIndex: 11,
+                            width: "90vw",
+                            height: "90vh",
+                            maxWidth: "600px",
+                            maxHeight: "600px",
+                            border: "none",
+                            background: "transparent",
+                            padding: "0",
+                            overflow: "hidden",
                         }
                     }
                 }
                 shouldCloseOnOverlayClick={true}
             >
                 {trapType === "weapons" && <img src={`../images/weapons/${itemName}.png`} alt={itemName} className="modal-trap-image" />}
-
                 {trapType === "bases" && <img src={`../images/bases/${itemName}.png`} alt={itemName} className="modal-trap-image" />}
 
             </ReactModal>

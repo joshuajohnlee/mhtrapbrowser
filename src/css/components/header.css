@@ -98,7 +98,7 @@ header h1 {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .header-nav-modal-overlay {
         position: fixed;
         height: 100%;
