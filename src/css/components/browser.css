@@ -67,18 +67,19 @@
         grid-template-columns: 1fr 1fr;
     }
 
-    #page-buttons-bottom .activepage, #page-buttons-bottom .page-number-button {
-    display :none;
+    #page-buttons-bottom .activepage,
+    #page-buttons-bottom .page-number-button {
+        display: none;
     }
 
     #previous-button-bottom {
-        grid-column:1;
-        grid-row:1;
+        grid-column: 1;
+        grid-row: 1;
     }
 
     #next-button-bottom {
-        grid-column:2;
-        grid-row:1;    
+        grid-column: 2;
+        grid-row: 1;
     }
 
     #text-search-input {
@@ -142,11 +143,11 @@
     box-sizing: border-box;
     border: 1px solid var(--light-bg);
     border-radius: 5px;
-    height: 20vh;
+    height: 200px;
     padding: 1vh;
-    margin-bottom: 1.5vh;
+    margin-bottom: 10px;
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 3fr 1fr;
     flex-grow: 1;
     flex-basis: 0;
     min-width: 45vw;
@@ -173,7 +174,7 @@
 }
 
 .card-stats-table {
-    margin: 2vh 0;
+    margin: 2vh 2vw 2vh 0;
     text-align: center;
     grid-column: 2;
 }
@@ -194,6 +195,36 @@
 .star-icon {
     width: 30px;
     height: 30px;
+}
+
+.weapon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    grid-column: 3;
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+    border: 1px solid var(--light-bg);
+}
+
+.weapon-image:hover {
+    box-shadow: 0 0 10px 5px #253e4b;
+    cursor: pointer;
+}
+
+.base-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    grid-column: 3;
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+    border: 1px solid var(--light-bg);
+}
+
+.base-image:hover {
+    box-shadow: 0 0 10px 5px #253e4b;
+    cursor: pointer;
 }
 
 .wishlist-add-button {

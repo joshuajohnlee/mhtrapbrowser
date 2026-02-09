@@ -13,6 +13,7 @@ import data from "../assets/data.json";
 
 // Import other components
 import FilterForm from "./FilterForm.jsx";
+import ImageViewer from "./ImageViewer.jsx";
 import { DEFAULT_WEAPON_FILTERS, DEFAULT_BASE_FILTERS } from "../assets/default_filters.json";
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
 
   const [filters, setFilters] = useState(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
   const [currentSortField, setCurrentSortField] = useState("power")
-  const [currentSorspanirection, setCurrentSortDirection] = useState("asc")
+  const [currentSortDirection, setCurrentSortDirection] = useState("asc")
   const [currentPage, setCurrentPage] = useState(0);
 
   // change filters and sorting when trapType changes
@@ -70,7 +71,7 @@ export default function App() {
 
 
   // sort the filtered list
-  let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSorspanirection);
+  let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
   const totalPages = Math.ceil(sortedList.length / 20);
 
   // paging functionality 
@@ -111,6 +112,10 @@ export default function App() {
     }
   }
 
+  // Image modal functionality
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
+
   // return the component
   return (
     <>
@@ -122,9 +127,10 @@ export default function App() {
             DEFAULTS={trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS}
           />
 
-            <input id="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
 
-          <select id="sorting-select" value={currentSortField + "_" + currentSorspanirection} onChange={(e) => {
+          <input id="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
+
+          <select id="sorting-select" value={currentSortField + "_" + currentSortDirection} onChange={(e) => {
             let [field, direction] = e.target.value.split("_");
             changeSort(field, direction);
           }}>
@@ -192,6 +198,11 @@ export default function App() {
                   </tr>
                 </tbody>
               </table>
+
+              {trapType === "weapons" && <img src={`../images/weapons/${weapon.name}.png`} alt={weapon.name} className="weapon-image" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }} />}
+
+              {trapType === "bases" && <img src={`../images/bases/${weapon.name}.png`} alt={weapon.name} className="base-image" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }} />}
+
               <button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}>
                 <img
                   className="star-icon"
@@ -199,9 +210,16 @@ export default function App() {
                   alt="Wishlist"
                 />
               </button>
+
             </li>
           ))}
         </ul>
+
+        <ImageViewer
+          itemName={selectedItem}
+          isModalOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
 
         {totalPages > 1 &&
           <>
