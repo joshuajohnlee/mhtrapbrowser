@@ -38,6 +38,7 @@ export default function ImageViewer({ itemName, isModalOpen, onClose }) {
                 }
                 shouldCloseOnOverlayClick={true}
             >
+                <button className="modal-close-button" onClick={onClose}>✕</button>
                 {trapType === "weapons" && <img src={`../images/weapons/${itemName}.png`} alt={itemName} className="modal-trap-image" />}
                 {trapType === "bases" && <img src={`../images/bases/${itemName}.png`} alt={itemName} className="modal-trap-image" />}
 

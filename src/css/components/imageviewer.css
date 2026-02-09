@@ -16,3 +16,27 @@
     height: 100%;
     object-fit: contain;
 }
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid var(--border-blue);
+    color: white;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 12;
+}
+
+.modal-close-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 10px var(--border-blue);
+}
