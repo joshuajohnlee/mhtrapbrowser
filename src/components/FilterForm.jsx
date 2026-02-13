@@ -187,11 +187,11 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                     <fieldset className="slider-container">
                         <legend>Power</legend>
                         <label className="form-label" htmlFor="min_power">Minimum</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max={resource === "weapons" ? 20000 : 3500} step="100" value={filters.min_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max={resource === "weapons" ? 20000 : 3500} step={resource === "weapons" ? 100 : 10} value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
                         <label className="form-label" htmlFor="max_power">Maximum</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max={resource === "weapons" ? 20000 : 3500} step="100" value={filters.max_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max={resource === "weapons" ? 20000 : 3500} step={resource === "weapons" ? 100 : 10} value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 

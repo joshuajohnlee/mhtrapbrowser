@@ -35,7 +35,7 @@ export default function App() {
   useEffect(() => {
     setFilters(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
     setCurrentSortField("power");
-    setCurrentSortDirection("asc");
+    setCurrentSortDirection("desc");
     setCurrentPage(0);
   }, [trapType]);
 
