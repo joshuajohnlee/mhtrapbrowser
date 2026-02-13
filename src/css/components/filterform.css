@@ -14,7 +14,7 @@
 }
 
 .slider-container {
-    display:grid;
+    display: grid;
     row-gap: 2vh;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -34,10 +34,6 @@
     border-radius: 15px;
     padding: 1rem;
     word-wrap: break-word;
-}
-
-.warning-message-inactive {
-    display: none;
 }
 
 fieldset {
