@@ -201,9 +201,31 @@ export default function App() {
                 </tbody>
               </table>
 
-              {trapType === "weapons" && <img src={`../images/weapons/${weapon.name}.png`} alt={weapon.name} className="weapon-image" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }} />}
+              {trapType === "weapons" && (
+                <img
+                  src={`../images/weapons/thumbs/${weapon.name}.png`}
+                  srcSet={`../images/weapons/thumbs/${weapon.name}.png 320w, ../images/weapons/${weapon.name}.png 1024w`}
+                  sizes="(max-width:900px) 100vw, 45vw"
+                  alt={weapon.name}
+                  className="weapon-image"
+                  loading="lazy"
+                  decoding="async"
+                  onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }}
+                />
+              )}
 
-              {trapType === "bases" && <img src={`../images/bases/${weapon.name}.png`} alt={weapon.name} className="base-image" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }} />}
+              {trapType === "bases" && (
+                <img
+                  src={`../images/bases/thumbs/${weapon.name}.png`}
+                  srcSet={`../images/bases/thumbs/${weapon.name}.png 320w, ../images/bases/${weapon.name}.png 1024w`}
+                  sizes="(max-width:900px) 100vw, 45vw"
+                  alt={weapon.name}
+                  className="base-image"
+                  loading="lazy"
+                  decoding="async"
+                  onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }}
+                />
+              )}
 
               <button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}>
                 <img
