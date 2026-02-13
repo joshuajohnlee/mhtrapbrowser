@@ -4,6 +4,7 @@ import { useTrapType } from "../contexts/TrapTypeContext.jsx";
 
 export default function FilterForm({ setFilters, filters, DEFAULTS }) {
     const resource = useTrapType();
+    console.log(resource);
 
     // Modal visibility state and toggle
     const [isModalOpen, setisModalOpen] = useState(false);
@@ -58,7 +59,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             power_type: { ...prev, [e.target.value]: e.target.checked }
         });
     }
-    
+
     function selectAllPowerTypes() {
         setFilters({
             ...filters, power_type: {
@@ -139,7 +140,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                 shouldCloseOnOverlayClick={true}
             >
                 <form id="filterForm">
-                    {warningVisibility && <div id="warning-message">{warningMessage}</div>}
+                    {warningVisibility && <div className="warning-message" id="warning-message">{warningMessage}</div>}
                     {resource === "weapons" && (
                         <fieldset>
                             <legend>Power Type</legend>
@@ -182,39 +183,37 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                             </div>
                         </fieldset>
                     )}
-                    {Number(filters.min_power) > Number(filters.max_power)
-                        && <div id="warning-message">Your minimum power is set higher than your maximum. Nothing will be shown.</div>}
 
                     <fieldset className="slider-container">
                         <legend>Power</legend>
-                        <label className="form-label" htmlFor="min_power">Minimum power</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max="20000" step="100" value={filters.min_power} onChange={handleChange} />
+                        <label className="form-label" htmlFor="min_power">Minimum</label>
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max={resource === "weapons" ? 20000 : 3500} step="100" value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
-                        <label className="form-label" htmlFor="max_power">Maximum power</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max="20000" step="100" value={filters.max_power} onChange={handleChange} />
+                        <label className="form-label" htmlFor="max_power">Maximum</label>
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max={resource === "weapons" ? 20000 : 3500} step="100" value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Power Bonus</legend>
-                        <label className="form-label" htmlFor="min_power_bonus">Minimum power bonus</label>
-                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max="35" step="1" value={filters.min_power_bonus} onChange={handleChange} />
+                        <label className="form-label" htmlFor="min_power_bonus">Minimum</label>
+                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max={resource === "weapons" ? 40 : 25} step="1" value={filters.min_power_bonus} onChange={handleChange} />
                         <output id="min_power_bonus_value">{filters.min_power_bonus + "%"}</output>
 
-                        <label className="form-label" htmlFor="max_power_bonus">Maximum power bonus</label>
-                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max="35" step="1" value={filters.max_power_bonus} onChange={handleChange} />
+                        <label className="form-label" htmlFor="max_power_bonus">Maximum</label>
+                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max={resource === "weapons" ? 40 : 25} step="1" value={filters.max_power_bonus} onChange={handleChange} />
                         <output id="max_power_bonus_value">{filters.max_power_bonus + "%"}</output>
                     </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Attraction Bonus</legend>
-                        <label className="form-label" htmlFor="min_attraction_bonus">Minimum attraction bonus</label>
-                        <input className="form-range" type="range" name="min_attraction_bonus" min="0" max="40" step="1" value={filters.min_attraction_bonus} onChange={handleChange} />
+                        <label className="form-label" htmlFor="min_attraction_bonus">Minimum</label>
+                        <input className="form-range" type="range" name="min_attraction_bonus" min="0" max={resource === "weapons" ? 40 : 50} step="1" value={filters.min_attraction_bonus} onChange={handleChange} />
                         <output id="min_attraction_bonus_value">{filters.min_attraction_bonus + "%"}</output>
 
                         <label className="form-label" htmlFor="max_attraction_bonus">Maximum attraction bonus</label>
-                        <input className="form-range" type="range" name="max_attraction_bonus" min="0" max="40" value={filters.max_attraction_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_attraction_bonus" min="0" max={resource === "weapons" ? 40 : 50} value={filters.max_attraction_bonus} onChange={handleChange} />
                         <output id="max_attraction_bonus_value">{filters.max_attraction_bonus + "%"}</output>
                     </fieldset>
 
@@ -222,11 +221,11 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                         <legend>Luck</legend>
 
                         <label className="form-label" htmlFor="min_luck">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max="42" value={filters.min_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_luck" min="0" max={resource === "weapons" ? 42 : 40} value={filters.min_luck} onChange={handleChange} />
                         <output id="min_luck_value">{filters.min_luck}</output>
 
                         <label className="form-label" htmlFor="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max="42" value={filters.max_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_luck" min="0" max={resource === "weapons" ? 42 : 40} value={filters.max_luck} onChange={handleChange} />
                         <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 

@@ -67,6 +67,13 @@ main{
     overflow-x: hidden;
 }
 
+.warning-message {
+    color: var(--link-green);
+    background-color: rgb(87, 27, 27);
+    text-align: center;
+    margin-top: 1vh;
+}
+
 @media (max-width: 900px) {
     main {
         margin: 0 2vw;
