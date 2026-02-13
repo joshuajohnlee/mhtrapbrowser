@@ -3,8 +3,9 @@ footer {
     display: grid;
     grid-template-columns: 5fr 2fr;
     width: 100%;
-    z-index: 2;
+    z-index: 10;
     margin-top: auto;
+    flex-shrink: 0;
 }
 
 #footer-credit {

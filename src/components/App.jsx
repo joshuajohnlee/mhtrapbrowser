@@ -35,7 +35,7 @@ export default function App() {
   useEffect(() => {
     setFilters(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
     setCurrentSortField("power");
-    setCurrentSortDirection("asc");
+    setCurrentSortDirection("desc");
     setCurrentPage(0);
   }, [trapType]);
 
@@ -131,7 +131,9 @@ export default function App() {
           <input id="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
 
           <select id="sorting-select" value={currentSortField + "_" + currentSortDirection} onChange={(e) => {
-            let [field, direction] = e.target.value.split("_");
+            let valueParts = e.target.value.split("_");
+            let direction = valueParts.pop();
+            let field = valueParts.join("_");
             changeSort(field, direction);
           }}>
             <option value="power_asc">Power - Ascending</option>

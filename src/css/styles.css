@@ -3,7 +3,6 @@
 @import "./components/browser.css";
 @import "./components/footer.css";
 @import "./components/filterform.css";
-@import "./components/home.css";
 @import "./components/wishlist.css";
 @import "./components/imageviewer.css";
 
@@ -23,15 +22,25 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
-    font-family: 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 200;
+    font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: left;
     background-color: var(--dark-bg);
     color: white;
     font-size: medium;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,10 +62,16 @@ button:active {
 }
 
 main{
-    margin: 0 3vw;
-    flex: 1;
+    margin: 0 3vw 20px 3vw;
     width: calc(100% - 6vw);
     overflow-x: hidden;
+}
+
+.warning-message {
+    color: var(--link-green);
+    background-color: rgb(87, 27, 27);
+    text-align: center;
+    margin-top: 1vh;
 }
 
 @media (max-width: 900px) {
@@ -70,8 +85,11 @@ main{
 
 a:link,
 a:visited,
-a:hover,
 a:active {
     text-decoration: none;
     color: #a1afdd;
+}
+
+a:hover {
+    color: var(--link-green);
 }

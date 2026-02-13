@@ -1,7 +1,7 @@
 [
   {
     "name": "10 Layer Birthday Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -19,7 +19,7 @@
   },
   {
     "name": "2017 New Year's Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.07,
     "attraction_bonus": 0,
     "luck": 10,
@@ -37,7 +37,7 @@
   },
   {
     "name": "2018 New Year's Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.07,
     "attraction_bonus": 0,
     "luck": 10,
@@ -56,7 +56,7 @@
   },
   {
     "name": "2019 New Year's Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.07,
     "attraction_bonus": 0,
     "luck": 10,
@@ -75,7 +75,7 @@
   },
   {
     "name": "2020 New Year's Base",
-    "power": "220",
+    "power": 220,
     "power_bonus": 0.07,
     "attraction_bonus": 0,
     "luck": 10,
@@ -94,7 +94,7 @@
   },
   {
     "name": "2021 New Year's Base",
-    "power": "221",
+    "power": 221,
     "power_bonus": 0.07,
     "attraction_bonus": 0,
     "luck": 10,
@@ -113,7 +113,7 @@
   },
   {
     "name": "2022 New Year's Base",
-    "power": "222",
+    "power": 222,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 10,
@@ -132,7 +132,7 @@
   },
   {
     "name": "2023 New Year's Base",
-    "power": "223",
+    "power": 223,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 10,
@@ -150,7 +150,7 @@
   },
   {
     "name": "2024 New Year's Base",
-    "power": "224",
+    "power": 224,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 10,
@@ -168,7 +168,7 @@
   },
   {
     "name": "2025 New Year's Base",
-    "power": "225",
+    "power": 225,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 10,
@@ -186,7 +186,7 @@
   },
   {
     "name": "Adorned Empyrean Refractor Base",
-    "power": "1,500",
+    "power": 1500,
     "power_bonus": 0.2,
     "attraction_bonus": 0.15,
     "luck": 20,
@@ -207,7 +207,7 @@
   },
   {
     "name": "Alchemist's Cookbook Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -225,7 +225,7 @@
   },
   {
     "name": "All Season Express Track Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -246,7 +246,7 @@
   },
   {
     "name": "Ancient Booster Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -264,7 +264,7 @@
   },
   {
     "name": "Aqua Base",
-    "power": "230",
+    "power": 230,
     "power_bonus": 0,
     "attraction_bonus": 0,
     "luck": 8,
@@ -282,7 +282,7 @@
   },
   {
     "name": "Attuned Enerchi Induction Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -302,7 +302,7 @@
   },
   {
     "name": "Aurora Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.03,
     "attraction_bonus": 0.05,
     "luck": 6,
@@ -320,7 +320,7 @@
   },
   {
     "name": "Bacon Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0,
     "attraction_bonus": 0.15,
     "luck": 0,
@@ -338,7 +338,7 @@
   },
   {
     "name": "Bamboozler Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 4,
@@ -356,7 +356,7 @@
   },
   {
     "name": "Birthday Banana Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.11,
     "attraction_bonus": 0.11,
     "luck": 11,
@@ -374,7 +374,7 @@
   },
   {
     "name": "Birthday Cake Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.11,
     "attraction_bonus": 0.05,
     "luck": 0,
@@ -392,7 +392,7 @@
   },
   {
     "name": "Birthday Confetti Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.12,
     "attraction_bonus": 0.12,
     "luck": 10,
@@ -410,7 +410,7 @@
   },
   {
     "name": "Birthday Dragée Cake Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.05,
     "attraction_bonus": 0.15,
     "luck": 6,
@@ -428,7 +428,7 @@
   },
   {
     "name": "Birthday Ube Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.13,
     "attraction_bonus": 0.13,
     "luck": 10,
@@ -446,7 +446,7 @@
   },
   {
     "name": "Black Forest Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.17,
     "attraction_bonus": 0.17,
     "luck": 10,
@@ -464,7 +464,7 @@
   },
   {
     "name": "Black Widow Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -482,7 +482,7 @@
   },
   {
     "name": "Bronze Tournament Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.05,
     "attraction_bonus": 0.03,
     "luck": 5,
@@ -500,7 +500,7 @@
   },
   {
     "name": "Candy Cane Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0,
     "attraction_bonus": 0,
     "luck": 8,
@@ -518,7 +518,7 @@
   },
   {
     "name": "Carrot Birthday Cake Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.05,
     "attraction_bonus": 0.05,
     "luck": 3,
@@ -536,7 +536,7 @@
   },
   {
     "name": "Cheesecake Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.03,
     "attraction_bonus": 0.2,
     "luck": 0,
@@ -554,7 +554,7 @@
   },
   {
     "name": "Chocolate Bar Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -572,7 +572,7 @@
   },
   {
     "name": "Chocolate Birthday Cake Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.08,
     "attraction_bonus": 0.05,
     "luck": 1,
@@ -590,7 +590,7 @@
   },
   {
     "name": "Claw Shot Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 4,
@@ -609,7 +609,7 @@
   },
   {
     "name": "Clockwork Base",
-    "power": "800",
+    "power": 800,
     "power_bonus": 0.2,
     "attraction_bonus": 0.05,
     "luck": 13,
@@ -629,7 +629,7 @@
   },
   {
     "name": "Compass Magnet Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0,
     "attraction_bonus": 0.1,
     "luck": 5,
@@ -647,7 +647,7 @@
   },
   {
     "name": "Condemned Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.15,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -665,7 +665,7 @@
   },
   {
     "name": "Crushed Birthday Cake Base",
-    "power": "185",
+    "power": 185,
     "power_bonus": 0.03,
     "attraction_bonus": 0.15,
     "luck": 5,
@@ -683,7 +683,7 @@
   },
   {
     "name": "Cupcake Birthday Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.07,
     "attraction_bonus": 0.07,
     "luck": 7,
@@ -701,7 +701,7 @@
   },
   {
     "name": "Curse Breaker Base",
-    "power": "310",
+    "power": 310,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -719,7 +719,7 @@
   },
   {
     "name": "Deadwood Plank Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -737,7 +737,7 @@
   },
   {
     "name": "Deep Freeze Base",
-    "power": "35",
+    "power": 35,
     "power_bonus": 0,
     "attraction_bonus": 0,
     "luck": 0,
@@ -760,7 +760,7 @@
   },
   {
     "name": "Dehydration Base",
-    "power": "225",
+    "power": 225,
     "power_bonus": 0,
     "attraction_bonus": 0.05,
     "luck": 4,
@@ -778,7 +778,7 @@
   },
   {
     "name": "Denture Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 0,
@@ -796,7 +796,7 @@
   },
   {
     "name": "Depth Charge Base",
-    "power": "450",
+    "power": 450,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 10,
@@ -814,7 +814,7 @@
   },
   {
     "name": "Desert Heater Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.15,
     "attraction_bonus": 0,
     "luck": 10,
@@ -834,7 +834,7 @@
   },
   {
     "name": "Dog Jade Base",
-    "power": "375",
+    "power": 375,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -852,7 +852,7 @@
   },
   {
     "name": "Dragon Jade Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 10,
@@ -870,7 +870,7 @@
   },
   {
     "name": "Dragon's Breath Opal Refractor Base",
-    "power": "3,000",
+    "power": 3000,
     "power_bonus": 0.2,
     "attraction_bonus": 0.5,
     "luck": 35,
@@ -885,12 +885,12 @@
       "1 Mythical Dragon Heart",
       "20,000 Dragon's Breath Opal"
     ],
-    "special_effects": "Floating Islands: Chance to add +1 to area-specific loot dropsBountiful Beanstalk: Doubles Fabled Fertilizer loot dropsSchool of Sorcery: Adds +1 Spell ForceDraconic Depths: Doubles Dragonhide Sliver loot drops (Replicart\u00e2\u201e\u00a2 compatible!)",
+    "special_effects": "Floating Islands: Chance to add +1 to area-specific loot dropsBountiful Beanstalk: Doubles Fabled Fertilizer loot dropsSchool of Sorcery: Adds +1 Spell ForceDraconic Depths: Doubles Dragonhide Sliver loot drops (Replicartâ„¢ compatible!)",
     "custom_wiki_name": ""
   },
   {
     "name": "Dragonhide Sliver Forge Base",
-    "power": "1,800",
+    "power": 1800,
     "power_bonus": 0.15,
     "attraction_bonus": 0.15,
     "luck": 18,
@@ -905,12 +905,12 @@
       "9,000 Dragon Ashes",
       "5,000 Dragon's Breath Opal"
     ],
-    "special_effects": "Doubles Dragonhide Sliver loot drops (Replicart\u00e2\u201e\u00a2 compatible!)",
+    "special_effects": "Doubles Dragonhide Sliver loot drops (Replicartâ„¢ compatible!)",
     "custom_wiki_name": ""
   },
   {
     "name": "Eerie Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.08,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -928,7 +928,7 @@
   },
   {
     "name": "Eerier Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 10,
@@ -946,7 +946,7 @@
   },
   {
     "name": "Electromagnetic Meteorite Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.12,
     "attraction_bonus": 0.15,
     "luck": 8,
@@ -964,7 +964,7 @@
   },
   {
     "name": "Elixir Exchanger Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.1,
     "attraction_bonus": 0.2,
     "luck": 10,
@@ -986,7 +986,7 @@
   },
   {
     "name": "Enerchi Induction Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1008,7 +1008,7 @@
   },
   {
     "name": "Explosive Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.05,
     "attraction_bonus": 0.05,
     "luck": 0,
@@ -1026,7 +1026,7 @@
   },
   {
     "name": "Extra Sweet Cupcake Birthday Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.08,
     "attraction_bonus": 0.08,
     "luck": 8,
@@ -1044,7 +1044,7 @@
   },
   {
     "name": "Fan Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 2,
@@ -1062,7 +1062,7 @@
   },
   {
     "name": "Festive Winter Hunt Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0,
     "attraction_bonus": 0.15,
     "luck": 10,
@@ -1080,7 +1080,7 @@
   },
   {
     "name": "Firecracker Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.05,
     "attraction_bonus": 0.05,
     "luck": 4,
@@ -1098,7 +1098,7 @@
   },
   {
     "name": "Fissure Base",
-    "power": "450",
+    "power": 450,
     "power_bonus": 0.15,
     "attraction_bonus": 0.05,
     "luck": 12,
@@ -1117,7 +1117,7 @@
   },
   {
     "name": "Folklore Printing Press Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.15,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1136,7 +1136,7 @@
   },
   {
     "name": "Forecaster Base",
-    "power": "400",
+    "power": 400,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1154,7 +1154,7 @@
   },
   {
     "name": "Fracture Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1173,7 +1173,7 @@
   },
   {
     "name": "Furoma Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1191,7 +1191,7 @@
   },
   {
     "name": "Gemology Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.18,
     "attraction_bonus": 0.18,
     "luck": 10,
@@ -1209,7 +1209,7 @@
   },
   {
     "name": "Gift of the Day Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0,
     "attraction_bonus": 0.15,
     "luck": 10,
@@ -1229,7 +1229,7 @@
   },
   {
     "name": "Gingerbread Base",
-    "power": "225",
+    "power": 225,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 4,
@@ -1247,7 +1247,7 @@
   },
   {
     "name": "Glowing Golem Guardian Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.2,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -1270,7 +1270,7 @@
   },
   {
     "name": "Golden Tournament Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.15,
     "attraction_bonus": 0.1,
     "luck": 8,
@@ -1288,7 +1288,7 @@
   },
   {
     "name": "Hallowed Ground Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.15,
     "luck": 10,
@@ -1306,7 +1306,7 @@
   },
   {
     "name": "Hearthstone Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0,
     "attraction_bonus": 0.1,
     "luck": 2,
@@ -1328,7 +1328,7 @@
   },
   {
     "name": "Horse Jade Base",
-    "power": "325",
+    "power": 325,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1346,7 +1346,7 @@
   },
   {
     "name": "Hothouse Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.03,
     "attraction_bonus": 0.05,
     "luck": 6,
@@ -1364,7 +1364,7 @@
   },
   {
     "name": "Ice Cream Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.14,
     "attraction_bonus": 0.14,
     "luck": 10,
@@ -1382,7 +1382,7 @@
   },
   {
     "name": "Iceberg Boiler Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 6,
@@ -1400,7 +1400,7 @@
   },
   {
     "name": "Jade Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1418,7 +1418,7 @@
   },
   {
     "name": "Labyrinth Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1439,7 +1439,7 @@
   },
   {
     "name": "Living Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 8,
@@ -1465,7 +1465,7 @@
   },
   {
     "name": "Living Grove Base",
-    "power": "450",
+    "power": 450,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -1483,7 +1483,7 @@
   },
   {
     "name": "Magma Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.08,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -1501,7 +1501,7 @@
   },
   {
     "name": "Magnet Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 5,
@@ -1523,7 +1523,7 @@
   },
   {
     "name": "Marble Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.16,
     "attraction_bonus": 0.16,
     "luck": 10,
@@ -1541,7 +1541,7 @@
   },
   {
     "name": "Minotaur Base",
-    "power": "1,000",
+    "power": 1000,
     "power_bonus": 0.2,
     "attraction_bonus": 0.1,
     "luck": 15,
@@ -1563,7 +1563,7 @@
   },
   {
     "name": "Mist Meter Regulator Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0.15,
     "luck": 6,
@@ -1581,7 +1581,7 @@
   },
   {
     "name": "Molten Shrapnel Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.12,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -1601,7 +1601,7 @@
   },
   {
     "name": "Monkey Jade Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1619,7 +1619,7 @@
   },
   {
     "name": "Monolith Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 0,
@@ -1637,7 +1637,7 @@
   },
   {
     "name": "Naughty List Printing Press Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.15,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1655,7 +1655,7 @@
   },
   {
     "name": "Overgrown Ember Stone Base",
-    "power": "450",
+    "power": 450,
     "power_bonus": 0.1,
     "attraction_bonus": 0.18,
     "luck": 12,
@@ -1676,7 +1676,7 @@
   },
   {
     "name": "Ox Jade Base",
-    "power": "375",
+    "power": 375,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1694,7 +1694,7 @@
   },
   {
     "name": "Papyrus Base",
-    "power": "400",
+    "power": 400,
     "power_bonus": 0.08,
     "attraction_bonus": 0,
     "luck": 10,
@@ -1714,7 +1714,7 @@
   },
   {
     "name": "Physical Brace Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -1732,7 +1732,7 @@
   },
   {
     "name": "Pig Jade Base",
-    "power": "375",
+    "power": 375,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1750,7 +1750,7 @@
   },
   {
     "name": "Polar Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 4,
@@ -1768,7 +1768,7 @@
   },
   {
     "name": "Polluted Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 5,
@@ -1790,7 +1790,7 @@
   },
   {
     "name": "Prestige Base",
-    "power": "490",
+    "power": 490,
     "power_bonus": 0.2,
     "attraction_bonus": 0,
     "luck": 5,
@@ -1809,7 +1809,7 @@
   },
   {
     "name": "Queso Cannonstorm Base",
-    "power": "1,000",
+    "power": 1000,
     "power_bonus": 0.25,
     "attraction_bonus": 0,
     "luck": 8,
@@ -1827,7 +1827,7 @@
   },
   {
     "name": "Rabbit Jade Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.1,
     "attraction_bonus": 0.2,
     "luck": 10,
@@ -1845,7 +1845,7 @@
   },
   {
     "name": "Rat Jade Base",
-    "power": "375",
+    "power": 375,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1863,7 +1863,7 @@
   },
   {
     "name": "Red Velvet Cake Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.15,
     "attraction_bonus": 0.15,
     "luck": 10,
@@ -1881,7 +1881,7 @@
   },
   {
     "name": "Refined Pollutinum Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.12,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -1901,7 +1901,7 @@
   },
   {
     "name": "Remote Detonator Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 4,
@@ -1922,7 +1922,7 @@
   },
   {
     "name": "Rift Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 11,
@@ -1943,7 +1943,7 @@
   },
   {
     "name": "Rift Mist Diffuser Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.15,
     "attraction_bonus": 0,
     "luck": 5,
@@ -1965,7 +1965,7 @@
   },
   {
     "name": "Rooster Jade Base",
-    "power": "350",
+    "power": 350,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -1983,7 +1983,7 @@
   },
   {
     "name": "Royal Ruby Refractor Base",
-    "power": "2,000",
+    "power": 2000,
     "power_bonus": 0.2,
     "attraction_bonus": 0.15,
     "luck": 26,
@@ -2003,7 +2003,7 @@
   },
   {
     "name": "Runic Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 5,
@@ -2021,7 +2021,7 @@
   },
   {
     "name": "Seasonal Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0,
     "attraction_bonus": 0.08,
     "luck": 6,
@@ -2039,7 +2039,7 @@
   },
   {
     "name": "Seasonal Gift of the Day Base",
-    "power": "100",
+    "power": 100,
     "power_bonus": 0,
     "attraction_bonus": 0.15,
     "luck": 10,
@@ -2057,7 +2057,7 @@
   },
   {
     "name": "Sheep Jade Base",
-    "power": "325",
+    "power": 325,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -2076,7 +2076,7 @@
   },
   {
     "name": "Signature Series Denture Base",
-    "power": "225",
+    "power": 225,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 0,
@@ -2094,7 +2094,7 @@
   },
   {
     "name": "Silver Tournament Base",
-    "power": "400",
+    "power": 400,
     "power_bonus": 0.1,
     "attraction_bonus": 0.05,
     "luck": 7,
@@ -2112,7 +2112,7 @@
   },
   {
     "name": "Skello-ton Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.05,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -2130,7 +2130,7 @@
   },
   {
     "name": "Smelly Sodium Base",
-    "power": "310",
+    "power": 310,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -2148,7 +2148,7 @@
   },
   {
     "name": "Snake Jade Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.1,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -2167,7 +2167,7 @@
   },
   {
     "name": "Soiled Base",
-    "power": "400",
+    "power": 400,
     "power_bonus": 0.12,
     "attraction_bonus": 0.05,
     "luck": 6,
@@ -2192,7 +2192,7 @@
   },
   {
     "name": "Sorcerer's Sapphire Refractor Base",
-    "power": "2,500",
+    "power": 2500,
     "power_bonus": 0.2,
     "attraction_bonus": 0.5,
     "luck": 30,
@@ -2211,7 +2211,7 @@
   },
   {
     "name": "Spellbook Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.2,
     "attraction_bonus": 0.05,
     "luck": 7,
@@ -2232,7 +2232,7 @@
   },
   {
     "name": "Spiked Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.12,
     "attraction_bonus": 0,
     "luck": 3,
@@ -2254,7 +2254,7 @@
   },
   {
     "name": "Sprinkly Sweet Cupcake Birthday Base",
-    "power": "300",
+    "power": 300,
     "power_bonus": 0.09,
     "attraction_bonus": 0.09,
     "luck": 9,
@@ -2272,7 +2272,7 @@
   },
   {
     "name": "Stone Base",
-    "power": "150",
+    "power": 150,
     "power_bonus": 0.1,
     "attraction_bonus": 0,
     "luck": 0,
@@ -2290,7 +2290,7 @@
   },
   {
     "name": "Thief Base",
-    "power": "500",
+    "power": 500,
     "power_bonus": 0.15,
     "attraction_bonus": 0.05,
     "luck": 10,
@@ -2308,7 +2308,7 @@
   },
   {
     "name": "Tidal Base",
-    "power": "800",
+    "power": 800,
     "power_bonus": 0.12,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -2331,7 +2331,7 @@
   },
   {
     "name": "Tiger Jade Base",
-    "power": "375",
+    "power": 375,
     "power_bonus": 0.15,
     "attraction_bonus": 0,
     "luck": 10,
@@ -2349,7 +2349,7 @@
   },
   {
     "name": "Tiki Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.18,
     "attraction_bonus": 0.05,
     "luck": 8,
@@ -2367,7 +2367,7 @@
   },
   {
     "name": "Treasure Seeker Base",
-    "power": "150",
+    "power": 150,
     "power_bonus": 0.2,
     "attraction_bonus": 0.1,
     "luck": 10,
@@ -2388,7 +2388,7 @@
   },
   {
     "name": "Tribal Base",
-    "power": "175",
+    "power": 175,
     "power_bonus": 0.18,
     "attraction_bonus": 0.02,
     "luck": 4,
@@ -2406,7 +2406,7 @@
   },
   {
     "name": "Tribal Kaboom Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.18,
     "attraction_bonus": 0.02,
     "luck": 0,
@@ -2424,7 +2424,7 @@
   },
   {
     "name": "Ultimate Iceberg Base",
-    "power": "200",
+    "power": 200,
     "power_bonus": 0.05,
     "attraction_bonus": 0.1,
     "luck": 5,
@@ -2442,7 +2442,7 @@
   },
   {
     "name": "Vegetation Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.2,
     "attraction_bonus": 0.1,
     "luck": 5,
@@ -2460,7 +2460,7 @@
   },
   {
     "name": "Washboard Base",
-    "power": "250",
+    "power": 250,
     "power_bonus": 0.1,
     "attraction_bonus": 0.08,
     "luck": 8,
@@ -2480,7 +2480,7 @@
   },
   {
     "name": "Wooden Base",
-    "power": "35",
+    "power": 35,
     "power_bonus": 0,
     "attraction_bonus": 0,
     "luck": 0,
@@ -2498,7 +2498,7 @@
   },
   {
     "name": "Wooden Base with Target",
-    "power": "75",
+    "power": 75,
     "power_bonus": 0,
     "attraction_bonus": 0.2,
     "luck": 0,
@@ -2516,7 +2516,7 @@
   },
   {
     "name": "Rainbow Diamond Refractor Base",
-    "power": "3500",
+    "power": 3500,
     "power_bonus": 0.2,
     "attraction_bonus": 0.5,
     "luck": 40,
