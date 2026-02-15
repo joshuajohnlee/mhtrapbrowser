@@ -9,6 +9,14 @@
     background-color: var(--light-bg);
 }
 
+@media (max-width: 900px) {
+    .modal-form {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
 .modal-form legend {
     text-align: center;
 }

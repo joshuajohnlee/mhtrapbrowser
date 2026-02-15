@@ -1,18 +1,23 @@
+// Import dependencies
 import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
+
+// Import contexts
 import { useTrapType } from "../contexts/TrapTypeContext.jsx";
 
+// Import data
+import data from "../assets/data.json";
+
 export default function FilterForm({ setFilters, filters, DEFAULTS }) {
-    const resource = useTrapType();
-    console.log(resource);
+    // Determine whether browsing weapons or bases
+    const trapType = useTrapType();
 
-    // Modal visibility state and toggle
-    const [isModalOpen, setisModalOpen] = useState(false);
-
-    // Set states for the warning message
+    // Create states
+    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
     const [warningMessage, setWarningMessage] = useState("")
     const [warningVisibility, setWarningVisibility] = useState(false)
 
+    // Warnings for invalid search parameters
     function displayWarning(message) {
         setWarningMessage(message);
         setWarningVisibility(true)
@@ -39,15 +44,16 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
         }
 
         if (Number(filters.min_luck) > Number(filters.max_luck)) {
-            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be will be shown.");
+            displayWarning("Your minimum luck is set higher than your maximum. Nothing will be shown.");
         }
 
         if (Number(filters.min_cheese_effect) > Number(filters.max_cheese_effect)) {
-            displayWarning("Your worst cheese effect is lower that your best cheese effect. Nothing will be shown.");
+            displayWarning("Your minimum cheese effect is higher than your maximum. Nothing will be shown.");
         }
 
     }, [filters]);
 
+    // Handle changes to form inputs
     const handleChange = (e) => {
         setFilters({ ...filters, [e.target.name]: e.target.value });
     }
@@ -60,50 +66,33 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
         });
     }
 
+    // Sets all power types to true
     function selectAllPowerTypes() {
         setFilters({
-            ...filters, power_type: {
-                "Arcane": true,
-                "Draconic": true,
-                "Forgotten": true,
-                "Hydro": true,
-                "Law": true,
-                "Parental": true,
-                "Physical": true,
-                "Rift": true,
-                "Shadow": true,
-                "Tactical": true,
-            }
+            ...filters,
+            power_type: Object.fromEntries(data.types.map(type => [type, true]))
         })
     }
 
     function selectNoPowerTypes() {
         setFilters({
-            ...filters, power_type: {
-                "Arcane": false,
-                "Draconic": false,
-                "Forgotten": false,
-                "Hydro": false,
-                "Law": false,
-                "Parental": false,
-                "Physical": false,
-                "Rift": false,
-                "Shadow": false,
-                "Tactical": false,
-            }
+            ...filters,
+            power_type: Object.fromEntries(data.types.map(type => [type, false]))
         })
     }
 
+    // Handle opening and closing of modal
     function openModal() {
-        setisModalOpen(true);
+        setIsFilterModalOpen(true);
         document.body.style.overflow = 'hidden';
     }
 
     function closeModal() {
-        setisModalOpen(false)
+        setIsFilterModalOpen(false)
         document.body.style.overflow = 'unset';
     }
 
+    // Reset all filters to default values
     function resetAllFilters() {
         let checkResponse = window.confirm("Are you sure you want to reset your filters?");
 
@@ -119,7 +108,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             </button>
 
             <ReactModal
-                isOpen={isModalOpen}
+                isOpen={isFilterModalOpen}
                 className="modal-form"
                 closeTimeoutMS={500}
                 style={
@@ -141,7 +130,7 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
             >
                 <form id="filterForm">
                     {warningVisibility && <div className="warning-message" id="warning-message">{warningMessage}</div>}
-                    {resource === "weapons" && (
+                    {trapType === "weapons" && (
                         <fieldset>
                             <legend>Power Type</legend>
 
@@ -151,35 +140,12 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                             </div>
 
                             <div className="form-power-selection">
-                                <input className="form-check-input" type="checkbox" id="formCheck-1" value="Arcane" checked={!!filters.power_type?.Arcane} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-1">Arcane</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-2" value="Draconic" checked={!!filters.power_type?.Draconic} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-2">Draconic</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-9" value="Forgotten" checked={!!filters.power_type?.Forgotten} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-9">Forgotten</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-8" value="Hydro" checked={!!filters.power_type?.Hydro} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-8">Hydro</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-7" value="Law" checked={!!filters.power_type?.Law} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-7">Law</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-6" value="Parental" checked={!!filters.power_type?.Parental} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-6">Parental</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-5" value="Physical" checked={!!filters.power_type?.Physical} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-5" >Physical</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-4" value="Rift" checked={!!filters.power_type?.Rift} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-4" >Rift</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-3" value="Shadow" checked={!!filters.power_type?.Shadow} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-3" >Shadow</label>
-
-                                <input className="form-check-input" type="checkbox" id="formCheck-10" value="Tactical" checked={!!filters.power_type?.Tactical} onChange={handleCheckboxChange} />
-                                <label className="form-check-label" htmlFor="formCheck-10" >Tactical</label>
+                                {data.types.map((powerType, idx) => (
+                                    <div key={powerType}>
+                                        <input className="form-check-input" type="checkbox" id={`formCheck-${idx}`} value={powerType} checked={!!filters.power_type?.[powerType]} onChange={handleCheckboxChange} />
+                                        <label className="form-check-label" htmlFor={`formCheck-${idx}`}>{powerType}</label>
+                                    </div>
+                                ))}
                             </div>
                         </fieldset>
                     )}
@@ -187,33 +153,33 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                     <fieldset className="slider-container">
                         <legend>Power</legend>
                         <label className="form-label" htmlFor="min_power">Minimum</label>
-                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max={resource === "weapons" ? 20000 : 3500} step={resource === "weapons" ? 100 : 10} value={filters.min_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power" id="min_power" min="0" max={trapType === "weapons" ? 20000 : 3500} step={trapType === "weapons" ? 100 : 10} value={filters.min_power} onChange={handleChange} />
                         <output id="min_power_value">{filters.min_power}</output>
 
                         <label className="form-label" htmlFor="max_power">Maximum</label>
-                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max={resource === "weapons" ? 20000 : 3500} step={resource === "weapons" ? 100 : 10} value={filters.max_power} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power" id="max_power" min="0" max={trapType === "weapons" ? 20000 : 3500} step={trapType === "weapons" ? 100 : 10} value={filters.max_power} onChange={handleChange} />
                         <output id="max_power_value">{filters.max_power}</output>
                     </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Power Bonus</legend>
                         <label className="form-label" htmlFor="min_power_bonus">Minimum</label>
-                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max={resource === "weapons" ? 40 : 25} step="1" value={filters.min_power_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_power_bonus" id="min_power_bonus" min="0" max={trapType === "weapons" ? 40 : 25} step="1" value={filters.min_power_bonus} onChange={handleChange} />
                         <output id="min_power_bonus_value">{filters.min_power_bonus + "%"}</output>
 
                         <label className="form-label" htmlFor="max_power_bonus">Maximum</label>
-                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max={resource === "weapons" ? 40 : 25} step="1" value={filters.max_power_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_power_bonus" id="max_power_bonus" min="0" max={trapType === "weapons" ? 40 : 25} step="1" value={filters.max_power_bonus} onChange={handleChange} />
                         <output id="max_power_bonus_value">{filters.max_power_bonus + "%"}</output>
                     </fieldset>
 
                     <fieldset className="slider-container">
                         <legend>Attraction Bonus</legend>
                         <label className="form-label" htmlFor="min_attraction_bonus">Minimum</label>
-                        <input className="form-range" type="range" name="min_attraction_bonus" min="0" max={resource === "weapons" ? 40 : 50} step="1" value={filters.min_attraction_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_attraction_bonus" min="0" max={trapType === "weapons" ? 40 : 50} step="1" value={filters.min_attraction_bonus} onChange={handleChange} />
                         <output id="min_attraction_bonus_value">{filters.min_attraction_bonus + "%"}</output>
 
                         <label className="form-label" htmlFor="max_attraction_bonus">Maximum attraction bonus</label>
-                        <input className="form-range" type="range" name="max_attraction_bonus" min="0" max={resource === "weapons" ? 40 : 50} value={filters.max_attraction_bonus} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_attraction_bonus" min="0" max={trapType === "weapons" ? 40 : 50} value={filters.max_attraction_bonus} onChange={handleChange} />
                         <output id="max_attraction_bonus_value">{filters.max_attraction_bonus + "%"}</output>
                     </fieldset>
 
@@ -221,11 +187,11 @@ export default function FilterForm({ setFilters, filters, DEFAULTS }) {
                         <legend>Luck</legend>
 
                         <label className="form-label" htmlFor="min_luck">Minimum luck</label>
-                        <input className="form-range" type="range" name="min_luck" min="0" max={resource === "weapons" ? 42 : 40} value={filters.min_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="min_luck" min="0" max={trapType === "weapons" ? 42 : 40} value={filters.min_luck} onChange={handleChange} />
                         <output id="min_luck_value">{filters.min_luck}</output>
 
                         <label className="form-label" htmlFor="max_luck">Maximum luck</label>
-                        <input className="form-range" type="range" name="max_luck" min="0" max={resource === "weapons" ? 42 : 40} value={filters.max_luck} onChange={handleChange} />
+                        <input className="form-range" type="range" name="max_luck" min="0" max={trapType === "weapons" ? 42 : 40} value={filters.max_luck} onChange={handleChange} />
                         <output id="max_luck_value">{filters.max_luck}</output>
                     </fieldset>
 
