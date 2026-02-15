@@ -1,10 +1,11 @@
 /* Styles for specific components */
 @import "./components/header.css";
-@import "./components/browser.css";
+@import "./components/app.css";
 @import "./components/footer.css";
 @import "./components/filterform.css";
 @import "./components/wishlist.css";
 @import "./components/imageviewer.css";
+@import "./components/comparison.css";
 
 :root {
     --dark-bg: #0A141B;

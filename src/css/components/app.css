@@ -119,7 +119,7 @@
     opacity: 0;
 }
 
-/* Cards */
+/* Trap Results List */
 
 #results-list {
     list-style: none;
@@ -138,34 +138,78 @@
     }
 }
 
+/* Trap cards */
+
 .results-card {
-    background-color: #11212D;
+    background-color: var(--light-bg);
     box-sizing: border-box;
-    border: 1px solid var(--light-bg);
+    text-align: center;
     border-radius: 5px;
     height: 200px;
     padding: 1vh;
-    margin-bottom: 10px;
+    margin-bottom: 1vh;
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 8fr 3fr;
+    grid-template-rows: 1fr 1fr;
     flex-grow: 1;
     flex-basis: 0;
-    min-width: 45vw;
+    min-width: 40vw;
     position: relative;
     overflow: hidden;
 }
 
 @media (max-width: 900px) {
     .results-card {
-        min-height: 20vh;
+        min-height: 30vh;
         min-width: 100%;
+        grid-template-columns: 1fr 6fr;
+        padding: 1em;
+        margin-bottom: 2vh;
     }
 }
 
-.card-info {
-    grid-column: 1;
+/* Trap cards - control buttons */
+
+.card-button-controls {
     display: flex;
+    row-gap: 1vh;
     flex-direction: column;
+    background-color: #111d24;
+    border-radius: 5px;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-control-button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    font-size: 1.5rem;
+    box-sizing: content-box;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card-control-button-image {
+    width: 30px;
+    height: 30px;
+}
+
+/* Trap cards - title */
+
+.card-info {
+    grid-row: 1;
+    grid-column: 2;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+}
+
+.trap-name {
+    font-weight: 500;
 }
 
 .subtitle {
@@ -173,14 +217,24 @@
     color: var(--lighter-text);
 }
 
+/* Trap cards - stats table */
+
 .card-stats-table {
-    margin: 2vh 2vw 2vh 0;
-    text-align: center;
     grid-column: 2;
+    grid-row: 2;
+    width: 90%;
+    margin: auto;
 }
 
-.card-stats-table td {
+.card-stats-table th {
     width: 20%;
+}
+
+@media (max-width: 900px) {
+    .card-stats-table {
+        font-size: smaller;
+        margin: auto;
+    }
 }
 
 .stat-image {
@@ -188,23 +242,49 @@
     height: 30px;
 }
 
-.trap-name {
-    font-weight: 500;
+@media (max-width: 900px) {
+    .stat-image {
+        width: 20px;
+        height: 20px;
+    }
 }
 
-.star-icon {
-    width: 30px;
-    height: 30px;
-}
+/* Trap cards - images */
 
-.weapon-image {
+.weapon-image, .base-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
     grid-column: 3;
+    grid-row: 1 / span 2;
     background-color: var(--dark-bg);
     border-radius: 20px;
-    border: 1px solid var(--light-bg);
+}
+
+.base-image img {
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg);
+    border-radius: 20px;
+}
+
+.image-viewer-button {
+    display: none;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    z-index: 2;
+}
+
+@media (max-width: 900px) {
+    .weapon-image {
+        display: none;
+    }
 }
 
 .weapon-image:hover {
@@ -212,35 +292,6 @@
     cursor: pointer;
 }
 
-.base-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    grid-column: 3;
-    background-color: var(--dark-bg);
-    border-radius: 20px;
-    border: 1px solid var(--light-bg);
-}
-
-.base-image:hover {
-    box-shadow: 0 0 10px 5px #253e4b;
-    cursor: pointer;
-}
-
-.wishlist-add-button {
-    height: 30px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    /* place button at bottom-left of the card */
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    z-index: 2;
-}
-
-/* No results message */
 #no-results {
     text-align: center;
     margin-top: 5vh;
@@ -260,3 +311,4 @@
 #reset-filters-button:hover {
     background-color: var(--selected-background);
 }
+
