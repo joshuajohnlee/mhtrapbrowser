@@ -1,6 +1,8 @@
 // Import libraries
 import { useState, useEffect } from "react";
 import orderBy from "lodash/orderBy";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faImage, faCodeCompare } from "@fortawesome/free-solid-svg-icons";
 
 // Import contexts
 import { useTrapType } from "../contexts/TrapTypeContext.jsx";
@@ -175,12 +177,33 @@ export default function App() {
           {slicedList.map((weapon) => (
             <li className="results-card" key={"card_" + weapon.name}>
 
+              {/* Control buttons */}
+              <div className="card-button-controls">
+
+                {/* Wishlist button */}
+                <button className="card-control-button" title={wishlist.isInWishlist(weapon.name, trapType) ? "Click to remove from wishlist" : "Add to wishlist"} alt={wishlist.isInWishlist(weapon.name, trapType) ? "Click to remove from wishlist" : "Add to wishlist"} onClick={() => handleWishlistAdd(weapon.name)}>
+                  <img
+                    className="card-control-button-image"
+                    src={wishlist.isInWishlist(weapon.name, trapType) ? "../images/trapstats/star_favorite.png" : "../images/trapstats/star_empty.png"}
+                    alt="Wishlist"
+                  />
+                </button>
+
+                <button className="card-control-button" title="Compare" alt="Compare">
+                  <FontAwesomeIcon icon={faCodeCompare} />
+                </button>
+
+                <button className="card-control-button" title="View Larger Image" alt="View Larger Image" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }}>
+                  <FontAwesomeIcon icon={faImage} />
+                </button>
+              </div>
+
               {/* Name, power type, rank and whether limited or not */}
               <div className="card-info">
-                <span className="trap-name"><a href={weapon.custom_wiki_name ? `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.custom_wiki_name}` : `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.name}`} target="_blank" rel="noopener noreferrer">{weapon.name}</a></span>
-                {trapType === "weapons" && <span className="subtitle">{weapon.power_type}</span>}
+                <span className="trap-name"><a href={weapon.custom_wiki_name ? `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.custom_wiki_name}` : `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.name}`} target="_blank" rel="noopener noreferrer">{weapon.name}</a></span><br />
+                {trapType === "weapons" && <span className="subtitle">{weapon.power_type}</span>}<br />
                 <span className="subtitle">{data.title_required[weapon.title_required]}</span>
-                {weapon.limited_edition === 1 && <span className="subtitle">Limited Edition</span>}
+                {weapon.limited_edition === 1 && <><br /><span className="subtitle">Limited Edition</span></>}
               </div>
 
               {/* Stats table */}
@@ -231,13 +254,8 @@ export default function App() {
                 />
               )}
 
-              {/* Wishlist button */}
-              <button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}>
-                <img
-                  className="star-icon"
-                  src={wishlist.isInWishlist(weapon.name, trapType) ? "../images/trapstats/star_favorite.png" : "../images/trapstats/star_empty.png"}
-                  alt="Wishlist"
-                />
+              <button className="image-viewer-button" onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }}>
+                <FontAwesomeIcon icon={faImage} />
               </button>
             </li>
           ))}
