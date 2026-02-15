@@ -1,0 +1,48 @@
+.good-comparison {
+    color: green;
+}
+
+.same-comparison {
+    color: yellow;
+}
+
+.bad-comparison {
+    color: red;
+}
+
+.comparison-table {
+    background-color: var(--light-bg);
+    padding: 1em;
+    border-spacing: 30px;
+    border-radius: 10px;
+}
+
+.comparison-table td {
+    text-align: center;
+    font-size: x-large;
+}
+
+.comparison-table thead {
+    font-size: larger;
+    text-align: center;
+}
+
+/* Comparison Adder buttons on App page */
+
+#comparison-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.comparison-modal {
+    background-color: var(--light-bg);
+}
+
+.comparison-slot-button {
+    width: 500px;
+    height: 10vh;
+}
+
+.comparison-button-add-text {
+    font-size: larger;
+}
