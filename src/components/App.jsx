@@ -1,6 +1,6 @@
 // Import libraries
 import { useState, useEffect } from "react";
-import lodash from "lodash";
+import orderBy from "lodash/orderBy";
 
 // Import contexts
 import { useTrapType } from "../contexts/TrapTypeContext.jsx";
@@ -17,21 +17,17 @@ import ImageViewer from "./ImageViewer.jsx";
 import { DEFAULT_WEAPON_FILTERS, DEFAULT_BASE_FILTERS } from "../assets/default_filters.json";
 
 export default function App() {
-  // load contexts
+  // Load contexts
   const trapType = useTrapType();
   const wishlist = useWishlist();
 
-  const handleTextSearch = (e) => {
-    let searchText = e.target.value;
-    setFilters({ ...filters, name: searchText });
-  }
-
+  // Create states
   const [filters, setFilters] = useState(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
   const [currentSortField, setCurrentSortField] = useState("power")
   const [currentSortDirection, setCurrentSortDirection] = useState("asc")
   const [currentPage, setCurrentPage] = useState(0);
 
-  // change filters and sorting when trapType changes
+  // Reset filters to default when changing between weapon/base
   useEffect(() => {
     setFilters(trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS);
     setCurrentSortField("power");
@@ -39,7 +35,7 @@ export default function App() {
     setCurrentPage(0);
   }, [trapType]);
 
-  // filter the weapons list
+  // Filtering
   let currentList = trapType === "weapons" ? weaponsList : baseList;
   let filteredList = currentList.filter(item => {
     let userSearchString = (filters.name || "").toLowerCase();
@@ -69,12 +65,16 @@ export default function App() {
     setCurrentSortDirection(direction);
   }
 
+  const handleTextSearch = (e) => {
+    let searchText = e.target.value;
+    setFilters({ ...filters, name: searchText });
+  }
 
-  // sort the filtered list
-  let sortedList = lodash.orderBy(filteredList, [currentSortField, "power"], currentSortDirection);
+  // Sorting
+  let sortedList = orderBy(filteredList, [currentSortField, "power"], [currentSortDirection, currentSortDirection]);
   const totalPages = Math.ceil(sortedList.length / 20);
 
-  // paging functionality 
+  // Pagination, 20 per page
   let slicedList = sortedList.slice(currentPage * 20, (currentPage * 20) + 20);
 
   function handlePreviousOrNext(direction) {
@@ -127,9 +127,10 @@ export default function App() {
             DEFAULTS={trapType === "weapons" ? DEFAULT_WEAPON_FILTERS : DEFAULT_BASE_FILTERS}
           />
 
-
+          {/* Text search */}
           <input id="text-search-input" type="text" name="name-search" placeholder="Search by name..." value={filters.name || ""} onChange={handleTextSearch} />
 
+          {/* Sort selector */}
           <select id="sorting-select" value={currentSortField + "_" + currentSortDirection} onChange={(e) => {
             let valueParts = e.target.value.split("_");
             let direction = valueParts.pop();
@@ -148,6 +149,7 @@ export default function App() {
             <option value="cheese_effect_desc">Cheese Effect - Descending</option>
           </select>
 
+          {/* Top page buttons - not shown on mobile */}
           {totalPages > 1 &&
             <>
               <div id="page-buttons-top" className="page-buttons">
@@ -173,13 +175,15 @@ export default function App() {
           {slicedList.map((weapon) => (
             <li className="results-card" key={"card_" + weapon.name}>
 
+              {/* Name, power type, rank and whether limited or not */}
               <div className="card-info">
-                <span className="trap-name">{weapon.name}</span>
+                <span className="trap-name"><a href={weapon.custom_wiki_name ? `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.custom_wiki_name}` : `https://mhwiki.hitgrab.com/wiki/index.php/${weapon.name}`} target="_blank" rel="noopener noreferrer">{weapon.name}</a></span>
                 {trapType === "weapons" && <span className="subtitle">{weapon.power_type}</span>}
                 <span className="subtitle">{data.title_required[weapon.title_required]}</span>
                 {weapon.limited_edition === 1 && <span className="subtitle">Limited Edition</span>}
               </div>
 
+              {/* Stats table */}
               <table className="card-stats-table">
                 <thead>
                   <tr>
@@ -201,10 +205,11 @@ export default function App() {
                 </tbody>
               </table>
 
+              {/* Images */}
               {trapType === "weapons" && (
                 <img
-                  src={`../images/weapons/thumbs/${weapon.name}.png`}
-                  srcSet={`../images/weapons/thumbs/${weapon.name}.png 320w, ../images/weapons/${weapon.name}.png 1024w`}
+                  src={`../images/weapons/thumbs/${encodeURIComponent(weapon.name)}.png`}
+                  srcSet={`../images/weapons/thumbs/${encodeURIComponent(weapon.name)}.png 320w, ../images/weapons/${encodeURIComponent(weapon.name)}.png 1024w`}
                   sizes="(max-width:900px) 100vw, 45vw"
                   alt={weapon.name}
                   className="weapon-image"
@@ -213,11 +218,10 @@ export default function App() {
                   onClick={() => { setSelectedItem(weapon.name); setIsModalOpen(true); }}
                 />
               )}
-
               {trapType === "bases" && (
                 <img
-                  src={`../images/bases/thumbs/${weapon.name}.png`}
-                  srcSet={`../images/bases/thumbs/${weapon.name}.png 320w, ../images/bases/${weapon.name}.png 1024w`}
+                  src={`../images/bases/thumbs/${encodeURIComponent(weapon.name)}.png`}
+                  srcSet={`../images/bases/thumbs/${encodeURIComponent(weapon.name)}.png 320w, ../images/bases/${encodeURIComponent(weapon.name)}.png 1024w`}
                   sizes="(max-width:900px) 100vw, 45vw"
                   alt={weapon.name}
                   className="base-image"
@@ -227,6 +231,7 @@ export default function App() {
                 />
               )}
 
+              {/* Wishlist button */}
               <button className="wishlist-add-button" onClick={() => handleWishlistAdd(weapon.name)}>
                 <img
                   className="star-icon"
@@ -234,17 +239,18 @@ export default function App() {
                   alt="Wishlist"
                 />
               </button>
-
             </li>
           ))}
-        </ul>
+        </ul >
 
-        <ImageViewer
+        {/* Image viewer modal */}
+        < ImageViewer
           itemName={selectedItem}
           isModalOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
         />
 
+        {/* {Bottom page buttons} */}
         {totalPages > 1 &&
           <>
             <div id="page-buttons-bottom" className="page-buttons">
@@ -254,7 +260,7 @@ export default function App() {
             </div>
           </>
         }
-      </main >
+      </main>
     </>
   );
 }
