@@ -6,21 +6,38 @@ footer {
     z-index: 10;
     margin-top: auto;
     flex-shrink: 0;
+    padding: 1em 0;
+}
+
+footer div {
+    padding: 5px;
 }
 
 #footer-credit {
-    margin-left: 5vw;
+    grid-row: 1;
+    grid-column: 1;
+    margin-left: 3vw;
     text-align: left;
 }
 
+#copyright-notice {
+    margin-left: 3vw;
+    font-size: smaller;
+    grid-row: 2;
+    grid-column: 1;
+}
+
 #footer-links {
-    margin-right: 5vw;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    margin-right: 3vw;
     text-align: right;
+    align-content: center;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* @media (max-width: 900px) {
     footer {
         display: none;
     }
-}
+} */

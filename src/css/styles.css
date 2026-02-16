@@ -62,7 +62,8 @@ button:active {
 }
 
 main{
-    margin: 0 3vw 20px 3vw;
+    margin: 0 3vw;
+    padding-bottom: 20px;
     width: calc(100% - 6vw);
     overflow-x: hidden;
 }
