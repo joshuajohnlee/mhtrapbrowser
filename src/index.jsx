@@ -30,26 +30,29 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <WishlistProvider>
+        <ComparisonProvider>
           <Header />
           <Routes>
             <Route index element={<Home />} />
 
-              <Route path="weapons" element={
-                <TrapTypeProvider value="weapons">
-                  <App />
-                </TrapTypeProvider>
-              } />
+            <Route path="weapons" element={
+              <TrapTypeProvider value="weapons">
+                <App />
+              </TrapTypeProvider>
+            } />
 
-              <Route path="bases" element={
-                <TrapTypeProvider value="bases">
-                  <App />
-                </TrapTypeProvider>
-              } />
+            <Route path="bases" element={
+              <TrapTypeProvider value="bases">
+                <App />
+              </TrapTypeProvider>
+            } />
 
             <Route path="wishlist" element={<Wishlist />} />
+            <Route path="comparison" element={<Comparison/>} />
             <Route path="help" element={<Help />} />
           </Routes>
           <PageFooter />
+        </ComparisonProvider>
       </WishlistProvider>
     </BrowserRouter>
   )
