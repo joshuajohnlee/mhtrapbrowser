@@ -5,6 +5,7 @@
 @import "./components/filterform.css";
 @import "./components/wishlist.css";
 @import "./components/imageviewer.css";
+@import "./components/comparison.css";
 
 :root {
     --dark-bg: #0A141B;

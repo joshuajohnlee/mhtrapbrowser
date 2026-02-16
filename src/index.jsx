@@ -2,8 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, } from 'react-router-dom';
+
+// Context immports
 import { TrapTypeProvider } from './contexts/TrapTypeContext.jsx';
 import { WishlistProvider } from './contexts/WishlistContext.jsx';
+import { ComparisonProvider } from './contexts/ComparisonContext.jsx';
 
 //Component Imports
 import Header from './components/Header.jsx';
@@ -12,6 +15,7 @@ import App from './components/App.jsx';
 import Wishlist from './components/Wishlist.jsx';
 import Help from './components/Help.jsx';
 import PageFooter from './components/Footer.jsx';
+import Comparison from './components/Comparison.jsx';
 
 // CSS Imports
 import './css/styles.css';
@@ -30,17 +34,17 @@ const Routing = () => {
           <Routes>
             <Route index element={<Home />} />
 
-            <Route path="weapons" element={
-              <TrapTypeProvider value="weapons">
-                <App />
-              </TrapTypeProvider>
-            } />
+              <Route path="weapons" element={
+                <TrapTypeProvider value="weapons">
+                  <App />
+                </TrapTypeProvider>
+              } />
 
-            <Route path="bases" element={
-              <TrapTypeProvider value="bases">
-                <App />
-              </TrapTypeProvider>
-            } />
+              <Route path="bases" element={
+                <TrapTypeProvider value="bases">
+                  <App />
+                </TrapTypeProvider>
+              } />
 
             <Route path="wishlist" element={<Wishlist />} />
             <Route path="help" element={<Help />} />
