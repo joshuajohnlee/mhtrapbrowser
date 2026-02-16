@@ -1,9 +1,26 @@
+#filter-form {
+    padding: 1em;
+}
+
+.filter-button {
+    width: 100%;
+}
+
+#filters-sorting {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 2vw;
+    row-gap: 2vh;
+    align-items: center;
+    overflow: hidden;
+}
+
 .modal-form {
     position: relative;
     width: 50%;
     z-index: 3;
     text-align: center;
-    margin: 5vh auto auto auto;
+    margin: 1em auto;
     padding: 1rem;
     border-radius: 10px;
     background-color: var(--light-bg);
@@ -30,22 +47,20 @@
 .power-type-buttons button {
     width: 40%;
     margin: 1vh;
+    padding: 10px;
 }
 
-.warning-message {
-    margin: 1vh auto 1vh auto;
-    width: 90%;
-    border-color: red;
-    color: white;
-    background-color: #D95D39;
-    border-style: solid;
-    border-radius: 15px;
-    padding: 1rem;
-    word-wrap: break-word;
-}
-
-fieldset {
+#filter-form fieldset {
     margin-top: 1vh;
+    border: 1px solid var(--border-blue);
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    #filter-form fieldset {
+    width: 80%;
+    margin: 2vh auto;
+}
 }
 
 .form-buttons {
@@ -55,20 +70,56 @@ fieldset {
 
 .form-buttons button {
     padding: 1em;
-    margin: 0 2% 0 2%;
+    margin: 0.5em;
 }
 
 .form-power-selection {
+    width: 60%;
+    margin: auto;
+    padding: 1em;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+}
+
+@media (max-width: 900px) {
+    .form-power-selection {
+        width: 100%;
+    }
+}
+
+.power-type-input {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.power-type-input .form-check-input {
+    grid-column: 1;
+    justify-self: end;
+    margin: 0;
+}
+
+.power-type-input .form-check-label {
+    grid-column: 2;
+    justify-self: start;
+    text-align: left;
+}
+
+.form-check-input {
+    grid-column: 2;
+    text-align: left;
 }
 
 .form-check-label {
     text-align: left;
+    grid-column: 2;
 }
 
 .form-other-controls {
     margin: 2vh auto 2vh auto;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 1vh;
@@ -76,5 +127,9 @@ fieldset {
 }
 
 .form-other-controls select {
-    width: 60%;
+    width: 100%;
+}
+
+.form-label {
+    text-align: left;
 }

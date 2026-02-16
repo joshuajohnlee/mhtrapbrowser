@@ -11,9 +11,10 @@
     --light-bg: #11212D;
     --link-green: #d0d6d4;
     --button-blue: #6D9DC5;
-    --border-blue: #32b8da;
-    --blue-glow: #5787be;
-    --selected-background: rgba(104, 112, 221, 1);
+    --border-blue: #2b3e4b;
+    --blue-glow: #37516e;
+    --active-background: #569981;
+    --selected-background: rgb(78, 124, 100);
     --lighter-text: #a1afdd;
 }
 
@@ -37,12 +38,6 @@ body {
     flex: 1;
 }
 
-#app {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
@@ -57,8 +52,8 @@ button {
     cursor: pointer;
 }
 
-button:active {
-    box-shadow: 2px 2px 20px #000000;
+button:hover {
+    background-color: var(--selected-background);
 }
 
 main{
@@ -68,18 +63,30 @@ main{
     overflow-x: hidden;
 }
 
-.warning-message {
-    color: var(--link-green);
-    background-color: rgb(87, 27, 27);
-    text-align: center;
-    margin-top: 1vh;
-}
-
 @media (max-width: 900px) {
     main {
         margin: 0 2vw;
         width: calc(100% - 4vw);
     }
+}
+
+.text-page {
+    margin-left: 6vw;
+    margin-right: 6vw;
+    width: auto;
+}
+
+.text-page p {
+    text-align: justify;
+}
+
+.warning-message {
+    padding: 1em;
+    border-radius: 10px;
+    color: var(--link-green);
+    border: 1px solid red;
+    background-color: rgb(87, 27, 27);
+    text-align: center;
 }
 
 /* Links */
@@ -94,3 +101,5 @@ a:active {
 a:hover {
     color: var(--link-green);
 }
+
+html { scrollbar-gutter: stable; }

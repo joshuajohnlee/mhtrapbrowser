@@ -26,7 +26,6 @@ const Routing = () => {
   return (
     <BrowserRouter>
       <WishlistProvider>
-        <div id="app">
           <Header />
           <Routes>
             <Route index element={<Home />} />
@@ -47,7 +46,6 @@ const Routing = () => {
             <Route path="help" element={<Help />} />
           </Routes>
           <PageFooter />
-        </div>
       </WishlistProvider>
     </BrowserRouter>
   )

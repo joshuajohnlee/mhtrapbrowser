@@ -1,22 +1,5 @@
 /* Filter, sort and page buttons */
 
-#filters-sorting {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 2vw;
-    row-gap: 2vh;
-    align-items: center;
-    overflow: hidden;
-}
-
-.filter-button {
-    width: 100%;
-}
-
-.filter-button:hover {
-    background-color: var(--selected-background);
-}
-
 #sorting-select {
     grid-row: 2;
     grid-column: 1;
@@ -90,7 +73,7 @@
 }
 
 .activepage {
-    background-color: var(--selected-background);
+    background-color: var(--active-background);
 }
 
 #text-search-input {
