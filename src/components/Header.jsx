@@ -40,7 +40,6 @@ export default function PageHeader() {
                         <Link className="nav-link" to="/weapons"><li>Weapons</li></Link>
                         <Link className="nav-link" to="/bases"><li>Bases</li></Link>
                         <Link className="nav-link" to="/wishlist"><li>Wishlist</li></Link>
-                        <Link className="nav-link" to="/comparison"><li>Comparison</li></Link>
                         <Link className="nav-link" to="/help"><li>Help</li></Link>
                     </ul>
                 </nav>

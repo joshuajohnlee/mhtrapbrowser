@@ -16,7 +16,6 @@ import data from "../assets/data.json";
 // Import other components
 import FilterForm from "./FilterForm.jsx";
 import ImageViewer from "./ImageViewer.jsx";
-import ComparisonAdder from "./ComparisonAdder.jsx";
 import { DEFAULT_WEAPON_FILTERS, DEFAULT_BASE_FILTERS } from "../assets/default_filters.json";
 
 export default function App() {
@@ -119,14 +118,6 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
 
-  // Comparison adder modal functionality
-  const [isComparisonModalOpen, setIsComparisonModalOpen] = useState(false);
-
-  function handleComparisonAdd(itemName) {
-    setSelectedItem(itemName);
-    setIsComparisonModalOpen(true);
-  }
-
   // return the component
   return (
     <>
@@ -198,7 +189,7 @@ export default function App() {
                   />
                 </button>
 
-                <button className="card-control-button" title="Compare" alt="Compare" onClick={() => handleComparisonAdd(weapon.name)}>
+                <button className="card-control-button" title="Compare" alt="Compare">
                   <FontAwesomeIcon icon={faCodeCompare} />
                 </button>
 
@@ -275,13 +266,6 @@ export default function App() {
           itemName={selectedItem}
           isModalOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-        />
-
-        {/* Comparison adder modal */}
-        <ComparisonAdder
-          itemName={selectedItem}
-          isModalOpen={isComparisonModalOpen}
-          onClose={() => setIsComparisonModalOpen(false)}
         />
 
         {/* {Bottom page buttons} */}
